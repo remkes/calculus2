@@ -1,0 +1,53 @@
+<!--
+  This assignment was used for the Winter 2023 term.
+-->
+<section xml:id="section-assignment-week2">
+  <title>Week 2 Assignment</title>
+  <p><ol>
+    <li>
+      <p>
+        Use the exponential definitions of the hyperbolic functions to
+        prove the following identity. (Should should start with one
+        side and manipulate the expressions to produce the other side.
+        You should not start with the equation and reduce to an known
+        equality; this is not a valid method of proving identities.) (6) 
+      </p>
+      <me>
+        \sinh^2 x = \frac{\cosh 2x - 1}{2} 
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate this limit. (4) 
+      </p>
+      <me>
+        \lim_{x \rightarrow \infty} \frac{e^{3x} + \sinh x}{\cosh^2 x} 
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate this derivative. (4) 
+      </p>
+      <me>
+        \frac{d}{dx} \left( \sinh^2 x + \frac{1}{1 + \tanh x} \right)
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate this integral (4) 
+      </p>
+      <me>
+        \int \frac{4 \cosh x}{5 + 5\sinh^2 x} dx
+      </me>
+    </li>
+    <li>
+      <p>
+        Find the slope of the tangent line to the following locus at
+        the points <m>(1,1)</m> and <m>(1,0)</m>. (6) 
+      </p>
+      <me>
+        x^3 + y^3 - xy = 1         
+      </me>
+    </li>
+  </ol></p>
+</section>

@@ -1,0 +1,84 @@
+<section xml:id="section-solvable-integrals">
+  <title>Solvable Integrals</title>
+  <p>
+    In Calculus I, I went through many techniques and rules for
+    differentiation (chain rule, product rule, quotient rule, etc),
+    but only one major technique for integration (the substitution
+    rule). In this course, I aim to cover the remaining major
+    techniques of integration.
+  </p>
+  <p>
+    Integration is much more difficult than differentiation. For
+    elementary functions, the derivative rules are a complete set of
+    tools: any elementary function has a derivative which is another
+    elementary function and that derivative can be calculated using
+    the known rules. For integrals, the situations is entirely
+    different. The rules are much less algorithmic; there is much more
+    guess work involved. More importantly, sometimes none of the rules
+    work at all.  There are elementary functions <m>f(x)</m> such that
+    the integral <m>\int f(x) dx</m> has no solution which is an
+    elementary function.
+  </p>
+  <example>
+    <statement>
+      <p>
+        The Guassian distribution (often called the bell curve) is
+        central to statistics. This is the function <m>f(x) =
+        e^{-x^2}</m>. Consider its integral.
+        <me>
+          \int e^{-x^2} dx
+        </me>
+      </p>
+      <p>
+        This is a very useful integral, as I shall discuss in <xref
+        ref="section-probability" />. But its integral is unsolvable
+        by elementary function. By the tools introduced in this
+        course, the integral is unsolvable. 
+      </p>
+    </statement>
+  </example>
+  <p>
+    I've been talking about integral that are solvable by elementary
+    functions. However, the class of solvable integrals is much larger
+    than this if I allow myself to consider non-elementary functions.
+    An integral <m>f(x) dx</m> might not have a elementary
+    antiderivaitve, but it still might have some other kind of
+    antiderivative. In fact, here is a nice proposition that tells
+    me when antiderivatives exist.
+  </p>
+  <proposition>
+    <statement>
+      <p>
+        Let <m>f: [a,b] \rightarrow \RR</m> be a continuous function.
+        Then <m>f</m> has an antiderivative which is defined on the
+        interval <m>[a,b]</m>. 
+      </p>
+    </statement>
+  </proposition>
+  <p>
+    So these <sq>unsolvable</sq> integrals actually do have solutions.
+    There are functions which are the antiderivatives of these
+    fucntions. They are just not elementary functions. They are new
+    functions, with new names, new properties, new behaviour. In fact,
+    integrals without elementary antiderivatives are one of the most
+    significant source of new functions. There is a whole enormous
+    branch of mathematics that studies all these other functions:
+    names them, calculates their values, determines their properties. 
+  </p>
+  <p>
+    This brings up an important and subtle theme in mathematics: what,
+    really, is a solution? To take the example above, does <m>\int
+    e^{-x^2} dx</m> have a solution? If, for a solution, you mean an
+    elemetary function, then the answer is no. If, for a solution, you
+    mean any function (possibly an entirely new and unknown function),
+    then the answer is yes. Whether a mathematical problem has an
+    answer can very much depend on the subtleties of how the question
+    is asked and the assumptions about what possibilities exist. 
+  </p>
+  <p>
+    All that said, in this course I will keep to integrals which have
+    elementary solutions. Even restricted to this domain, there are
+    many techniques and many useful functions whose antiderivatives
+    can be calculated. 
+  </p>
+</section>

@@ -1,0 +1,40 @@
+<!--
+  This assignment was used for the Winter 2023 term.
+-->
+<section xml:id="section-assignment-week4">
+  <title>Week 4 Assignment</title>
+  <p><ol>
+    <li>
+      <p>
+        Calculate this integral. Show all your steps and reasoning,
+        including the details of any integral rules used. (6) 
+      </p>
+      <me>
+        \int (4x^2 - x)e^x dx 
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate this integral. Show all your steps and reasoning,
+        including the details of any integral rules used. (6) 
+      </p>
+      <me>
+        \int_2^3 x \sqrt[4]{x^2 - 4} dx 
+      </me>
+    </li>
+    <li>
+      <p>
+        Consider the following general integral form, where
+        <m>p(x)</m> is an arbitrary polynomial. (4) 
+      </p>
+      <me>
+        \int p(x) e^x  dx 
+      </me>
+      <p>
+        Why does integration by parts help with this type of integral?
+        How many times do you have to use integration by parts to
+        finish the integral? 
+      </p>
+    </li>
+  </ol></p>
+</section>
