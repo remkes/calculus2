@@ -1,267 +1,563 @@
 <section xml:id="section-week8-activity">
   <title>Week 8 Activity</title>
-  <subsection xml:id="subsection-activity-volumes-slices">
-    <title>Volumes by Slices</title>
-    <activity>
+  <subsection xml:id="subsection-activity-probability">
+    <title>Probability Distributions</title>
+    <activity xml:id="activity-probability-1">
       <statement>
         <p>
-          Calculate the volume of a cone of height <m>h</m> and base
-          radius <m>R</m>. 
+          Consider this probability distribution defined on the
+          interval <m>[0,6]</m>. 
         </p>
+        <me>
+          f(x) = a(6x - x^2)
+        </me>
+        <ol>
+          <li>
+            <p>
+              Determine the value of the constant <m>a</m> that makes
+              this a probability distribution. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the probability of a measurement in <m>[1,3]</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the probability of a measurement in <m>[2,4]</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Calculate the mean.
+            </p>
+          </li>
+          <li>
+            <p>
+              Calculate the standard deviation. 
+            </p>
+          </li>
+        </ol>
       </statement>
       <solution>
+        <figure xml:id="figure-probability-1">
+          <title>A Probability Distribution</title>
+          <image xml:id="figure53" width="80%">
+            <asymptote>
+              size(12cm,4cm);
+              import graph;
+              xaxis();
+              yaxis();
+
+              draw((0,0)--(3,1/3)--(6,0));
+            </asymptote>
+          </image>
+        </figure>
+        <ol>
+          <li>
+            <p>
+              I integrate the function over the domain <m>[0,6]</m>.
+            </p>
+            <me>
+              \int_0^6 f(x) dx = \int_0^6 a(6x-x^2) = a \left( 3x^2 -
+              \frac{x^3}{3} \Bigg|_0^6 \right) = a(108 - 72) = 36a
+            </me>
+            <p>
+              This integral needs to be <m>1</m>. That happens when
+              <m>a = \frac{1}{36}</m>. I'll use this value of <m>a</m>
+              for the rest of the question. The resulting function is
+              shown in <xref ref="figure-probability-1" />. 
+            </p>
+          </li>
+          <li>
+            <p>
+              I integrate the function over <m>[1,3]</m> to find the
+              probability of a measurement in that range. 
+            </p>
+            <md>
+              <mrow>
+                P([1,3]) \amp = \int_1^3 f(x) dx = \frac{1}{36}
+                \int_1^3 6x-x^2 dx = \frac{1}{36} 3x^2 -
+                \frac{x^3}{3} \Bigg|_1^3 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{36} \left[ 27-9-3+\frac{1}{3} \right]
+                = \frac{46}{108} = \frac{23}{54}
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <p>
+              I integrate the function over <m>[2,4]</m> to find the
+              probability of a measurement in that range. 
+            </p>
+            <md>
+              <mrow>
+                P([2,4]) \amp = \int_2^4 f(x) dx = \frac{1}{36}
+                \int_2^4 6x-x^2 dx = \frac{1}{36} 3x^2 -
+                \frac{x^3}{3} \Bigg|_2^4 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{36} \left[ 48 - \frac{64}{3} - 12 +
+                \frac{18}{3} \right] = \frac{52}{108} =
+                \frac{13}{27}
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <p>
+              I integrate <m>xf(x)</m> to calculate the mean. 
+            </p>
+            <md>
+              <mrow>
+                \mu \amp = \int_0^6 x f(x) dx = \frac{1}{36} \int_0^6
+                6x^2 - x^3 = \frac{1}{36} \left[ 2x^3 -
+                \frac{x^4}{4} \Bigg|_0^6 \right]
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{36} \left[ 432 - \frac{1296}{4}
+                \right] = \frac{1}{36} [ 432 - 324] = \frac{108}{36} =
+                3
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <p>
+              I integrate <m>(x-\mu)^2 f(x)</m> to calculate
+              <m>\sigma^2</m>. Then I take the square root to
+              calculate <m>\sigma</m>. 
+            </p>
+            <md>
+              <mrow>
+                \sigma^2 \amp = \int_0^6 (x-3)^2 f(x) dx =
+                \frac{1}{36} \int_0^6 (x^2-6x+9)(6x-x^2) dx 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{36} \int_0^6 -x^4 + 12x^3 - 45 x^2+
+                54x dx 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{36} \left[ \frac{-x^5}{5} +
+                3x^4 - 15x^3 + 27x^2 \Bigg|_0^6 \right] 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{36} \left[ \frac{-7776}{5} + 3888 -
+                3240 + 972 \right] 
+              </mrow>
+              <mrow>
+                \amp = \frac{-7776 + 19440 - 16200 +
+                4860}{180} = \frac{324}{180} = \frac{9}{5}
+              </mrow>
+              <mrow>
+                \sigma \amp = \sqrt{\frac{9}{5}} \doteq 1.34
+              </mrow>
+            </md>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+    <activity xml:id="activity-probability-2">
+      <statement>
         <p>
-          I will assume the cone is pointing along the <m>y</m> axis
-          with its base at <m>y=h</m> and its tip at <m>y=0</m>. (This
-          standing the cone on its end is a bit odd, but it makes the
-          integral easier.) 
-          Horizontal slices (at various <m>y</m> values) have circular
-          cross sections. The radius of each horizontal slice grows
-          linearly from <m>0</m> are the origin to <m>R</m> at height
-          <m>y = h</m>. This slope is <m>r = \frac{Ry}{h}</m>, so I
-          can use this the radius term. The area is <m>\pi r^2</m> and
-          the range is <m>y \in [0,h]</m>. Now I can setup the
-          integral. 
+          Consider this probability distribution defined on the
+          interval <m>[0,6]</m>. 
         </p>
         <me>
-          V = \int_0^h \frac{\pi y^2 r^2}{h^2} dy 
+          g(x) = \left\{ \begin{matrix} 
+            ax \amp x \in [0,3] \\ 
+            a(6-x) \amp x \in [3,6] 
+          \end{matrix} \right. 
         </me>
-        <p>
-          This is a reasonable polynomial integral. 
-        </p>
-        <me>
-          V = \frac{\pi r^2}{h^2} \int_0^h y^2 dy = \frac{\pi
-          r^2}{h^3} \frac{y^3}{3} \Bigg|_0^h = \frac{\pi
-          r^2}{h^2} \frac{h^3}{3} = \frac{\pi r^2 h}{3}
-        </me>
+        <ol>
+          <li>
+            <p>
+              Determine the value of the constant <m>a</m> that makes
+              this a probability distribution. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the probability of a measurement in <m>[1,3]</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the probability of a measurement in <m>[2,4]</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Calculate the mean.
+            </p>
+          </li>
+          <li>
+            <p>
+              Calculate the standard deviation. 
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <solution>
+        <figure xml:id="figure-probability-2">
+          <title>A Probability Distribution</title>
+          <image xml:id="figure52" width="80%">
+            <asymptote>
+              size(12cm,4cm);
+              import graph;
+              xaxis();
+              yaxis();
+
+              real f(real x) {return (6x-x^2)/36;}
+
+              draw(graph(f,0,6));
+            </asymptote>
+          </image>
+        </figure>
+        <ol>
+          <li>
+            <p>
+              I integrate the function over the domain <m>[0,6]</m>.
+              Since this is a piecewise function, the integral splits
+              into two integrals for the two pieces of the domain. 
+            </p>
+            <md>
+              <mrow>
+                \int_0^6 g(x) dx \amp = \int_0^3 x dx + \int_3^6 (6-x)
+                dx = \frac{x^2}{2} \Bigg|_0^3 + 6x - \frac{x^2}{2}
+                \Bigg|_3^6
+              </mrow>
+              <mrow>
+                \amp = \frac{9}{2} + 36 - 18 - 18 + \frac{9}{2} = 9
+              </mrow>
+            </md>
+            <p>
+              This integral needs to be <m>1</m>. That happens when
+              <m>a = \frac{1}{9}</m>. I'll use this value of <m>a</m>
+              for the remainder of the question. This function is show
+              in <xref ref="figure-probability-2" />. 
+            </p>
+          </li>
+          <li>
+            <p>
+              I integrate the function over <m>[1,3]</m> to find the
+              probability of a measurement in that range. 
+            </p>
+            <me>
+              P([1,3]) = \int_1^3 g(x) dx = \int_1^3 \frac{x}{9} dx =
+              \frac{x^2}{18} \Bigg|_1^3 = \frac{9}{18} - \frac{1}{9} =
+              \frac{8}{18} = \frac{4}{9}
+            </me>
+          </li>
+          <li>
+            <p>
+              I integrate the function over <m>[2,4]</m> to find the
+              probability of a measurement in that range. 
+            </p>
+            <md>
+              <mrow>
+                P([2,4]) \amp = \int_2^4 g(x) dx = \int_2^3
+                \frac{x}{9} dx + \int_3^4 \frac{6-x}{9} dx 
+              </mrow>
+              <mrow>
+                \amp = \frac{x^2}{18} \Bigg|_2^3 + \frac{6x}{9} -
+                \frac{x^2}{18} \Bigg|_3^4 
+              </mrow>
+              <mrow>
+                \amp = \frac{9}{18} - \frac{4}{18} + \frac{24}{9} -
+                \frac{16}{18} - \frac{18}{9} + \frac{9}{18} =
+                \frac{10}{18} = \frac{5}{9}
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <p>
+              I integrate <m>xg(x)</m> to calculate the mean. 
+            </p>
+            <md>
+              <mrow>
+                \mu \amp = \int_0^6 x g(x) dx = \int_0^3 \frac{x^2}{9}
+                dx + \int_3^6 \frac{6x-x^2}{9} dx = \frac{x^3}{27}
+                \Bigg|_0^3 + \frac{6x^2}{18} - \frac{x^3}{27}
+                \Bigg|_3^6 
+              </mrow>
+              <mrow>
+                \amp = \frac{27}{27} - 0 + \frac{216}{18} -
+                \frac{216}{27} - \frac{54}{18} + \frac{27}{27} = 1 +
+                12 - 8 - 3 + 1 = 3
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <p>
+              I integrate <m>(x-\mu)^2 g(x)</m> to calculate
+              <m>\sigma^2</m>. 
+            </p>
+            <md>
+              <mrow>
+                \sigma^2 \amp = \int_0^6 (x-3)^2 g(x) dx 
+              </mrow>
+              <mrow>
+                \amp = \int_0^3 (x^2-6x+9)\frac{x}{9} dx + \int_3^6
+                (x^2-6x+9)\frac{(6-x)}{9} dx 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{9} \int_0^3 x^3 - 6x^2 + 9x dx +
+                \frac{1}{9} \int_3^6 -x^3 +12x^2 - 45 x + 54 dx 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{9} \left[ \frac{x^4}{4} - 2x^3 +
+                \frac{9x^2}{2} \Bigg|_0^3 + \frac{-x^4}{4} + 4x^3 -
+                \frac{45x^2}{2} + 54 x \Bigg|_3^6 \right] 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{9} \left[ \frac{81}{4} - 54 +
+                \frac{81}{2} - \frac{1296}{4} + 864 - \frac{1620}{2}
+                \right. 
+              </mrow>
+              <mrow>
+                \amp \left. + 324 + \frac{81}{4} - 108 + \frac{405}{2}
+                - 162 \right]
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{36} \left[ 81 - 216 + 162 - 1296
+                + 3456 - 3240 + 1296 \right. 
+              </mrow>
+              <mrow>
+                \amp \left. + 81 - 432 + 810 - 648 \right]
+              </mrow>
+              <mrow>
+                \amp = \frac{54}{36} = \frac{3}{2} 
+              </mrow>
+              <mrow>
+                \sigma \amp = \sqrt{\frac{3}{2}} \doteq 1.22
+              </mrow>
+            </md>
+          </li>
+        </ol>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Calculate the volume of a surface of revolution formed by
-          rotating the function <m>f(x) = \ln x</m> about the <m>x</m>
-          axis in the range <m>x \in [1, e^2]</m> 
+          Give a reason why it is reasonable that the standard
+          deviation of <xref ref="activity-probability-1"/> is larger
+          than the standard deviation of <xref
+          ref="activity-probability-2" />, even though they have the
+          same domain and the same mean. 
         </p>
       </statement>
       <solution>
         <p>
-          The setup for a surface of revolution is this integral.
+          The first distribution is much broader than the second.  It
+          extends wider and only decays at the very edge of its
+          domain. Therefore, we expect that typical measurements are
+          farther from the mean and the standard deviation is higher.
         </p>
-        <me>
-          V = \int_a^b \pi (f(x))^2 dx 
-        </me>
-        <p>
-          The function and the range are given, so I can just proceed
-          with the integral.
-        </p>
-        <me>
-          V = \int_1^{e^2} A dh = \int_1^{e^2} \pi (ln x)^2 dx = \pi
-          \int_1^{e^2} (\ln x)^2 dx 
-        </me>
-        <p>
-          I will integrate by parts, with <m>f = \ln x</m> and
-          <m>\frac{dg}{dx}  = \ln x</m>, so that <m>\frac{df}{dx} =
-          \frac{1}{x}</m> and <m>g = x \ln x - x</m>. (The
-          antiderivative of the logarithm is from the tables.) Then I
-          can proceed with the integral. 
-        </p>
-        <md>
-          <mrow>
-            V \amp = \pi \left( (\ln x)(x \ln x - x) \Bigg|_1^{e^2} -
-            \int_1^{e^2} \frac{1}{x} (x \ln x - x) dx \right) 
-          </mrow>
-          <mrow>
-            \amp = \pi \left( (2)(2e^2 - e^2) - (0)(0-1) -
-            \int_1^{e^2} \ln x - 1 dx \right) 
-          </mrow>
-          <mrow>
-            \amp = \pi \left( 2e^2 - (x \ln x - x - x) \Bigg|_1^{e^2}
-            = 2e^2 - (x \ln x - 2x ) \Bigg|_1^{e^2} \right)
-          </mrow>
-          <mrow>
-            \amp = \pi \left( 2e^2 - (2 e^2 - 2 e^2 - 0 + 2)
-            \Bigg|_1^{e^2} \right) = (2e^2 - 2)\pi 
-          </mrow>
-        </md>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Calculate the volume of a tetrahedron of side length
-          <m>a</m>. (This is a particularly difficult activity; feel
-          free to attempt it, but don't be discouraged if you don't
-          make easy progress.) 
+          Consider this probability distribution defined on the domain
+          <m>[1, \infty)</m>, where <m>r</m> is a parameter with <m> r
+          \gt 1</m>. 
         </p>
+        <me>
+          f(x) = \frac{r-1}{x^r}
+        </me>
+        <ol>
+          <li>
+            <p>
+              Find the probability of a measurement in <m>[1,2]</m>
+              (this will depend on the parameter <m>r</m> of course). 
+            </p>
+          </li>
+          <li>
+            <p>
+              Try to calculate the mean. Argue that this calculation
+              is only possible when <m>r \gt 2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For <m>r \in (1, 2]</m>, this is a probability
+              distribution which has no calculatable mean. How can
+              this be so?
+            </p>
+          </li>
+          <li>
+            <p>
+              Try to calculate the standard deviation. Conclude that
+              the standard deviation is only calculatable when <m>r
+              \gt 3</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              For <m>r \in (2,3]</m>, this is a probability
+              distribution with a mean but not calculatable standard
+              deviation. How can this be so?
+            </p>
+          </li>
+        </ol>
       </statement>
       <solution>
-        <p>
-          The geometry is difficult to set up, and there are many
-          approaches.  I set one of the faces to be the base. On
-          that face, I'll let <m>b</m> be the distance from a vertex of
-          that face to the centre of the same face. I can split this
-          face into three isoceles trianges, each of which has side
-          lengths <m>b</m>, <m>b</m> and <m>a</m>, with angles
-          <m>\pi/6</m>, <m>\pi/6</m> and <m>2\pi/3</m>. I apply the
-          sine law to this triangle.
-        </p>
-        <me>
-          \frac{a}{\sin \frac{2\pi}{3}} = \frac{b}{\sin \frac{\pi}{6}}
-          \implies \frac{a}{\frac{\sqrt{3}}{2}} = \frac{1}{2} 
-        </me>
-        <p>
-          This implies <m>b = \frac{a}{\sqrt{3}}</m>. Then there is a
-          right triangle whose vertical are one vertex of the base,
-          the centre of the base, and the top vertex. This triangle
-          has hypotenuese <m>a</m>, base <m>b</m> and height <m>c</m>
-          where <m>c</m> is the height of tetrahedron, from the center
-          of the base to the top vertex. Pythagorus allows me to
-          calculate c: <m>c = \sqrt{a^2 - b^2} = \sqrt{\frac{2}{3}}
-          a</m>.
-        </p>
-        <p>
-          I'm going to slice the tetrahedron with horizontal plane
-          slices, stacked vertical. The previous calculation for
-          <m>c</m> gives us a bound for integration, so the integral
-          goves from <m>0</m> to <m>\sqrt{\frac{2}{3}}a</m>.  I'll
-          work with the variable <m>h</m> for height. Because it is
-          convenient, I'll say that <m>h</m> starts at zero at the top
-          vertex, and goes to <m>\sqrt{\frac{2}{3}}a</m> at the base.
-        </p>
-        <p>
-          I have to do some geometry to find the area of each slice.
-          slice. Each slice is an equilateral triangle, but what is
-          the side length (depending on <m>h</m>)? Recall the base
-          triangle: it has side length <m>a</m> when <m>h =
-          \sqrt{\frac{2}{3}}a</m>. This side length increases linearly
-          from <m>0</m> when <m>h=0</m> to <m>a</m> when <m>h =
-          \sqrt{\frac{2}{3}}a</m>. The final result gives the solve of
-          the linear relationship.  Therefore, for <m>h \in [0,
-          \sqrt{\frac{2}{3}}a ]</m>, the side length of the triangle
-          at height <m>h</m> is <m>\sqrt{\frac{3}{2}}h</m>.
-        </p>
-        <p>
-          An equilateral triangle with side length <m>s</m> is
-          <m>\frac{\sqrt{3}a^2}{4}</m>. This gives the area of each
-          slice. 
-        </p>
-        <me>
-          A = \frac{\sqrt{3}}{4} \left( \sqrt{ \frac{3}{2}} h
-          \right)^2 = \frac{\sqrt{3}}{4} \frac{3}{2} h^2 =
-          \frac{3\sqrt{3}h^2}{8}
-        </me>
-        <p>
-          Then I can setup the integral of the slices. 
-        </p>
-        <me>
-          V = \int_0^{\sqrt{\frac{3}{2}}a} A(h) dh =
-          \int_0^{\sqrt{\frac{3}{2}}a}  \frac{3\sqrt{3}h^2}{8} dh
-        </me>
-        <p>
-          This is a reasonable polynomial integral.
-        </p>
-        <me>
-          V = \frac{3\sqrt{3}}{8} \int_0^{\sqrt{\frac{3}{2}}a} h^2 dh
-          = \frac{3\sqrt{3}}{8} \frac{h^3}{3}
-          \Bigg|_0^{\sqrt{\frac{3}{2}}a}  
-          = \frac{\sqrt{3}}{8} \left( \sqrt{\frac{2}{3}} a \right)^3
-          = \frac{\sqrt{3}}{8} \frac{2\sqrt{2}}{3\sqrt{3}} a^3 =
-          \frac{a^3}{6\sqrt{2}}
-        </me>
-      </solution>
-    </activity>
-  </subsection>
-  <subsection xml:id="subsection-activity-volumes-shells">
-    <title>Volume by Shells</title>
-    <activity>
-      <statement>
-        <p>
-          Calculate the volume of the object formed by taking the
-          triangle with vertices <m>(3,0)</m>, <m>(5,0)</m> and
-          <m>(3,4)</m> and rotating it about the <m>y</m> axis. 
-        </p>
-      </statement>
-      <solution>
-        <p>
-          I need to determine the function to use for cylindrical
-          shells. The height of the triangle over the <m>x</m> axis is
-          given by the diagonal line from <m>(3,4)</m> to <m>(5,0)</m>. 
-          That line has equation <m>y = -2x + 10</m>.
-          Therefore, I can take <m>f(x) = -2x + 10</m> as the function.
-          The function is the height of the cylinder, and its
-          circumference is <m>2\pi x</m>. Its area is <m>2\pi x
-          f(x)</m>. Then I set up the integral. The resulting integral
-          is a reasonable polynomial integral. 
-        </p>
-        <md>
-          <mrow>
-            V \amp = \int_a^b 2\pi x f(x) dx = \int_3^5 2\pi x (-2x +
-            10) dx
-          </mrow>
-          <mrow>
-            \amp = -4\pi \int_3^5 x^2 dx + 20 \pi \int_3^5 x dx =
-            \frac{-4\pi x^3}{3} \Bigg|_3^5 + \frac{20\pi x^2}{2}
-            \Bigg|_3^5 
-          </mrow>
-          <mrow>
-            \amp = \frac{-4\pi}{3} (125 - 27) + 10 \pi (25 - 9) =
-            \frac{-4\pi (98)}{3} + 10 \pi (16) 
-          </mrow>
-          <mrow>
-            \amp = \frac{(-392 + 480)\pi}{3} = \frac{88\pi}{3}
-          </mrow>
-        </md>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate the volume of the object formed by taking the 
-          graph of <m>\sin x</m> with <m>x \in [0,\pi]</m> and
-          rotating it about the <m>y</m> axis. 
-        </p>
-      </statement>
-      <solution>
-        <p>
-          The function <m>f(x) = \sin (x)</m> gives the height of the
-          cylindrical shells. The radius is <m>x</m>, so the
-          circumference of the shell is <m>2\pi x</m> and the area is
-          <m>2\pi x \sin x</m>.  Then I integrate in <m>x</m> over the
-          range <m>[0, \pi]</m>. In the integral, I use integration by
-          parts with <m>g(x) = x</m> and <m>\frac{df}{dx} = \sin
-          x</m>, so that <m>\frac{dg}{dx} = 1</m> and <m>f = -\cos
-          x</m>.
-        </p>
-        <md>
-          <mrow>
-            V \amp = \int_a^b 2\pi x f(x) dx = \int_0^{\pi} 2\pi x
-            \sin x dx 
-          </mrow>
-          <mrow>
-            \amp = 2\pi \left[ -x \cos x \Bigg|_0^{\pi} +
-            \int_0^{\pi} \cos x dx \right] = 2 \pi \left[ -\pi (-1) +
-            0 \cdot 1 - \sin x \Bigg|_0^{\pi} \right] = 2\pi^2
-          </mrow>
-        </md>
+        <ol>
+          <li>
+            <p>
+              To get the probability, I integrate the probability
+              distribution over the range <m>[1,2]</m>.     
+            </p>
+            <me>
+              P([1,2]) = (r-1)\int_1^2 \frac{1}{x^r} dx = (r-1)
+              \frac{1}{x^{r-1}}\frac{1}{1-r} \Bigg|_1^2 = 1-
+              \frac{1}{2^{r-1}} 
+            </me>
+          </li>
+          <li>
+            <p>
+              I try to calculate the integral of <m>xf(x)</m>
+              to calculate the mean.
+            </p>
+            <me>
+              \mu = (r-1)\int_1^\infty x \frac{1}{x^r} dx =
+              (r-1)\int_1^\infty \frac{1}{x^{r-1}} dx 
+            </me>
+            <p>
+              If <m>r \in (1,2]</m>, then this integrand is either
+              <m>\frac{1}{x}</m> (when <m>r=2</m> or something larger.
+              The integral of <m>\frac{1}{x}</m> is <m>\ln x</m>.
+              Evaluated on these limits, the improper integral will
+              diverge. When <m>r \lt 2</m>, since the integral is even
+              large than <m>\frac{1}{X}</m>, the improper integral
+              will likewise diverge. 
+            </p>
+            <p>
+              However, when <m>r>2</m>, the improper integral will
+              converge. I'll do that calculation now. 
+            </p>
+            <md>
+              <mrow>
+                \mu \amp = (r-1)\int_1^\infty x \frac{1}{x^r} dx =
+                (r-1)\int_1^\infty \frac{1}{x^{r-1}} dx 
+              </mrow>
+              <mrow>
+                \amp = (r-1)\lim_{a \rightarrow \infty}
+                \frac{1}{x^{r-2}}\frac{1}{2-r} \Bigg|_1^a
+              </mrow>
+              <mrow>
+                \amp = (r-1)\lim_{a \rightarrow \infty}
+                \frac{1}{(2-r)(a^{r-2})} + \frac{1}{r-2} =
+                \frac{r-1}{r-2} 
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <p>
+              The tail is simply to long. Even though the function
+              decays and has finite area, the long tail skews the
+              average higher and higher. For <m>r \lt 2</m>, the
+              effect of that skew is enough to make the mean
+              meaningless.
+            </p>
+          </li>
+          <li>
+            <p>
+              The argument is the same as for the mean. Since I need
+              to square <m>(x-\mu)</m>, we will have an <m>x^2</m>
+              term in the numerator. That means the integral will have
+              a <m>\frac{1}{x^{r-2}}</m> term, which won't lead to a
+              finite integral unless <m>r \gt 3</m>. If <m>r \gt
+              3</m>, I'll do the calculation of the standard
+              deviation.
+            </p>
+            <md>
+              <mrow>
+                \sigma^2 \amp = (r-1)\int_1^\infty \left( x -
+                \frac{r-1}{r-2} \right)^2 \frac{1}{x^r} dx 
+              </mrow>
+              <mrow>
+                \amp = (r-1) \int_1^\infty \frac{x^2}{x^r} - 2 \left(
+                \frac{r-1}{r-2} \right) \frac{x}{x^r} + \left(
+                \frac{r-1}{r-2} \right)^2 \frac{1}{x^r} dx
+              </mrow>
+              <mrow>
+                \amp = (r-1) \int_1^\infty \frac{1}{x^{r-2}} - 2
+                \left( \frac{r-1}{r-2} \right) \frac{1}{x^{r-1}} +
+                \left( \frac{r-1}{r-2} \right)^2 \frac{1}{x^r} dx
+              </mrow>
+              <mrow>
+                \amp = (r-1) \left[ \frac{1}{x^{r-3}}\frac{1}{3-r} - 2
+                \left( \frac{r-1}{r-2} \right) \frac{1}{x^{r-2}}
+                \frac{1}{2-r} \right.
+              </mrow>
+              <mrow>
+                \amp + \left. \left( \frac{r-1}{r-2} \right)^2
+                \frac{1}{x^{r-1}} \frac{1}{1-r} \Bigg|_1^\infty
+                \right]
+              </mrow>
+              <mrow>
+                \amp = (r-1) \lim_{a \rightarrow \infty} \left[
+                \frac{1}{x^{r-3}}\frac{1}{3-r} - 2 \left(
+                \frac{r-1}{r-2} \right) \frac{1}{x^{r-2}}
+                \frac{1}{2-r} \right.
+              </mrow>
+              <mrow>
+                \amp \left. + \left( \frac{r-1}{r-2} \right)^2
+                \frac{1}{x^{r-1}} \frac{1}{1-r} \Bigg|_1^a \right]
+              </mrow>
+              <mrow>
+                \amp = (r-1) \left[ \frac{1}{r-3} - 2\left(
+                \frac{r-1}{r-2} \right) \frac{1}{r-2} + \left(
+                \frac{r-1}{r-2} \right)^2 \frac{1}{r-1} \right]
+              </mrow>
+              <mrow>
+                \amp = \left( \frac{r-1}{r-3} \right) -2 \left(
+                \frac{r-1}{r-2} \right)^2 + \left( \frac{r-1}{r-2}
+                \right)^2 = \left( \frac{r-1}{r-3} \right) - \left(
+                \frac{r-1}{r-2} \right)
+              </mrow>
+            </md>
+          </li>
+          <li>
+            <p>
+              This is the same situation as for the mean. The long
+              tail also skews the standard deviation. When <m>r \leq
+              3</m>, this skew is enough to send the standard
+              deviation to infinity.
+            </p>
+          </li>
+        </ol>
       </solution>
     </activity>
   </subsection>
   <subsection xml:id="subsection-week8-concepts">
     <title>Conceptual Review Questions</title>
-    <p>
-      <ul>
-        <li>
-          What is a surface of revolution?
-        </li>
-        <li>
-          Why are integrals used to calculate volumes? 
-        </li>
-        <li>
-          What is different about shells and slices as ways of
-          calculating volumes? 
-        </li>
-      </ul>
-    </p>
+    <ul>
+      <li>
+        <p>
+          What is a probability distribution?
+        </p>
+      </li>
+      <li>
+        <p>
+          Why is the measurement the independent variable for a
+          probability distribution?
+        </p>
+      </li>
+      <li>
+        <p>
+          Why do integrals calculate probabilities, means and
+          standard deviations?
+        </p>
+      </li>
+      <li>
+        <p>
+          What is a central tendency? Why are there multiple
+          mathematical definition of a central tendency?
+        </p>
+      </li>
+    </ul>
   </subsection>
 </section>

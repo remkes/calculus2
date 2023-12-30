@@ -1,189 +1,87 @@
 <section xml:id="section-week7-activity">
   <title>Week 7 Activity</title>
-  <subsection xml:id="subsection-activity-parametric-curves">
-    <title>Parametric Curves - Tangents and Lengths</title>
+  <subsection xml:id="subsection-activity-volumes-slices">
+    <title>Volumes by Slices</title>
     <activity>
       <statement>
         <p>
-          This parametric curve is two revolutions of the logarithmic
-          spiral. 
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = (e^t \cos t, e^t \sin t) \amp \amp t \in [0, 4\pi]
-          </mrow>
-        </md>
-        <p>
-          Calculate <m>\frac{dy}{dx}</m> and identify some points
-          with vertical tangents. Then calculate the length of the
-          curve. 
+          Calculate the volume of a cone of height <m>h</m> and base
+          radius <m>R</m>. 
         </p>
       </statement>
       <solution>
-        <figure xml:id="figure-parametric-activity1">
-          <image xml:id="figure47" width="80%">
-            <asymptote>
-              size(16cm,10cm);
-              import contour;
-              import graph;
-              xaxis();
-              yaxis();
-
-              real x(real t) {return exp(t)*cos(3*t);}
-              real y(real t) {return exp(t)*sin(3*t);}
-
-              draw(graph(x,y,-3,2));
-            </asymptote>
-          </image>
-        </figure>
         <p>
-          First I calcualte the derivatives of the two components.
-          Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope.
-        </p>
-        <md>
-          <mrow>
-            \frac{dx}{dt} \amp = e^t \cos t - e^t \sin t 
-          </mrow>
-          <mrow>
-            \frac{dy}{dt} \amp = e^t \sin t + e^t \cos t 
-          </mrow>
-          <mrow>
-            \frac{dy}{dx} \amp = \frac{ e^t \sin t + e^t \cos t }{ e^t
-            \cos t - e^t \sin t} = \frac{\sin t + \cos t}{\cos t -
-            \sin t}
-          </mrow>
-        </md>
-        <p>
-          There are vertical tangents whenever the denominator of
-          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
-          not. This happens when <m>\cos t = \sin t</m>, which happens
-          at <m>\frac{\pi}{4}</m> plus any multiple  of <m>\pi</m>.
-        </p>
-        <p>
-          I put the derviatives of the components into the length
-          formula and then calculate the resulting integral. After
-          cancelling of terms which easily cancel, I use the
-          trig identity <m>\sin^2 t + \cos^2 t = 1</m> to simplify the
-          integral, leaving a reasonable exponential integral. 
-        </p>
-        <md>
-          <mrow>
-            L \amp = \int_0^{4\pi} e^t \sqrt{ \cos^2 t - 2 \cos t \sin
-            t + \sin^2 t + \sin^2 t + 2\sin t \cos t + \cos^2 t} dt 
-          </mrow>
-          <mrow>
-            \amp = \int_0^{4\pi} e^t \sqrt{ 2(\cos^2 t + \sin^2 t)}
-            dt
-          </mrow>
-          <mrow>
-            \amp = \int_0^{4\pi} \sqrt{2} e^t dt = \sqrt{2}e^t
-            \Big|_0^{4\pi} 
-          </mrow>
-          <mrow>
-            \amp = \sqrt{e^{4\pi}} - \sqrt{2} = \sqrt{2} \left(
-            e^{4\pi} - 1 \right)
-          </mrow>
-        </md>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          This parametric curve is the Archimedian spiral.
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = (t \cos t, t \sin t) \amp \amp t \in [0, 4\pi]
-          </mrow>
-        </md>
-        <p>
-          Calculate <m>\frac{dy}{dx}</m> and identify some points
-          with vertical tangents. Then calculate the length of the
-          curve. 
-        </p>
-        <p>
-          In the arclength calculation, I will get to an integral
-          which needs a trig substitution. Instead of doing that trig
-          substitution, I can use the form found on the table of
-          integrals.
+          I will assume the cone is pointing along the <m>y</m> axis
+          with its base at <m>y=h</m> and its tip at <m>y=0</m>. (This
+          standing the cone on its end is a bit odd, but it makes the
+          integral easier.) 
+          Horizontal slices (at various <m>y</m> values) have circular
+          cross sections. The radius of each horizontal slice grows
+          linearly from <m>0</m> are the origin to <m>R</m> at height
+          <m>y = h</m>. This slope is <m>r = \frac{Ry}{h}</m>, so I
+          can use this the radius term. The area is <m>\pi r^2</m> and
+          the range is <m>y \in [0,h]</m>. Now I can setup the
+          integral. 
         </p>
         <me>
-          \int \sqrt{a^2 + x^2} dx = \frac{x}{2} \sqrt{a^2 + x^2} +
-          \frac{a^2}{2} \ln \left( x + \sqrt{a^2 + x^2} \right) + c
+          V = \int_0^h \frac{\pi y^2 r^2}{h^2} dy 
         </me>
+        <p>
+          This is a reasonable polynomial integral. 
+        </p>
+        <me>
+          V = \frac{\pi r^2}{h^2} \int_0^h y^2 dy = \frac{\pi
+          r^2}{h^3} \frac{y^3}{3} \Bigg|_0^h = \frac{\pi
+          r^2}{h^2} \frac{h^3}{3} = \frac{\pi r^2 h}{3}
+        </me>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the volume of a surface of revolution formed by
+          rotating the function <m>f(x) = \ln x</m> about the <m>x</m>
+          axis in the range <m>x \in [1, e^2]</m> 
+        </p>
       </statement>
       <solution>
-        <figure xml:id="figure-parametric-activity2">
-          <image xml:id="figure48" width="80%">
-            <asymptote>
-              size(16cm,10cm);
-              import contour;
-              import graph;
-              xaxis();
-              yaxis();
-
-              real x(real t) {return t*cos(t);}
-              real y(real t) {return t*sin(t);}
-
-              draw(graph(x,y,0,4*pi));
-            </asymptote>
-          </image>
-        </figure>
         <p>
-          First I calcualte the derivatives of the two components.
-          Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope.
+          The setup for a surface of revolution is this integral.
+        </p>
+        <me>
+          V = \int_a^b \pi (f(x))^2 dx 
+        </me>
+        <p>
+          The function and the range are given, so I can just proceed
+          with the integral.
+        </p>
+        <me>
+          V = \int_1^{e^2} A dh = \int_1^{e^2} \pi (ln x)^2 dx = \pi
+          \int_1^{e^2} (\ln x)^2 dx 
+        </me>
+        <p>
+          I will integrate by parts, with <m>f = \ln x</m> and
+          <m>\frac{dg}{dx}  = \ln x</m>, so that <m>\frac{df}{dx} =
+          \frac{1}{x}</m> and <m>g = x \ln x - x</m>. (The
+          antiderivative of the logarithm is from the tables.) Then I
+          can proceed with the integral. 
         </p>
         <md>
           <mrow>
-            \frac{dx}{dt} \amp = -t \sin t + \cos t 
+            V \amp = \pi \left( (\ln x)(x \ln x - x) \Bigg|_1^{e^2} -
+            \int_1^{e^2} \frac{1}{x} (x \ln x - x) dx \right) 
           </mrow>
           <mrow>
-            \frac{dy}{dt} \amp = t \cos t + \sin t 
+            \amp = \pi \left( (2)(2e^2 - e^2) - (0)(0-1) -
+            \int_1^{e^2} \ln x - 1 dx \right) 
           </mrow>
           <mrow>
-            \frac{dy}{dx} \amp = \frac{t \cos t + \sin t}{-t \sin t +
-            \cos t}
-          </mrow>
-        </md>
-        <p>
-          There are vertical tangents whenever the denominator of
-          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
-          not. This happens twice every revolution, when the
-          denominators vanishes.  precise value of the parameter
-          <m>t</m> at those points is challenging.
-        </p>
-        <p>
-          I put the derviatives of the components into the length
-          formula and then calculate the resulting integral. Again,
-          some term will cancel and I can use trig identities to
-          simplify some of the remianing term. When I
-          get to the square root integral, I just used the
-          antiderivative given in the question instead of doing the
-          whole process of the trig substitution.
-        </p>
-        <md>
-          <mrow>
-            L \amp = \int_0^{4\pi} \sqrt{ t^2 \sin^2 t - 2t \cos t
-            \sin t + \cos^2 t + t^2 \cos^2 t + 2t \cos t \sin t +
-            \sin^2 t} dt 
+            \amp = \pi \left( 2e^2 - (x \ln x - x - x) \Bigg|_1^{e^2}
+            = 2e^2 - (x \ln x - 2x ) \Bigg|_1^{e^2} \right)
           </mrow>
           <mrow>
-            \amp = \int_0^{4\pi} \sqrt{t^2 (\cos^2 t + \sin^2 t) +
-            (\cos^2 t + \sin^2 t)} dt 
-          </mrow>
-          <mrow>
-            \amp = \int_0^{4\pi} \sqrt{t^2 + 1} 
-          </mrow>
-          <mrow>
-            \amp = \frac{t}{2} \sqrt{1 + t^2} +
-            \frac{1}{2} \ln \left| t + \sqrt{1 + t^2} \right|
-            \Bigg|_0^{4\pi} 
-          </mrow>
-          <mrow>
-            \amp = 2\pi \sqrt{1 + 16\pi^2} + \frac{1}{2} \ln \left(
-            4\pi + \sqrt{1 + 16\pi^2} \right) 
+            \amp = \pi \left( 2e^2 - (2 e^2 - 2 e^2 - 0 + 2)
+            \Bigg|_1^{e^2} \right) = (2e^2 - 2)\pi 
           </mrow>
         </md>
       </solution>
@@ -191,431 +89,127 @@
     <activity>
       <statement>
         <p>
-          This parametric curve is a parabola.
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = (t, at^2) \amp \amp t \in [0,5]
-          </mrow>
-        </md>
-        <p>
-          Calculate <m>\frac{dy}{dx}</m> and identify some points
-          with vertical tangents. Then calculate the length of the
-          curve. You can use the same antiderivative as the previous
-          question. 
+          Calculate the volume of a tetrahedron of side length
+          <m>a</m>. (This is a particularly difficult activity; feel
+          free to attempt it, but don't be discouraged if you don't
+          make easy progress.) 
         </p>
       </statement>
       <solution>
-        <figure xml:id="figure-parametric-activity3">
-          <image xml:id="figure50" width="80%">
-            <asymptote>
-              size(16cm,10cm);
-              import contour;
-              import graph;
-              xaxis();
-              yaxis();
-
-              real x(real t) {return t;}
-              real y(real t) {return t^2/(10);}
-              
-              draw(graph(x,y,0,5));
-            </asymptote>
-          </image>
-        </figure>
         <p>
-          First I calcualte the derivatives of the two components.
-          Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope.
+          The geometry is difficult to set up, and there are many
+          approaches.  I set one of the faces to be the base. On
+          that face, I'll let <m>b</m> be the distance from a vertex of
+          that face to the centre of the same face. I can split this
+          face into three isoceles trianges, each of which has side
+          lengths <m>b</m>, <m>b</m> and <m>a</m>, with angles
+          <m>\pi/6</m>, <m>\pi/6</m> and <m>2\pi/3</m>. I apply the
+          sine law to this triangle.
         </p>
-        <md>
-          <mrow>
-            \frac{dx}{dt} \amp = 1 
-          </mrow>
-          <mrow>
-            \frac{dy}{dt} \amp = 2at 
-          </mrow>
-          <mrow>
-            \frac{dy}{dx} \amp = 2at
-          </mrow>
-        </md>
+        <me>
+          \frac{a}{\sin \frac{2\pi}{3}} = \frac{b}{\sin \frac{\pi}{6}}
+          \implies \frac{a}{\frac{\sqrt{3}}{2}} = \frac{1}{2} 
+        </me>
         <p>
-          There are vertical tangents whenever the denominator of
-          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
-          not. However, this denominator never vanishes, so there are
-          no vertical tangents. 
+          This implies <m>b = \frac{a}{\sqrt{3}}</m>. Then there is a
+          right triangle whose vertical are one vertex of the base,
+          the centre of the base, and the top vertex. This triangle
+          has hypotenuese <m>a</m>, base <m>b</m> and height <m>c</m>
+          where <m>c</m> is the height of tetrahedron, from the center
+          of the base to the top vertex. Pythagorus allows me to
+          calculate c: <m>c = \sqrt{a^2 - b^2} = \sqrt{\frac{2}{3}}
+          a</m>.
         </p>
         <p>
-          I put the derviatives of the components into the length
-          formula and then calculate the resulting integral. Again, I
-          use the a known antiderivative from the tables for the
-          square root integral instead of doing the whole trig
-          substitution. I need to do a little bit of algebra,
-          factoring <m>4a^2</m> out of the square root, to make the
-          square root integral fit the expression on the table.
-        </p>
-        <md>
-          <mrow>
-            L \amp = \int_0^5 \sqrt{1 + 4a^2 t^2} dt 
-          </mrow>
-          <mrow>
-            \amp = \int_0^5 2a \sqrt{\frac{1}{4a^2} + t^2} dt 
-          </mrow>
-          <mrow>
-            \amp = 2a \left. \frac{1}{2} t \sqrt{\frac{1}{4a^2} + t^2}
-            + \frac{1}{8a^2} \ln \left( \sqrt{\frac{1}{4a^2} + t^2} +
-            t \right) \right|_0^5 
-          </mrow>
-          <mrow>
-            \amp = 5a \sqrt{\frac{1}{4a^2} + 25} + \frac{1}{8a^2} \ln
-            \left( \sqrt{ \frac{1}{4a^2} + 25} + 5 \right) -
-            \frac{1}{8a^2} \ln \left( \sqrt{\frac{1}{4a^2}} \right) 
-          </mrow>
-          <mrow>
-            \amp = \frac{5}{2} \sqrt{1 + 100a^2} + \frac{1}{8a^2} \ln
-            \left( \frac{1}{2a} \sqrt{1 + 100a^2} + 5 \right) +
-            \frac{1}{8a^2} \ln (2a)
-          </mrow>
-        </md>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          This parametric curve is called the astroid. 
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = (\cos^3 t, \sin^3 t) \amp \amp t \in [0, 2\pi]
-          </mrow>
-        </md>
-        <p>
-          Calculate <m>\frac{dy}{dx}</m> and identify some points
-          with vertical tangents. Then calculate the length of the
-          curve. 
-        </p>
-      </statement>
-      <solution>
-        <figure xml:id="figure-parametric-activity4">
-          <image xml:id="figure49" width="80%">
-            <asymptote>
-              size(16cm,10cm);
-              import contour;
-              import graph;
-              xaxis();
-              yaxis();
-
-              real x(real t) {return (cos(t))^3;}
-              real y(real t) {return (sin(t))^3;}
-
-              draw(graph(x,y,0,2*pi));
-            </asymptote>
-          </image>
-        </figure>
-        <p>
-          First I calcualte the derivatives of the two components.
-          Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope.
-        </p>
-        <md>
-          <mrow>
-            \frac{dx}{dt} \amp = 3 \cos^2 t \sin t 
-          </mrow>
-          <mrow>
-            \frac{dy}{dt} \amp = - 3 \sin^2 t \cos t 
-          </mrow>
-          <mrow>
-            \frac{dy}{dx} \amp = \frac{-\sin t}{\cos t} = - \tan t
-          </mrow>
-        </md>
-        <p>
-          There are vertical tangents whenever the denominator of
-          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
-          not. This happens when cosine vanishes, which is the two
-          parameter value <m>\frac{\pi}{2}</m> and
-          <m>\frac{3\pi}{2}</m>. (These are the known asymptote values
-          for tangent.)
+          I'm going to slice the tetrahedron with horizontal plane
+          slices, stacked vertical. The previous calculation for
+          <m>c</m> gives us a bound for integration, so the integral
+          goves from <m>0</m> to <m>\sqrt{\frac{2}{3}}a</m>.  I'll
+          work with the variable <m>h</m> for height. Because it is
+          convenient, I'll say that <m>h</m> starts at zero at the top
+          vertex, and goes to <m>\sqrt{\frac{2}{3}}a</m> at the base.
         </p>
         <p>
-          I put the derviatives of the components into the length
-          formula and then calculate the resulting integral. I use the
-          trig identity <m>\sin^2 t + \cos^2 t = 1</m> to simplify the
-          integrand. 
-        </p>
-        <md>
-          <mrow>
-            L \amp = \int_0^{2\pi} 3 \sqrt{\cos^4 t \sin^2 t + \sin^4
-            t \cos^2 t} dt 
-          </mrow>
-          <mrow>
-            \amp = 3 \int_0^{2\pi} \sqrt{ \sin^2 t \cos^2 t (\cos^2 t
-            + \sin^2 t)} dt 
-          </mrow>
-          <mrow>
-            \amp = \int_0^{2\pi} 3 |\sin t \cos t| dt 
-          </mrow>
-          <mrow>
-            \amp = \int_0^{2\pi} \frac{3}{2} |\sin 2t| dt 
-          </mrow>
-        </md>
-        <p>
-          This is a bit tricky due to the absolue value. However, I
-          can use a symmetry argument. The expression <m>\sin 2t</m>
-          makes two periods over this domain. Each period has an area
-          above the axis and an area below, each for half a period.
-          The absolute value puts these areas above the axis. Over two
-          periods, there are four such areas, all with the same shape.
-          So I can integrate over the first quarter of this domain and
-          multiply by 4. That lets me drop the absolute value.
-        </p>
-        <md>
-          <mrow>
-            \amp = 4 \int_0^{\frac{\pi}{2}} \frac{3}{2} \sin 2t dt = 6
-            \int_0^{\frac{\pi}{2}} \sin 2t dt = 6 \left. \frac{-\cos
-            2t}{2} \right|_0^{\frac{\pi}{2}} = 6 \left( \frac{1}{2} +
-            \frac{1}{2} \right) = 6
-          </mrow>
-        </md>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          This parametric curve is the cardiod.
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = (2 \cos t - \cos 2t,2 \sin t - \sin 2t) \amp
-            \amp t \in [0,2\pi]
-          </mrow>
-        </md>
-        <p>
-          Calculate <m>\frac{dy}{dx}</m> and identify some points
-          with vertical tangents. Then calculate the length of the
-          curve. 
-        </p>
-      </statement>
-      <solution>
-        <figure xml:id="figure-parametric-activity5">
-          <image xml:id="figure51" width="80%">
-            <asymptote>
-              size(16cm,10cm);
-              import contour;
-              import graph;
-              xaxis();
-              yaxis();
-
-              real x(real t) {return 2*cos(t) - cos(2*t);}
-              real y(real t) {return 2*sin(t) - sin(2*t);}
-
-              draw(graph(x,y,0,2*pi));
-            </asymptote>
-          </image>
-        </figure>
-        <p>
-          First I calcualte the derivatives of the two components.
-          Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope.
-        </p>
-        <md>
-          <mrow>
-            \frac{dx}{dt} \amp = -2 \sin t + 2 \sin 2t 
-          </mrow>
-          <mrow>
-            \frac{dy}{dt} \amp = 2 \cos t - 2 \cos 2t 
-          </mrow>
-          <mrow>
-            \frac{dy}{dx} \amp = \frac{\cos t - \cos2t}{-\sin t + \sin 2t}
-          </mrow>
-        </md>
-        <p>
-          There are vertical tangents whenever the denominator of
-          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
-          not. I can use a double angle identity to change the
-          denominator to <m>(-\sin t + 2 \sin t \cos t)</m> and then
-          factor out of sine to get <m>\sin t(-1 + 2\cos t)</m>. The
-          zeros of the demonimator are the zeros of the sine function
-          (all multiples of <m>\pi</m>) and <m>\cos t =
-          \frac{1}{2}</m> ( in this range <m>\frac{\pi}{3}</m> and
-          <m>\frac{5\pi}{3}</m>). I have to reject <m>t = 0</m>, since
-          that is also a zero of the numerator and the limit of the
-          slope is not infinity, but there is a vertical tangent at
-          <m>t = \pi</m>. Similarly, since they are not zero of the
-          numerator, there are vertical tangents at
-          <m>\frac{\pi}{3}</m> and <m>\frac{5\pi}{3}</m> as well. 
+          I have to do some geometry to find the area of each slice.
+          slice. Each slice is an equilateral triangle, but what is
+          the side length (depending on <m>h</m>)? Recall the base
+          triangle: it has side length <m>a</m> when <m>h =
+          \sqrt{\frac{2}{3}}a</m>. This side length increases linearly
+          from <m>0</m> when <m>h=0</m> to <m>a</m> when <m>h =
+          \sqrt{\frac{2}{3}}a</m>. The final result gives the solve of
+          the linear relationship.  Therefore, for <m>h \in [0,
+          \sqrt{\frac{2}{3}}a ]</m>, the side length of the triangle
+          at height <m>h</m> is <m>\sqrt{\frac{3}{2}}h</m>.
         </p>
         <p>
-          I put the derviatives of the components into the length
-          formula and then calculate the resulting integral. The
-          integral simplifies using trig identities. After taking the
-          square root, I can use the same argument as the previous
-          question to get rid of the absolute value by integration
-          over a quarter of the domain and multiplying by 4. 
+          An equilateral triangle with side length <m>s</m> is
+          <m>\frac{\sqrt{3}a^2}{4}</m>. This gives the area of each
+          slice. 
         </p>
-        <md>
-          <mrow>
-            \amp L = 
-          </mrow>
-          <mrow>
-            \amp \int_0^{2\pi} \sqrt{ 4 \sin ^2 t - 8 \sin t \sin
-            2t + 4 \sin^2 2t + 4 \cos^2 2t - 8 \cos t \cos2t + 4\cos^2
-            t} dt 
-          </mrow>
-          <mrow>
-            \amp = \int_0^{2\pi} \sqrt{ 4 + 4 - 8 \sin t (2 \sin t
-            \cos t) - 8 \cos t (\cos^2 t - \sin^2 t)} dt
-          </mrow>
-          <mrow>
-            \amp = \int_0^{2\pi} \sqrt{8 - 16 \sin^2 t \cos t - 8
-            \cos^3 t + 8 \sin^2 t \cos t} dt 
-          </mrow>
-          <mrow>
-            \amp = \int_0^{2\pi} \sqrt{8 - 8 \cos t (\sin^2 t + \cos^2
-            t)} dt 
-          </mrow>
-          <mrow>
-            \amp = \sqrt{8} \int_0^{2\pi} \sqrt{1-\cos t} dt =
-            \sqrt{8} \int_0^{2\pi} \sqrt{ 2 \sin^2 2t} dt 
-          </mrow>
-          <mrow>
-            \amp 4 \int_0^{2\pi} |\sin 2t| dt = 4 \cdot 4
-            \int_0^{\frac{\pi}{2}} \sin 2t dt 
-          </mrow>
-          <mrow>
-            \amp = 16 \left. \frac{-\cos 2t}{2}
-            \right|_0^{\frac{\pi}{2}} = 8 \left( \cos 0 - \cos
-            \frac{\pi}{2} \right) = 8
-          </mrow>
-        </md>
+        <me>
+          A = \frac{\sqrt{3}}{4} \left( \sqrt{ \frac{3}{2}} h
+          \right)^2 = \frac{\sqrt{3}}{4} \frac{3}{2} h^2 =
+          \frac{3\sqrt{3}h^2}{8}
+        </me>
+        <p>
+          Then I can setup the integral of the slices. 
+        </p>
+        <me>
+          V = \int_0^{\sqrt{\frac{3}{2}}a} A(h) dh =
+          \int_0^{\sqrt{\frac{3}{2}}a}  \frac{3\sqrt{3}h^2}{8} dh
+        </me>
+        <p>
+          This is a reasonable polynomial integral.
+        </p>
+        <me>
+          V = \frac{3\sqrt{3}}{8} \int_0^{\sqrt{\frac{3}{2}}a} h^2 dh
+          = \frac{3\sqrt{3}}{8} \frac{h^3}{3}
+          \Bigg|_0^{\sqrt{\frac{3}{2}}a}  
+          = \frac{\sqrt{3}}{8} \left( \sqrt{\frac{2}{3}} a \right)^3
+          = \frac{\sqrt{3}}{8} \frac{2\sqrt{2}}{3\sqrt{3}} a^3 =
+          \frac{a^3}{6\sqrt{2}}
+        </me>
       </solution>
     </activity>
   </subsection>
-  <subsection xml:id="subsection-activity-parametric-curves2">
-    <title>Parametric Curves - Parametrization by Arclenth</title>
+  <subsection xml:id="subsection-activity-volumes-shells">
+    <title>Volume by Shells</title>
     <activity>
       <statement>
         <p>
-          This parametric curve is the quadratic spiral. 
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = (t^2 \cos t, t^2 \sin t) \amp \amp t \in [0,
-            \infty)
-          </mrow>
-        </md>
-        <p>
-          Parametrize the curve by arclength. 
+          Calculate the volume of the object formed by taking the
+          triangle with vertices <m>(3,0)</m>, <m>(5,0)</m> and
+          <m>(3,4)</m> and rotating it about the <m>y</m> axis. 
         </p>
       </statement>
       <solution>
-        <figure xml:id="figure-parametric-activity6">
-          <image xml:id="figure45" width="80%">
-            <asymptote>
-              size(16cm,10cm);
-              import contour;
-              import graph;
-              xaxis();
-              yaxis();
-
-              real x(real t) {return t^2*cos(t);}
-              real y(real t) {return t^2*sin(t);}
-
-              draw(graph(x,y,0,4*pi));
-            </asymptote>
-          </image>
-        </figure>
         <p>
-          I follow the three part algorithm presented in the notes and
-          the videos. First I setup the integral to calculate the
-          arclength suntion. I need the two derivatives of the
-          components, which I then put into the square root term of
-          the integral. The integral gets pretty messy. 
+          I need to determine the function to use for cylindrical
+          shells. The height of the triangle over the <m>x</m> axis is
+          given by the diagonal line from <m>(3,4)</m> to <m>(5,0)</m>. 
+          That line has equation <m>y = -2x + 10</m>.
+          Therefore, I can take <m>f(x) = -2x + 10</m> as the function.
+          The function is the height of the cylinder, and its
+          circumference is <m>2\pi x</m>. Its area is <m>2\pi x
+          f(x)</m>. Then I set up the integral. The resulting integral
+          is a reasonable polynomial integral. 
         </p>
         <md>
           <mrow>
-            \frac{dx}{dt} \amp = 2 t \cos t - t^2 \sin t 
+            V \amp = \int_a^b 2\pi x f(x) dx = \int_3^5 2\pi x (-2x +
+            10) dx
           </mrow>
           <mrow>
-            \frac{dy}{dt} \amp = 2 t \sin t + t^2 \cos t 
-          </mrow>
-        </md>
-        <p>
-          I'll calculate the sum of the square of the derivative by
-          itself and then insert it into the arclength integral. After
-          expanding the squares, several terms cancel. Then, after
-          factoring and grouping, trig identities help me make more
-          simplifications. 
-        </p>
-        <md>
-          <mrow>
-            \left( \frac{dx}{dt} \right)^2  \amp = 4t^2 \cos^2 t -
-            4t^3 \cos t \sin t + t^4 \sin^2 t 
+            \amp = -4\pi \int_3^5 x^2 dx + 20 \pi \int_3^5 x dx =
+            \frac{-4\pi x^3}{3} \Bigg|_3^5 + \frac{20\pi x^2}{2}
+            \Bigg|_3^5 
           </mrow>
           <mrow>
-            \left( \frac{dy}{dt} \right)^2 \amp = 4t^2 \sin^2 t + 4t^3
-            \cos t \sin t + t^4 \cos t du 
+            \amp = \frac{-4\pi}{3} (125 - 27) + 10 \pi (25 - 9) =
+            \frac{-4\pi (98)}{3} + 10 \pi (16) 
           </mrow>
           <mrow>
-            \left( \frac{dx}{dt} \right)^2 + \left( \frac{dy}{dx}
-            \right)^2 \amp = 4t^2 (\cos^2 t + \sin^2 t) + t^4(\cos^2 t
-            + \sin^2 t)
-          </mrow>
-          <mrow>
-            \amp = 4t^2 + t^4 = t^2(4+t^2) 
-          </mrow>
-          <mrow>
-            s(t) \amp = \int_0^t u \sqrt{4+u^2} du 
-          </mrow>
-        </md>
-        <p>
-          Since there is a <m>u</m> outside the square root, this
-          looks likes a reasonable substitution using <m>v = 4 +
-          u^2</m> with <m>d = 2u du</m>. I also change the bounds so
-          that I don't have to do the reverse substitution.
-        </p>
-        <md>
-          <mrow>
-            s \amp = \int_4^{4+t^2} \frac{\sqrt{v}}{2} dv = 
-            \frac{v^{\frac{3}{2}}}{3} \Bigg|_4^{4+t^2} =
-            \frac{(4+t^2)^\frac{3}{2}}{3} - \frac{8}{3} 
-          </mrow>
-        </md>
-        <p>
-          Then I invert the arclength function.
-        </p>
-        <md>
-          <mrow>
-            s + \frac{8}{3} \amp = \frac{(4+t^2)^\frac{3}{2}}{3}
-          </mrow>
-          <mrow>
-            3s + 8 \amp = (1+t^2)^\frac{3}{2} 
-          </mrow>
-          <mrow>
-            \left( 3s + 8 \right)^\frac{2}{3} \amp = 4+t^2 
-          </mrow>
-          <mrow>
-            \left( 3s + 8 \right)^\frac{2}{3} - 4 \amp = t^2 
-          </mrow>
-          <mrow>
-            \sqrt{\left( 3s + 8 \right)^\frac{2}{3} -4} \amp = t 
-          </mrow>
-          <mrow>
-            t(s) \amp = \sqrt{\left( 3s + 8 \right)^\frac{2}{3} -4} 
-          </mrow>
-        </md>
-        <p>
-          Finally, I replace the original parameter <m>t</m> with
-          <m>t(s)</m> from the inversion calculation.
-        </p>
-        <md>
-          <mrow>
-            \gamma(s) \amp = \left( \left( \left( 3s + 8
-            \right)^\frac{2}{3} -4 \right) \cos \left( \sqrt{\left( 3s
-            + 8 \right)^\frac{2}{3} -4} \right), \right.
-          </mrow>
-          <mrow>
-            \amp \left. \left( \left( 3s + 8 \right)^\frac{2}{3} -4
-            \right) \sin \left( \sqrt{\left( 3s + 8
-            \right)^\frac{2}{3} -4} \right) \right) 
+            \amp = \frac{(-392 + 480)\pi}{3} = \frac{88\pi}{3}
           </mrow>
         </md>
       </solution>
@@ -623,298 +217,33 @@
     <activity>
       <statement>
         <p>
-          This parametric curve is an alternate parametrization of the
-          circle. 
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = \left( \frac{\cos t - \sin t}{\sqrt{2}},
-            \frac{\cos t + \sin t}{\sqrt{2}} \right) \amp \amp t \in
-            \left[ \frac{-\pi}{4}, \frac{7\pi}{4} \right]
-          </mrow>
-        </md>
-        <p>
-          Parametrize the curve by arclength. 
+          Calculate the volume of the object formed by taking the 
+          graph of <m>\sin x</m> with <m>x \in [0,\pi]</m> and
+          rotating it about the <m>y</m> axis. 
         </p>
       </statement>
       <solution>
         <p>
-          I follow the three part algorithm presented in the notes and
-          the videos. First I setup the integral to calculate the
-          arclength suntion. I start with the derivatives and then put
-          them into the square root term in the arclength integral.
+          The function <m>f(x) = \sin (x)</m> gives the height of the
+          cylindrical shells. The radius is <m>x</m>, so the
+          circumference of the shell is <m>2\pi x</m> and the area is
+          <m>2\pi x \sin x</m>.  Then I integrate in <m>x</m> over the
+          range <m>[0, \pi]</m>. In the integral, I use integration by
+          parts with <m>g(x) = x</m> and <m>\frac{df}{dx} = \sin
+          x</m>, so that <m>\frac{dg}{dx} = 1</m> and <m>f = -\cos
+          x</m>.
         </p>
         <md>
           <mrow>
-            \frac{dx}{dt} \amp = \frac{1}{\sqrt{2}} \left( - \sin t -
-            \cos t \right) 
+            V \amp = \int_a^b 2\pi x f(x) dx = \int_0^{\pi} 2\pi x
+            \sin x dx 
           </mrow>
           <mrow>
-            \frac{dy}{dx} \amp = \frac{1}{\sqrt{2}} \left( - \sin t +
-            \cos t \right) 
-          </mrow>
-          <mrow>
-            \left( \frac{dx}{dt} \right)^2 \amp = \frac{1}{2} \left(
-            \sin^2 t + 2\cos t \sin t + \cos^2 t \right) 
-          </mrow>
-          <mrow>
-            \left( \frac{dy}{dx} \right)^2 \amp = \frac{1}{2} \left(
-            \sin^2 t - 2 \cos t \sin t + \cos^2 t \right) 
-          </mrow>
-          <mrow>
-            \left( \frac{dx}{dy} \right)^2 +  \left( \frac{dy}{dx}
-            \right)^2 \amp = \frac{1}{2} \left( 2\sin^2 t + 2\cos^2 t
-            \right) = \frac{2}{2} = 1 
+            \amp = 2\pi \left[ -x \cos x \Bigg|_0^{\pi} +
+            \int_0^{\pi} \cos x dx \right] = 2 \pi \left[ -\pi (-1) +
+            0 \cdot 1 - \sin x \Bigg|_0^{\pi} \right] = 2\pi^2
           </mrow>
         </md>
-        <p>
-          When calculating the sums of the square roots, I get some
-          nice cancellations. What remains can be reduced to a
-          constant with trig identities. That leaves a reasonably easy
-          arclength integral.
-        </p>
-        <md>
-          <mrow>
-            s(t) \amp = \int_{\frac{-\pi}{4}}^t du = u 
-            \Bigg|_{\frac{-\pi}{4}}^t = t + \frac{\pi}{4} 
-          </mrow>
-          <mrow>
-            s(t) \amp = t + \frac{\pi }{4} 
-          </mrow>
-        </md>
-        <p>
-          Then I invert the arclength function.
-        </p>
-        <md>
-          <mrow>
-            s - \frac{\pi }{4} \amp = t \implies t = s + \frac{\pi}{4}
-          </mrow>
-        </md>
-        <p>
-          Finally, I replace the original parameter <m>t</m> with
-          <m>t(s)</m> from the inversion calculation. I could directly
-          replace <m>t</m>, but if I make use of the some identities
-          for sums and differences, I get a more succinet form of the
-          reparametrized curve. 
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) \amp = \left( \frac{\cos t - \sin t}{\sqrt{2}},
-            \frac{\cos t + \sin t}{\sqrt{2}} \right) = \left(
-            \frac{1}{\sqrt{2}} \sqrt{2} \sin \left( \frac{\pi}{4} - t
-            \right), \frac{1}{\sqrt{2}} \sqrt{2} \sin \left(
-            \frac{\pi}{4} + t \right) \right) 
-          </mrow>
-        </md>
-        <p>
-          Now I replace <m>t</m> with <m>s + \frac{\pi}{4}</m>.
-        </p>
-        <md>
-          <mrow>
-            \gamma (s) \amp = \left( \sin \left( \frac{\pi}{4} - t
-            \right), \sin \left( \frac{\pi}{4} + t \right) \right) 
-          </mrow>
-          <mrow>
-            \amp = \left( \sin \left( \frac{\pi}{4} - s +
-            \frac{\pi}{4} \right), \sin \left( \frac{\pi}{4} + s -
-            \frac{\pi}{4} \right) \right)
-          </mrow>
-          <mrow>
-            \amp = \left( \sin \left( -s + \frac{\pi}{2} \right), \sin
-            (s) \right) = (\cos (-s), \sin (s)) = (\cos s, \sin s)
-          </mrow>
-        </md>
-        <p>
-          At the end of all this work, I have just recovered the most
-          basic parametrization of the circle. However, this makes
-          sense, since each curve has only one parametrization by
-          arclength. Starting with any parametrization of the circle,
-          the algorithm should produce this same answer as the
-          parametrization by arclength. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          This parametric curve is an alternate parametrization of the
-          half-circle.
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = \left( \frac{1-t^2}{1+t^2}, \frac{2t}{1+t^2}
-            \right) \amp \amp t \in [0, \infty)
-          </mrow>
-        </md>
-        <p>
-          Parametrize the curve by arclength. 
-        </p>
-      </statement>
-      <solution>
-        <p>
-          I follow the three part algorithm presented in the notes and
-          the videos. First I setup the integral to calculate the
-          arclength suntion. I calculate the two derivatives and them
-          put them into the square root term in the arclength
-          integral. 
-        </p>
-        <md>
-          <mrow>
-            \frac{dx}{dt} \amp = \frac{(1+t^2)(-2t) -
-            2t(1-t^2)}{(1+t^2)^2} = \frac{-4t}{(1+t^2)^2} .
-          </mrow>
-          <mrow>
-            \frac{dy}{dt} \amp = \frac{(1+t^2)(2) - 2t(2t)}{(1+t^2)^2}
-            = \frac{2-2t^2}{(1+t^2)^2} 
-          </mrow>
-          <mrow>
-            s(t) \amp = \int_0^t \frac{1}{(1+u^2)^2} \sqrt{16u^2 + 4 -
-            8u^2 + 4u^4} du 
-          </mrow>
-          <mrow>
-            \amp = \int_0^t \frac{1}{(1+u^2)^2} \sqrt{4 + 8
-            u^2 + 4u^4} du 
-          </mrow>
-          <mrow>
-            \amp = \int_0^t \frac{1}{(1+u^2)^2} 2 \sqrt{(1+u^2)^2} du
-            = \int_0^t \frac{2}{1+u^2} du 
-          </mrow>
-          <mrow>
-            \amp = 2 \arctan u \Big|_0^t = 2 \arctan t 
-          </mrow>
-        </md>
-        <p>
-          Then I invert the arclength function.
-        </p>
-        <md>
-          <mrow>
-            t \amp = \tan \frac{s}{2} 
-          </mrow>
-        </md>
-        <p>
-          Finally, I replace the original parameter <m>t</m> with
-          <m>t(s)</m> from the inversion calculation.
-        </p>
-        <md>
-          <mrow>
-            \gamma(s) \amp = \left( \frac{1-\tan^2 \left( \frac{s}{2}
-            \right) }{1 + \tan^2 \left( \frac{s}{2} \right)}, \frac{2
-            \tan \left( \frac{s}{2} \right)}{1 + \tan^2 \left(
-            \frac{s}{2} \right)} \right) = \left( \frac{1-\tan^2
-            \left( \frac{s}{2} \right) }{\sec^2 \left( \frac{s}{2}
-            \right)}, \frac{2 \tan \left( \frac{s}{2} \right)}{\sec^2
-            \left( \frac{s}{2} \right)} \right) 
-          </mrow>
-          <mrow>
-            \amp = \left( \cos^2 \left( \frac{s}{2} \right) - \sin^2
-            \left( \frac{s}{2} \right), 2 \sin \left( \frac{s}{2}
-            \right) \cos \left( \frac{s}{2} \right) \right) = ( \cos
-            s, \sin s)
-          </mrow>
-        </md>
-        <p>
-          After this use of the double-angle identities, I do recover
-          the simple parametriztaion of the circle.
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          This parametric curve is the quadrifolium. 
-        </p>
-        <md>
-          <mrow>
-            \gamma(t) = (\cos t \sin 2t, \sin t \sin 2t) \amp \amp t \in
-            [0, 2\pi]
-          </mrow>
-        </md>
-        <p>
-          Parametrize the curve by arclength. (Go as far as you can
-          with the process for this question; the integral that
-          results is not actually solvable by elementary functions.) 
-        </p>
-      </statement>
-      <solution>
-        <figure xml:id="figure-parametric-activity7">
-          <image xml:id="figure46" width="80%">
-            <asymptote>
-              size(16cm,10cm,IgnoreAspect);
-              import contour;
-              import graph;
-              xaxis();
-              yaxis();
-
-              real x(real t) {return cos(t)*sin(2*t);}
-              real y(real t) {return sin(t)*sin(2*t);}
-
-              draw(graph(x,y,0,2*pi));
-            </asymptote>
-          </image>
-        </figure>
-        <p>
-          I follow the three part algorithm presented in the notes and
-          the videos. First I setup the integral to calculate the
-          arclength suntion. I calculate the derivatives of the
-          coordinates and put those into the square root in the
-          arclength integral. Some trig identities help to simplify
-          the expressions. 
-        </p>
-        <md>
-          <mrow>
-            \frac{dx}{dt} \amp = - \sin t \sin 2t + 2 \cos t \cos 2t 
-          </mrow>
-          <mrow>
-            \frac{dy}{dt} \amp = \cos t \sin 2t + 2 \sin t \cos 2t 
-          </mrow>
-          <mrow>
-            \left( \frac{dx}{dt} \right)^2 \amp = \sin^2 t \sin^2 2t -
-            4 \sin t \cos t \sin 2t \cos 2t + 4 \cos^2 t \cos^2 2t 
-          </mrow>
-          <mrow>
-            \left( \frac{dy}{dt} \right)^2 \amp = \cos^2 t \sin^2 2t +
-            + 4 \cos t \sin t \cos 2t \sin 2t + 4 \sin^2 t \cos^2 2t 
-          </mrow>
-        </md>
-          When I add the squares of the two derivatives, the middle
-          terms cancel. Let me work with the remaining four terms to
-          simplify with trig identities. I notice that I can factor
-          out the terms with <m>(2t)</m> inside the trig functions and
-          use the square identity for sine a cosine.
-        <md>
-          <mrow>
-            \amp \sqrt{ \left( \frac{dx}{dt} \right)^2 + \left(
-            \frac{dy}{dt} \right)^2 }
-          </mrow>
-          <mrow>
-            \amp = \sqrt{ \sin^2 t \sin^2 2t + 4 \cos^2 t \cos^2 2t +
-            \cos t \sin 2t + 4 \sin^2t \cos^2 2t}
-          </mrow>
-          <mrow>
-            \amp = \sqrt{\sin^2 2t(\sin^2 t + \cos^2 t) + 4 \cos^2 2t
-            (\sin^2 t + \cos^2 t)} 
-          </mrow>
-          <mrow>
-            \amp = \sqrt{\sin^2 2t + \cos^2 2t + 3 \cos^2 2t}
-          </mrow>
-          <mrow>
-            \amp = \sqrt{1 + 3 \cos^2 2t}
-          </mrow>
-          <mrow>
-            s(t) \amp = \int_0^t ds = \int_0^t \sqrt{1 + 3 \cos^2 2u} du
-          </mrow>
-        </md>
-        <p>
-          This is an elliptic integral, of the same style as the
-          elliptic integral that results from the calculation of the
-          perimeter of an ellipse. Such integrals do not have
-          elementary anti-derivatives, so short of inventing a new
-          function, I am not able to proceed. Theoretically, the
-          inverse of the function does exist and I could invent a name
-          for it to finish the process. But that name doesn't do much
-          without an investigation of the properties of the unknown
-          function.
-        </p>
       </solution>
     </activity>
   </subsection>
@@ -923,17 +252,14 @@
     <p>
       <ul>
         <li>
-          How does a parametric curve differ from a locus?
+          What is a surface of revolution?
         </li>
         <li>
-          How can the same shape have multiple parametrizations?
+          Why are integrals used to calculate volumes? 
         </li>
         <li>
-          What does it mean to reparametrize a curve?
-        </li>
-        <li>
-          What is the parametrization by arclength and why is it
-          important?
+          What is different about shells and slices as ways of
+          calculating volumes? 
         </li>
       </ul>
     </p>

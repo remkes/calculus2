@@ -1,8 +1,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
   xml:id="chapter-week1">
   <title>Week 1</title>
-  <xi:include href="numbers.ptx" />
-  <xi:include href="theorems.ptx" />
-  <xi:include href="epsilon-delta.ptx" />
+  <xi:include href="hyperbolics.ptx" />
+  <xi:include href="implicit-derivatives.ptx" />
   <xi:include href="week1-activity.ptx" />
 </chapter>

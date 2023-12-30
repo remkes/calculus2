@@ -1,345 +1,545 @@
 <section xml:id="section-week11-activity">
   <title>Week 11 Activity</title>
-  <subsection xml:id="subsection-activity-alternating-series">
-    <title>Alternating Series</title>
+  <subsection xml:id="subsection-activity-radius-convergence">
+    <title>Power Series</title>
     <activity>
       <statement>
         <p>
-          Use the alternating series to test this series for
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{n}{n^3 + 1} x^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero. I need to simplify
+          the nested fraction, expand the cubed binomial, and evaluate
+          the limit asymptotically.
+        </p>
+        <md>
+          <mrow>
+            R \amp = \lim_{n \rightarrow \infty} \left|
+            \frac{c_n}{c_{n+1}} \right| 
+          </mrow>
+          <mrow>
+            \amp = \lim_{n \rightarrow \infty} \left|
+            \frac{\frac{n}{n^3+1}}{\frac{(n+1)}{(n+1)^3+1}} \right| 
+          </mrow>
+          <mrow>
+            \amp = \lim_{n \rightarrow \infty} 
+            \frac{n((n+1)^3+1}{(n+1)(n^3+1)} = \lim_{n \rightarrow
+            \infty} \frac{n^4 + 3n^3 + 2n + 2}{n^4 + n^3 + n + 1} = 1 
+          </mrow>
+        </md>
+        <p>
+          The radius of convergence is <m>R = 1</m>. Since the centre
+          point is <m>\alpha = -</m>, the domain of definition is
+          <m>(-1,0)</m>.     
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{1}{n!} (x-4)^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero.
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{1}{n!}}{\frac{1}{(n+1)!}} \right| = \lim_{n
+          \rightarrow \infty} \frac{(n+1)!}{n!} = \lim_{n \rightarrow
+          \infty} n = \infty
+        </me>
+        <p>
+          The radius of convergence is <m>R = \infty</m>. The domain
+          of definition is all real numbers. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{(-1)^n}{n} (x-3)^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero.
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{(-1)^n}{n}}{\frac{(-1)^{n+1}}{n+1}} \right| =
+          \lim_{n \rightarrow \infty} \frac{n+1}{n} = 1
+        </me>
+        <p>
+          The radius of convergence is <m>R = 1</m>. Since the centre
+          point is <m>\alpha = 3</m>, the domain of definition is
+          <m>(2,4)</m>.     
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty (\ln n) x^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero. I'll use
+          L'Hôpital's rule for this limit, which conveniently gets
+          rid of the logarithms. (The limit has type
+          <m>\frac{\infty}{\infty}</m>, so L'Hôpital's rule is
+          justified.
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left| \frac{\ln
+          n}{\ln (n+1)} \right| = \lim_{n \rightarrow \infty}
+          \frac{\frac{1}{n}}{\frac{1}{n+1}} = \lim_{n \rightarrow
+          \infty} \frac{n+1}{n} = 1
+        </me>
+        <p>
+          The radius of convergence is <m>R = 1</m>. Since the centre
+          point is <m>\alpha = 0</m>, the domain of definition is
+          <m>(-1,1)</m>.     
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{1}{n!} x^{2n} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          This series has only even terms; all the odd terms are zero.
+          Since there are even terms, a direct use of either the limit
+          calculation for the radius of convergence or the ratio test
+          leads to division by zero problems. However, I can adjust a
+          bit. I can think of this as a power series in <m>x^2</m>. If
+          I do that, then all the terms are non-zero and I can use the
+          limit. The result will give a radius that applies to
+          <m>x^2</m>. Here is the limit.
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{1}{n!}}{\frac{1}{(n_1)!}} \right| = \lim_{n
+          \rightarrow \infty} \frac{(n+1)!}{n!} = \lim_{n \rightarrow
+          \infty} n+1 = \infty
+        </me>
+        <p>
+          The radius of convergence is <m>R = \infty</m>. Therefore,
+          the series is defined everywhere. Technically, since I made
+          this a series in <m>x^2</m>, the limit shows that <m>x^2</m>
+          can be any real number. That immediatly implies that the
+          original input <m>x</m> can be any real number as well. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{n!(n+2)!}{(2n+3)!} (x+2)^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero. This limit is all
+          about factorial algebra. I'll simplify the nested fraction
+          and then group similar factorial terms together. Then I'll
+          cancel the factorials and look at the remaining polynomial
+          terms. 
+        </p>
+        <md>
+          <mrow>
+            R \amp = \lim_{n \rightarrow \infty} \left|
+            \frac{c_n}{c_{n+1}} \right| = \lim_{n \rightarrow \infty}
+            \frac{\frac{n!(n+2)!}{(2n+3)!}}{\frac{(n+1)!(n+3)!}{(2n+5)!}}
+          </mrow>
+          <mrow>
+            \amp = \lim_{n \rightarrow \infty} \frac{n!}{(n+1)!}
+            \frac{(n+2)!}{(n+3)!} \frac{(2n+5)!}{(2n+3)!} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{n \rightarrow \infty}
+            \frac{(2n+4)(2n+5)}{(n+1)(n+3)} 
+            = \lim{n \rightarrow \infty}
+            \frac{4n^2 + 18n + 20}{n^2 + 4n + 3} = 4 
+          </mrow>
+        </md>
+        <p>
+          After simplifying the factorial, the limit is a quadratic in
+          both the denominator and numerator. Since these have the
+          same asymptotic order, the limit is the ratio of the leading
+          coefficients.  The radius of convergence is <m>R = 4</m>.
+          Since the centre point is <m>\alpha = -2</m>, the domain of
+          definition is <m>(-6,2)</m>.     
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-taylor-series">
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = \cosh x</m> with
+          centre point <m>\alpha = 0</m>. Determine its radius of
           convergence. 
         </p>
-        <me>
-          \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n^3} 
-        </me>
       </statement>
       <solution>
         <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
+          First I need the derivatives of the function. I'll take the
+          first few derivatives.
+        </p>
+        <md>
+          <mrow>
+            f(x) \amp = \cosh x 
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \amp = \sinh x 
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \amp = \cosh x
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \amp = \sinh x 
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \amp = \cosh x
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \amp = \sinh x 
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \amp = \cosh x
+          </mrow>
+        </md>
+        <p>
+          Then I'll evaluate at the centre point. 
+        </p>
+        <md>
+          <mrow>
+            f(0) \amp = 1
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \Bigg|_{x=0} \amp = 0
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \Bigg|_{x=0} \amp = 1
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \Bigg|_{x=0} \amp = 0
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \Bigg|_{x=0} \amp = 1
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \Bigg|_{x=0} \amp = 0
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \Bigg|_{x=0} \amp = 1
+          </mrow>
+        </md>
+        <p>
+          Then I need to find a pattern. Here, the pattern is
+          relatively obvious: a sequences of alternating zeros and
+          ones. Only the even terms are non-zero, so I'll only write
+          the even terms in the final Taylor series. To write the even
+          terms, I use <m>(2n)</m> as <m>n \in \NN</m>.
         </p>
         <me>
-          \lim_{n \rightarrow \infty} \frac{1}{n^3} = 0 
+          \frac{d^{2n}}{dx^{2n}} f(x) \Bigg|_{x=0} = 1 
         </me>
         <p>
-          The limit of the terms is zero, so the series converges. 
+          After describing a pattern for the derivatives at the centre
+          point, I put that pattern into the standard form of the
+          Taylor series. 
+        </p>
+        <me>
+          f(x) = \sum_{n=0}^\infty \frac{1}{(2n)!} x^{2n} 
+        </me>
+        <p>
+          I take the limit of the ration of the coefficients to
+          determine the radius of convergence. (In this case, since
+          there are only even terms, the resulting radius will be a
+          bound on <m>x^2</m> instead of <m>x</m>.)
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{1}{n!}}{\frac{1}{(n+1)!}} \right| = \lim_{n
+          \rightarrow \infty} \frac{(n+1)!}{n!} = \lim_{n \rightarrow
+          \infty} n+1 = \infty
+        </me>
+        <p>
+          The radius of convergence for <m>x^2</m> is <m>R =
+          \infty</m>. Since <m>x^2</m> can be any real number,
+          <m>x</m> can also be any real number, to the radius of
+          convergence for the series is, indeed, infinity. 
         </p>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Use the alternating series to test this series for
+          Calculate the Taylor series for <m>f(x) = \frac{1}{x}</m>
+          with centre point <m>\alpha = 1</m>. Determine its radius of
           convergence. 
         </p>
-        <me>
-          \sum_{n=1}^\infty \frac{(-1)^{n+1}(n^2 + 3n + 4)}{4n^2 + 2n
-          + 4} 
-        </me>
       </statement>
       <solution>
         <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
+          First I need the derivatives of the function. I'll take the
+          first few derivatives.
+        </p>
+        <md>
+          <mrow>
+            f(x) \amp = \frac{1}{x} 
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \amp = \frac{-1}{x^2} 
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \amp = \frac{2}{x^3} 
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \amp = \frac{-(2)(3)}{x^4}
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \amp = \frac{(2)(3)(4)}{x^5} 
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \amp = \frac{-(2)(3)(4)(5)}{x^6}
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \amp = \frac{(2)(3)(4)(5)(6)}{x^7}
+          </mrow>
+        </md>
+        <p>
+          Then I'll evaluate at the centre point. 
+        </p>
+        <md>
+          <mrow>
+            f(1) \amp = 1
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \Bigg|_{x=1} \amp = -1
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \Bigg|_{x=1} \amp = 2
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \Bigg|_{x=1} \amp = -(2)(3)
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \Bigg|_{x=1} \amp = (2)(3)(4)
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \Bigg|_{x=1} \amp = -(2)(3)(4)(5)
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \Bigg|_{x=1} \amp = (2)(3)(4)(5)(6)
+          </mrow>
+        </md>
+        <p>
+          Then I need to find a pattern. The sign is alternating, so I
+          need a power of <m>(-1)</m>. Since the even terms are
+          positive, <m>(-1)^n</m> will work. After the sign, it looks
+          like I'm building a factorial. The degree of the derivative
+          matches the degree of the factorial. 
         </p>
         <me>
-          \lim_{n \rightarrow \infty} \frac{n^2 + 3n + 4}{4n^2 + 2n +
-          4} = \frac{1}{4}
+          \frac{d^n}{dx^n} f(x) \Bigg|_{x=1} = (-1)^n n!
         </me>
         <p>
-          This is an asymptotic analysis limit and the order is the
-          same in both numerator and denominator. The limit is the
-          ratio of the leading terms. Since the limit is not zero, the
-          series diverges by the alternating series test. 
+          After describing a pattern for the derivatives at the centre
+          point, I put that pattern into the standard form of the
+          Taylor series. 
+        </p>
+        <me>
+          f(x) = \sum_{n=0}^\infty \frac{(-1)^n n!}{n!} (x-1)^n =
+          \sum_{n=0}^\infty (-1)^n (x-1)^n 
+        </me>
+        <p>
+          I take the limit of the ration of the coefficients to
+          determine the radius of convergence.  
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{(-1)^n}{(-1)^{n+1}} \right| = \lim_{n \rightarrow
+          \infty} 1 = 1 
+        </me>
+        <p>
+          The radius of convergence is <m>R = 1</m>. 
         </p>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Use the alternating series to test this series for
+          Calculate the Taylor series for <m>f(x) = x^7 + 8x^6 - 19x^5
+          + 12x^4 + 3x^3 - 19x^2 + 4x + 41 </m> with
+          centre point <m>\alpha = 0</m>. Determine its radius of
           convergence. 
         </p>
-        <me>
-          \sum_{n=1}^\infty (-1)^{n+1} \sin ((2n+1)\pi) 
-        </me>
       </statement>
       <solution>
         <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} \sin ((2n+1)\pi) = \lim_{n
-          \rightarrow \infty} 0 = 0 
-        </me>
-        <p>
-          This is a limit of constant zeros, so it is certainly zero,
-          and the series converges. (Adds up to 0, in fact, since it
-          is just a sum of zeros!)
+          This is a bit of a trick question. A polynomial is already
+          in the form of a Taylor series centred at <m>\alpha =
+          0</m>. Since series representations are unique, there is no
+          other way to write this polynomial as a series. There is
+          nothing to do here. If you did do the steps, you would
+          recover exactly the same expression and you would find that
+          all coefficients for <m>x^8</m> and above would be zero. The
+          radius of convergence is <m>\infty</m>, since a polynomial
+          is defined everywhere. 
         </p>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Use the alternating series to test this series for
+          Calculate the Taylor series for <m>f(x) = \ln (x+3)</m> with
+          centre point <m>\alpha = 0</m>. Determine its radius of
           convergence. 
         </p>
-        <me>
-          \sum_{n=1}^\infty (-1)^{n+1} \sqrt{n} 
-        </me>
       </statement>
       <solution>
         <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
+          First I need the derivatives of the function. I'll take the
+          first few derivatives.
+        </p>
+        <md>
+          <mrow>
+            f(x) \amp = \ln (x+3)
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \amp = \frac{1}{x+3}
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \amp = \frac{-1}{(x+3)^2}
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \amp = \frac{2}{(x+3)^3} 
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \amp = \frac{-(2)(3)}{(x+3)^4}
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \amp = \frac{(2)(3)(4)}{(x+3)^5}
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \amp = \frac{-(2)(3)(4)(5)}{(x+3)^6}
+          </mrow>
+        </md>
+        <p>
+          Then I'll evaluate at the centre point. 
+        </p>
+        <md>
+          <mrow>
+            f(0) \amp = \ln 3 
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \Bigg|_{x=0} \amp = \frac{1}{3} 
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \Bigg|_{x=0} \amp = \frac{-1}{3^2} 
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \Bigg|_{x=0} \amp = \frac{2}{3^3} 
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \Bigg|_{x=0} \amp =
+            \frac{-(2)(3)}{3^4} 
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \Bigg|_{x=0} \amp =
+            \frac{(2)(3)(4)}{3^5} 
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \Bigg|_{x=0} \amp =
+            \frac{-(2)(3)(4)(5)}{3^6} 
+          </mrow>
+        </md>
+        <p>
+          Then I need to find a pattern. The signs are alternating and
+          the odd terms are positive, so I need <m>(-1)^{n+1}</m>. I
+          am buliding a factorial in the numerator, but the degree of
+          the factorial is one less than the degree of the
+          derivatives, so I'll need <m>(n-1)!</m>. Finally, there is a
+          power of <m>3</m> in the numerator and the exponent is the
+          same as the degree of the derivative. Also, the first
+          term doesn't fit the pattern, so I'll have to remember to
+          keep that term seperate. 
         </p>
         <me>
-          \lim_{n \rightarrow \infty} \sqrt{n} = \infty 
+          \frac{d^n}{dx^n} f(x) \Bigg|_{x=0} =
+          \frac{(-1)^{n+1}(n-1)!}{3^n} 
         </me>
         <p>
-          The limit of the terms is not zero, so the series diverges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Use the alternating series to test this series for
-          convergence. 
+          After describing a pattern for the derivatives at the centre
+          point, I put that pattern into the standard form of the
+          Taylor series. I need to remember that the first term
+          doesn't fit the pattern and must be written apart from the
+          sigma notation.
         </p>
         <me>
-          \sum_{n=1}^\infty (-1)^{n+1} \ln \left( \frac{1}{n} \right) 
+          f(x) = \ln 3 + \sum_{n=1}^\infty \frac{(-1)^{n+1}(n-1)!}{3^n
+          n!} x^n = \ln 3 + \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n3^n} x^n 
         </me>
-      </statement>
-      <solution>
         <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
+          I take the limit of the ration of the coefficients to
+          determine the radius of convergence.  
         </p>
         <me>
-          \lim_{n \rightarrow \infty} \ln \left( \frac{1}{n} \right) =
-          -\infty 
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{(-1)^{n+1}}{n3^n}}{\frac{(-1)^{n+2}}{(n+1)3^{n+1}}}
+          \right| = \lim_{n \rightarrow \infty}
+          \frac{(n+1)3^{n+1}}{n3^n} = \lim_{n \rightarrow \infty}
+          3 \frac{n+1}{n} = 3 
         </me>
         <p>
-          The limit of the terms is not zero, so the series is
-          divergent. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Use the alternating series to test this series for
-          convergence. 
-        </p>
-        <me>
-          \sum_{n=1}^\infty (-1)^{n+1} e^{-n} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} e^{-n} = 0 
-        </me>
-        <p>
-          The limit of the terms is zero, so the series is convergent. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{4}{1+n} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The asymptotic order of the terms is <m>\frac{1}{n}</m>,
-          which are the terms of the harmonic series. The hamornic
-          series diverges, so this series will also diverge by
-          asymptotic comparison. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=2}^{\infty} \frac{1}{n \ln n}
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I will use the integral test to deal with the logarithm. In
-          the resulting integral, I use a substitution <m>u = \ln
-          x</m> with <m> du = \frac{1}{x} dx</m>.
-        </p>
-        <me>
-          \int_2^\infty \frac{1}{x \ln x} dx = \int_{\ln 2}^\infty
-          \frac{1}{u} du = \lim_{a \rightarrow \infty} \ln u
-          \Bigg|_{\ln 2}^a = \lim_{a \rightarrow \infty} \ln a - \ln
-          (\ln 2) = \infty
-        </me>
-        <p>
-          The integral diverges, so the sum will also diverge. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{1 + 2^n + 4^n}{7^n} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I can split this up into three series using linearity. 
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{1}{7^n} 
-          + \sum_{n=1}^{\infty} \frac{2^n}{7^n} 
-          + \sum_{n=1}^{\infty} \frac{4^n}{7^n} 
-        </me>
-        <p>
-          All three of these are geometric series. The common ratios
-          are <m>\frac{1}{7}</m>. <m>\frac{2}{7}</m>, and
-          <m>\frac{4}{7}</m>. All the common ratios are less than one,
-          so all three series converge, and I conclude that the
-          original series also converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{\sqrt{n^6 + 7n^3 +
-          1}}{\sqrt[3]{n^9 + 3n}} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I consider the limit of the terms. 
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 7n^3 +
-          1}}{\sqrt[3]{n^9 + 3n}} 
-        </me>
-        <p>
-          The asymptotic order of the numerator is <m>\sqrt{n^6} =
-          n^3</m>. The asymptotic order of the denominator is
-          <m>\sqrt[3]{n^9} = n^3</m>. The limit here is the ratio of
-          the leading coefficients, since the asymptotic order of the
-          numerator is the same as the denominator. That ratio is 1.
-          The limit of the terms is not zero, so by the test for
-          divergence, the series diverges.
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{e^n}{n!} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          With factorials, I'll use the ratio test. I take the limit
-          of the ratio of the terms. In the limit, note how the
-          factorials cancal: <m>\frac{n!}{(n+1)!} = \frac{1}{n+1}</m>.  
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty}
-          \frac{\left| \frac{e^{n+1}}{(n+1)!} \right|}{\left|
-          \frac{e^n}{n!} \right|} = \lim_{n
-          \rightarrow \infty} \frac{n!}{(n+1)!} \frac{e^{n+1}}{e^n} =
-          \lim_{n \rightarrow \infty} \frac{e}{n+1} = 0 
-        </me>
-        <p>
-          The outcome of the ratio test is less than one, so the limit
-          converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} 2^{\frac{1}{n}}
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I look at the limit of the terms.
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} 2^{\frac{1}{n}} = 1 
-        </me>
-        <p>
-          The limit of the terms is not zero, so the series diverges
-          by the test for divergence. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{\sin n}{n^2} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          Asymptotically, the <m>\sin n</m> in the numerator doesn't
-          affect the asymptotic order. The asymptotic order here is
-          <m>\frac{1}{n^2}</m>. That's the asymptotic order of
-          convergent zeta series, so this series converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=4}^{\infty} \frac{\ln (n-3)}{n-3}
-        </me>
-      </statement>
-      <solution>
-        <p>
-          Since the logarithm is a growing function, these terms are
-          eventually larger than <m>\frac{1}{n-3}</m>. Those terms are
-          (with a shift) the terms of the divergence harmonic series.
-          Therefore, since these terms are larger than the terms of a
-          divergent series, this diverges by direct comparison.
+          The radius of convergence is <m>R = 3</m>. 
         </p>
       </solution>
     </activity>
@@ -349,375 +549,20 @@
     <p>
       <ul>
         <li>
-          Why is convergence the most important property of series?
+          What is a radius of convergence?
+        </li>
+      </ul>
+      <ul>
+        <li>
+          How do series represent functions?
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Why can series define all sorts of new non-elementary
+          functions?
         </li>
       </ul>
     </p>
-  </subsection>
-  <subsection xml:id="subsection-week11-extra-practice">
-    <title>Extra Practice Activities</title>
-    <activity>
-      <statement>
-        <p>
-          Use the alternating series to test this series for
-          convergence. 
-        </p>
-        <me>
-          \sum_{n=1}^\infty \frac{(-1)^{n+1} (n^6 + 54}{n!} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} \frac{n^6 + 54}{n!} = 0 
-        </me>
-        <p>
-          Asymptotically, the factorial grows faster than any
-          polynomial or exponential function. Therefore, the limit is
-          zero and the series converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Use the alternating series to test this series for
-          convergence. 
-        </p>
-        <me>
-          \sum_{n=1}^\infty (-1)^{n+1} \sin \left( \frac{1}{n} \right) 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} \sin \left( \frac{1}{n} \right)
-          = 0 
-        </me>
-        <p>
-          The limit of the terms is zero, so the series converges. In
-          this limit, see that the term inside the sine fucntion are
-          getting close to zero. Since sine is continuous and <m>\sin
-          (0) = 0</m>, applying the sine function to those terms gives
-          new terms which will still be approaching zero. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Use the alternating series to test this series for
-          convergence. 
-        </p>
-        <me>
-          \sum_{n=1}^\infty (-1)^{n+1} \cos \left( \frac{1}{n} \right) 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} \cos \left( \frac{1}{n} \right)
-          = 1 
-        </me>
-        <p>
-          The limit does not approach zero, so the series is
-          divergent. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Use the alternating series to test this series for
-          convergence. 
-        </p>
-        <me>
-          \sum_{n=1}^\infty \frac{(-1)^{n+1} (n!)(n+1)!}{(2n+3)!} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms. For this limit, I have to
-          do some factorial algebra. I'll split up the factorial in
-          the denominator into three pieces. 
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} \frac{n!(n+1)!}{2n+3)!} =
-          \lim_{n \rightarrow \infty} \frac{n!}{n!}
-          \frac{(n+1)!}{(n+1)(n+2)\ldots (2n+2)} \frac{1}{(2n+3)} 
-        </me>
-        <p>
-          Let me look at these three pieces. In the first, piece, the
-          <m>n!</m> cancels off, leaving just <m>1</m>. The third
-          piece is simply <m>\frac{1}{2n+3}</m>. The middle piece is
-          the most interesting. Here there are <m>n+1</m> numers in
-          the numerator multiplied together and there are also
-          <m>n+1</m> numbers in the denominator multiplied together.
-          In the numerator, the numbers multiplied at all numbers up
-          to <m>n+1</m>. In the denominator, the numbers multiplied
-          together are the numbers starting with <m>n+1</m> and
-          getting larger. Therefore, the product in the denominator
-          must be larger than the product in the numerator and the
-          fraction must be less than one. Putting it all together, I
-          get constnat 1 multiplies by something less than one
-          multiplied by <m>
-          \frac{1}{2n+3}</m>, which approach zero. Therefore, the
-          limit must be zero as well, which means that the series
-          converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Use the alternating series to test this series for
-          convergence. 
-        </p>
-        <me>
-          \sum_{n=1}^\infty \frac{(-1)^{n+1}}{1 - \frac{1}{n}} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The alternating series test says that an alternating series
-          converges if and only if the limit of the terms is zero. I
-          calculate the limit of the terms.
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} \frac{1}{1 - \frac{1}{n}} = 1
-        </me>
-        <p>
-          The limit of the terms is not zero, so the sequence is
-          divergent. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{(n+5)!}{(n+7)!} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I can simplify the terms by canceling with the factorial. 
-        </p>
-        <me>
-          \frac{(n+5)!}{(n+7)!} = \frac{1}{(n+6)(n+7)} = \frac{1}{n^2
-          + 13n + 42} 
-        </me>
-        <p>
-          The asymptotic order of the terms is <m>\frac{1}{n^2}</m>,
-          which are the terms of a convergent <m>\zeta</m> series.
-          Therefore, this series converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{20 - n^2}{30 - n^3} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The asymptotic order of the series is <m>\frac{n^2}{n^3} =
-          \frac{1}{n}</m>. That is the harmonic series, which is
-          divergence. Therefore, this series is divergent. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{n^6 + 5n + 4}{7n^8 + 4n^3} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The asymptotic order of the terms is <m>\frac{n^6}{n^8} =
-          \frac{1}{n^2}</m>. Those are the terms of a convergent
-          <m>\zeta</m> series, so this series converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{1}{3n - \sqrt{n}} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The asymptotic order of the terms of this series is
-          <m>\frac{1}{n}</m>. That is the order of the harmonic
-          series, which diverges. Therefore, this series diverges by
-          asymptotic comparison. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} \frac{n}{3^n}
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I will use the ratio test. I calculate the limit of the
-          ratio of the terms.
-        </p>
-        <me>
-          \lim_{n \rightarrow \infty} \frac{\left| \frac{n+1}{3^{n+1}}
-          \right|}{\left| \frac{n}{3^n} \right|} = \lim_{n \rightarrow
-          \infty} \frac{n+1}{n} \frac{3^n}{3^{n+1}} = \frac{1}{3} 
-        </me>
-        <p>
-          The limit is less than one, so the series converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty \left( \frac{1}{n} + \frac{1}{n^2} +
-            \frac{1}{n^3} \right) 
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Since this series is formed byadding positive elements to
-          <m>\frac{1}{n}</m>, the terms here satisfy this inequatily. 
-          <me>
-            \left( \frac{1}{n} + \frac{1}{n^2} +
-            \frac{1}{n^3} \right) > \frac{1}{n} 
-          </me>
-          The terms are positive and greater than the terms of the
-          harmonic series, which is a divergent series with positive
-          terms. By direct comparison, this series diverges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=1}^\infty \frac{\sqrt{n^6 + 1}}{n^3} 
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          I can use the test for divergence here and look at the
-          limit of the terms.
-          <me>
-            \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 1}}{n^3} 
-          </me>
-          In this limit, the asymptotic order of the numerator and
-          denominator are both <m>n^3</m> and the leading coefficients
-          are both 1. 
-          <me>
-            \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 1}}{n^3} =
-            \frac{1}{1} = 1 
-          </me>
-          Since the limit of the terms is not zero, this is a
-          divergent series.
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=5}^\infty \frac{1}{\sqrt{3n^3-4}}
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          The terms of this series are asymptotically equivalent to
-          <m>\frac{1}{n^{\frac{3}{2}}}</m>. Those are the terms of a
-          <m>\zeta</m> series with <m>p=\frac{3}{2}</m>. <m>\zeta</m>
-          series converge when <m>p > 1</m>, so the series has terms
-          which are asymptotically equivalent to a convergent
-          <m>\zeta</m> series; therefore the series converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-          <me>
-            \sum_{n=3}^\infty \frac{1}{(\ln n)^n}
-          </me>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          This is a very strange series and it isn't obvious what test
-          might help. I found a comparison that works. For large
-          enough <m>n</m>, <m>\ln n \gt 2</m>. If I invert this, I see
-          that <m>\frac{1}{\ln n} \lt \frac{1}{2}</m>. Then if I
-          apply the exponent <m>n</m>, I get 
-          <me>
-            \frac{1}{(\ln n)^n} \lt \left( \frac{1}{2} \right)^n 
-          </me>
-          This shows that the terms of this series are smaller than
-          the terms <m>\left( \frac{1}{2} \right)^n</m>, which are the
-          terms of a convergent geometric series (since the common
-          ratio, <m>\frac{1}{2}</m>, is less than 1). Since all the
-          terms of our series and the comparison series are positive,
-          since there are terms which are smaller than the terms of a
-          convergent series, this series will also converge. 
-        </p>
-        <p>
-          Alternatively, the root test is quite effective here (though
-          I completely forgot about it while looking for the
-          comparison above). 
-          <me>
-            \lim_{n \rightarrow \infty} \sqrt[n]{ \left| \frac{1}{(\ln
-            n)^n} \right| } = \lim_{n \rightarrow \infty} \frac{1}{\ln
-            n} = 0 
-          </me>
-          Since this limits exists and is less than <m>1</m>, the root
-          test tells me that the series converges.
-        </p>
-      </solution>
-    </activity>
   </subsection>
 </section>

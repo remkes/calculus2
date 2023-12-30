@@ -1,0 +1,43 @@
+<section xml:id="section-unused-activity">
+  <title>Unused Activity</title>
+  <subsection xml:id="subsection-activity-unusedfirstpast">
+    <title>Title</title>
+    <activity>
+      <statement>
+        <p>
+          Question
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Solution
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-unused-concepts">
+    <title>Conceptual Review Questions</title>
+    <p>
+      <ul>
+        <li>
+          Question
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-unused-extra-practice">
+    <title>Extra Practice Activities</title>
+    <activity>
+      <statement>
+        <p>
+          Question
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Solution
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+</section>

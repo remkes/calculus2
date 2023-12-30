@@ -1,763 +1,509 @@
 <section xml:id="section-week2-activity">
   <title>Week 2 Activity</title>
-  <subsection xml:id="subsection-activity-hyperbolics">
-    <title>Hyperbolic Functions</title>
+  <subsection xml:id="subsection-activity-singularities">
+    <title>Singularities of Algebriac Plane Curves</title>
     <activity>
       <statement>
         <p>
-          Calculate these limits.
-        </p>
-        <ol>
-          <li><me>
-            \lim_{x \rightarrow 0} \frac{\sin x \sinh x}{x^2} 
-          </me></li>
-          <li><me>
-            \lim_{x \rightarrow 0} x^3 \coth x
-          </me></li>
-          <li><me>
-            \lim_{x \rightarrow \infty} \frac{\sinh x}{\cosh x} 
-          </me></li>
-        </ol>
-      </statement>
-      <solution>
-        <ol>
-          <li>
-            <me>
-              \lim_{x \rightarrow 0} \frac{\sin x \sinh x}{x^2} = 
-              \lim_{x \rightarrow 0} \frac{\sin x}{x} \frac{\sinh
-              x}{x} = \lim_{x \rightarrow 0} \frac{\sin x}{x} \lim_{x
-              \rightarrow 0} \frac{\sinh x}{x} = 1 \cdot 1=  1\\
-            </me>
-            <p>
-              This limit can be split up into two limits. For both
-              <m>\sin x</m> and <m>\sinh x</m>, there are known
-              limits for the ratio with <m>x</m> near zero.
-            </p>
-          </li>
-          <li>
-            <me>
-              \lim_{x \rightarrow 0} x^3 \coth x = \lim_{x \rightarrow
-              0} \frac{x}{\sinh x} x^2 \cosh x = = \left( \lim_{x
-              \rightarrow 0} \frac{x}{\sinh x} \right) \left( \lim_{x
-              \rightarrow 0} x^2 \right) \left( \lim_{x \rightarrow 0}
-              \cosh x \right)= 1 \cdot 0 \cdot 1 = 0
-            </me>
-            <p>
-              By writing hyperbolic cotangent in terms of hyperbolic
-              sine and cosine, this limit can also be split up. Then
-              it uses the known limit for <m>\frac{\sinh x}{x}</m> and
-              simply evaluate the other two pieces. 
-            </p>
-          </li>
-          <li>
-            <me>
-              \lim_{x \rightarrow \infty} \frac{\sinh x}{\cosh x} =
-              \lim_{x \rightarrow \infty} \frac{e^x - e^{-x}}{e^x +
-              e^{-x}} = 1 
-            </me>
-            <p>
-              For this limit, I can write the hyperbolics in terms of
-              their exponential defintions and then use asymptotic
-              analysis. I see that the numerator and denominator have
-              the same order and both have leading coefficients
-              <m>1</m>. (For limits at infinity, I will almost always
-              rely on exponential definitions of the hyperbolics,
-              either directly on indirectly.) 
-            </p>
-          </li>
-        </ol>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate these derivatives.
-        </p>
-        <ol>
-          <li><me>
-            \frac{d}{dx} e^{\cosh x}
-          </me></li>
-          <li><me>
-            \frac{d}{dx} \cosh (1 + x^2) 
-          </me></li>
-        </ol>
-      </statement>
-      <solution>
-        <ol>
-          <li>
-            <md>
-              <mrow>
-                \frac{d}{dx} e^{\cosh x} \amp = \frac{d}{du} e^u
-                \Big|_{u = \cosh x} \frac{d}{dx} \cosh x
-              </mrow>
-              <mrow>
-                \amp = e^u \Big|_{u = \cosh x} \sinh x = e^{\cosh x}
-                \sinh x 
-              </mrow>
-            </md>
-            <p>
-              This is the chain rule with <m>u = \cosh x</m>.
-            </p>
-          </li>
-          <li>
-            <md>
-              <mrow>
-                \amp \frac{d}{dx} \cosh (1 + x^2) = \frac{d}{du} \cosh
-                u \Big|_{u = 1 + x^2} \frac{d}{dx} (1+x^2) 
-              </mrow>
-              <mrow>
-                \amp = \sinh u \Big|_{u = 1 + x^2} (2x) = 
-                \sinh (1+x^2) (2x) = 2x \sinh (1+x^2) 
-              </mrow>
-            </md>
-            <p>
-              This is the chain rule with <m>u = 1+x^2</m>.
-            </p>
-          </li>
-        </ol>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate these integrals.
-        </p>
-        <ol>
-          <li><me>
-            \int \sinh (x^6) x^5 dx 
-          </me></li>
-          <li><me>
-            \int \cosh^3 x \sinh 2x dx 
-          </me></li>
-        </ol>
-      </statement>
-      <solution>
-        <ol>
-          <li>
-            <me>
-              \int \sinh (x^6) x^5 dx = \frac{1}{6} \int \sinh u du
-              = \frac{1}{6} \cosh u + c = \frac{1}{6} \cosh (x^6) +
-              c 
-            </me>
-            <p>
-              In the first step, I used substitution with <m>u =
-              x^6</m> and <m>du = 6x^5dx </m>, so <m>\frac{1}{6} du =
-              x^5 dx</m>. After the replacements are done, the
-              antiderivative of <m>\sinh u</m> is <m>\cosh u</m>. Then
-              I reverse the substitution and add a constant of
-              integration. 
-            </p>
-          </li>
-          <li>
-            <me>
-              \int \cosh^3 x \sinh 2x dx = \int \cosh^3 x 2
-              \sinh x \cosh x dx 
-            </me>
-            <p>
-              The <m>\sinh 2x</m> term makes the integral difficult to
-              approach. Happily, there is a double-angle identity for
-              this. I replaced <m>\sinh 2x</m> with <m>2 \sinh x \cosh
-              x</m> from the table of identities. Then I group the
-              <m>\cosh x</m> terms together using exponents. 
-            </p>
-            <me>
-              = 2 \int \cosh^4 x \sinh x dx 
-            </me>
-            <p>
-              This can now be solved by substitution with <m>u = \cosh
-              x</m> and <m>du = \sinh x dx</m>. After the replacements,
-              I get a power rule integral. 
-            </p>
-            <me>
-              = 2 \int u^4 du = 2 \frac{u^5}{5} + c = \frac{2 \cosh^5
-              x}{5} + c 
-            </me>
-            <p>
-              After doing the antiderivative, I reversed the
-              substitution.
-            </p>
-          </li>
-        </ol>
-      </solution>
-    </activity>
-  </subsection>
-  <subsection xml:id="subsection-activity-implicit-derivatives">
-    <title>Implicit Derivatives</title>
-    <activity>
-      <statement>
-        <p>
-          Calculate the implicit derivative for the following locus.
-          Sketch the locus and observe the expected slopes; compare
-          those with the slopes given by the implicit derivatives.
+          Find and classify the singularities of this algebraic plane
+          curve.
         </p>
         <me>
-          x^2 + y^2 = 100
+          y^2 = x^2 + x^4 
         </me>
       </statement>
       <solution>
         <p>
-          First I differentiate both sides of the equation in the
-          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
-          a function of <m>x</m>, so when I differentiate an
-          expression in <m>y</m>, the chain rules applies and I
-          multiply by the derivative of the inside, which is the
-          unknown <m>\frac{dy}{dx}</m>. 
+          I can factor the right side of the curve as
+          <m>x^2(1+x^2)</m>. There are no domain restrictions for this
+          curve. I'll use this factored form, since it will help to
+          clearly understand the limits of the implicit derivative. 
+        </p>
+        <p>
+          First I calculate the implicit derivative of the curve. 
         </p>
         <md>
           <mrow>
-            \frac{d}{dx} x^2 + y^2 \amp = \frac{d}{dx} 100 
+            \frac{d}{dx} y^2 \amp = \frac{d}{dx} x^2 (1+x^2) 
           </mrow>
           <mrow>
-            2x + 2y \frac{dy}{dx} \amp = 0 
+            2y \frac{dy}{dx} \amp = 2x (1+x^2) + x^2 (2x) = 2x (1+x^2)
+            + 2x^3 
           </mrow>
           <mrow>
-            \frac{dy}{dx} \amp = -\frac{x}{y} 
+            \frac{dy}{dx} \amp = \frac{2x(1 + x^2) + 2x^3}{2y} =
+            \frac{x(1+x)^2 + x^3}{y} 
           </mrow>
         </md>
         <p>
-          By solving for <m>\frac{dy}{dx}</m>, I get an expression in
-          both <m>x</m> and <m>y</m> that describes the derivative. I
-          can evalute this at a few points. 
+          Then I use the original curve to solve for <m>y</m> and
+          replace <m>y</m> in the implicit derivative. 
         </p>
         <md>
           <mrow>
-            \frac{dy}{dx} (0,10) = -\frac{0}{10} = 0 
+            y \amp = \pm \sqrt{x^2 (1+x^2)} = \pm x \sqrt{1+x^2} 
           </mrow>
           <mrow>
-            \frac{dy}{dx} \left( \sqrt{50}, \sqrt{50} \right) = -
-            \frac{\sqrt{50}}{\sqrt{50}} = -1 
-          </mrow>
-          <mrow>
-            \frac{dy}{dx} \left( \sqrt{30}, -\sqrt{70} \right) =
-            -\frac{\sqrt{30}}{-\sqrt{70}} = \sqrt{\frac{3}{10}} 
+            \frac{dy}{dx} \amp = \pm \frac{x(1+x^2) + x^3}{x
+            \sqrt{1+x^2}}
           </mrow>
         </md>
         <p>
-          Also, the derivative at <m>(-10,0)</m> is undefined due to
-          division by zero. Possibly there is a vertical tangent line
-          at this point.
+          The singularities happen at the undefined points of the
+          implicit derivative. These are the points where the
+          denominator is zero. For this curve, the only potential
+          singularity is at <m>x=0</m>, since <m>1+x^2</m> can never
+          be zero. 
         </p>
-        <figure xml:id="figure-implicit1">
-          <caption>Implicit Derivatives to <m>x^2 + y^2 = 100</m></caption>
-          <image xml:id="figure30" width="80%">
+        <p>
+          For each of the undefined points, I calculate the limit of
+          the implicit derivative approaching the undefined points.
+          There is only one such point here.
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 0} \frac{dy}{dx} \amp = \lim_{x
+            \rightarrow 0} \pm \frac{x(1+x^2) + x^3}{x
+            \sqrt{1+x^2}}
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 0} \pm \frac{(1+x^2) +
+            x^2}{\sqrt{1+x^2}} = \pm \frac{1}{1} = \pm 1 
+          </mrow>
+        </md>
+        <p>
+          There are two possible values for the limit. I conclude that
+          the singularity is a double point node.  <xref
+          ref="figure-activity-apc1" /> shows the curve and the double
+          point node.
+        </p>
+        <figure xml:id="figure-activity-apc1">
+          <image xml:id="figure40" widht="80%">
             <asymptote>
-              size(12cm,8cm,IgnoreAspect);
+              size(10cm,5cm,IgnoreAspect);
+
               import contour;
               import graph;
               xaxis(Ticks);
               yaxis(Ticks);
 
-              real f(real x, real y) {return x^2+y^2;}
-              draw(contour(f,(-10,-10),(10,10),new real[] {100}));
-
-              draw((-10,-9)--(-10,9));
-              draw((-9,10)--(9,10));
-              draw((sqrt(50)-4,sqrt(50)+4)--(sqrt(50)+4,sqrt(50)-4));
-              draw((sqrt(20)-4,-sqrt(80)-2)--(sqrt(20)+8,-sqrt(80)+4));
-
-              dot((-10,0));
-              label("$(-10,0)$",(-10,0),NW);
-
-              dot((0,10));
-              label("$(0,10)$", (0,10),NW);
-
-              dot((7.07,7.07));
-              label("$(\sqrt{50},\sqrt{50})$",(7.07,7.07),NE);
-
-              dot((5.48,-8.37));
-              label("$(\sqrt{30},-\sqrt{70})$",(5.48,-8.37),SE);
+              real f(real x, real y) {return x^2 + x^4 - y^2;}
+              draw(contour(f,(-2,-2),(2,2),new real[] {0}));
             </asymptote>
           </image>
         </figure>
-        <p>
-          <xref ref="figure-implicit1" /> shows the graph of the locus.
-          Looking at the three points where I evaluted the derivaitve,
-          I can see that the tangent lines have slopes which match my
-          calculations. 
-        </p>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Calculate the implicit derivative for the following locus.
-          Sketch the locus and observe the expected slopes; compare
-          those with the slopes given by the implicit derivatives.
+          Find and classify the singularities of this algebraic plane
+          curve.
         </p>
         <me>
-          \frac{x^2}{4} + \frac{y^2}{64} = 1 
+          y^2 = x^4 + x^3 
         </me>
       </statement>
       <solution>
         <p>
-          First I differentiate both sides of the equation in the
-          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
-          a function of <m>x</m>, so when I differentiate an
-          expression in <m>y</m>, the chain rules applies and I
-          multiply by the derivative of the inside, which is the
-          unknown <m>\frac{dy}{dx}</m>. 
+          For this curve, I can factor the right side to get
+          <m>x^3(x+1)</m>. This curve is not defined when <m>-1 \lt x
+          \lt 0</m>, since the right side is negative in that range.
+          Then I calculate the implicit derivative of the curve.
         </p>
         <md>
           <mrow>
-            \frac{d}{dx} \frac{x^2}{4} + \frac{y^2}{64} =
-            \frac{d}{dx} 1 
+            \frac{d}{dx} y^2 \amp = \frac{d}{dx} x^3 (x+1)
           </mrow>
           <mrow>
-            \frac{x}{2}  + \frac{y}{32} \frac{dy}{dx} = 0
+            2y \frac{dy}{dx} \amp = 3x^2 (x+1) + x^3 
           </mrow>
           <mrow>
-            \frac{dy}{dx} = - \frac{16x}{y} 
+            \frac{dy}{dx} \amp = \frac{3x^2 (x+1) + x^3}{2y} 
           </mrow>
         </md>
         <p>
-          By solving for <m>\frac{dy}{dx}</m>, I get an expression in
-          both <m>x</m> and <m>y</m> that describes the derivative. I
-          can evalute this at a few points.
+          Then I use the original curve to solve for <m>y</m> and
+          replace <m>y</m> in the implicit derivative. 
         </p>
         <md>
           <mrow>
-            \frac{dy}{dx} (0,8) = \frac{-0}{8} = 0 
+            y \amp = \pm \sqrt{x^3 (x+1)} = \pm x \sqrt{x(x+1)} 
           </mrow>
           <mrow>
-            \frac{dy}{dx} (\sqrt{2},\sqrt{32}) =
-            \frac{-16\sqrt{2}}{\sqrt{32}} = \frac{-16}{\sqrt{16}} =
-            -4 
-          </mrow>
-          <mrow>
-            \frac{dy}{dx} (1,-\sqrt{48}) = \frac{-16}{-\sqrt{48}} =
-            \frac{4}{\sqrt{3}}
+            \frac{dy}{dx} \amp = \pm \frac{3x^2 (x+1) +
+            x^3}{2x\sqrt{x(x+1)}} 
           </mrow>
         </md>
         <p>
-          Also, at <m>(-2,0)</m>, the derivative is undefined due to
-          division by zero. Possibly there is vertical tangent here. 
+          The singularities happen at the undefined points of the
+          implicit derivative. These are the points where the
+          denominator is zero. For this curve, there are potential
+          singularities at <m>x=0</m> and <m>x=-1</m>. 
         </p>
-        <figure xml:id="figure-implicit2">
-          <caption>Implicit Derivatives to <m>\frac{x^2}{4} +
-            \frac{y^2}{64} = 1</m></caption>
-          <image xml:id="figure31" width="80%">
+        <p>
+          For each of the undefined points, I calculate the limit of
+          the implicit derivative approaching the undefined points.
+          I'll start with <m>x=0</m>. I only approach from the right,
+          due to the domain restrictions.
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 0^+} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 0^+} \pm \frac{3x^2 (x+1) +
+            x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 0^+} \pm \left[ \frac{3x^2
+            (x+1)}{2x\sqrt{x(x+1)}} + \frac{x^3}{2x\sqrt{x(x+1)}}
+            \right] 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 0^+} \pm \left[
+            \frac{3\sqrt{x(x+1)}}{2} + \frac{x}{2} \sqrt{
+            \frac{x}{x+1}} \right] 
+          </mrow>
+          <mrow>
+            \amp = \pm \left[ 0 + 0 \right] = 0 
+          </mrow>
+        </md>
+        <p>
+          The limit is zero. I conclude that there is a cusp at
+          <m>x=0</m>. (There are some tricky subtleties with the
+          square root calculations in this question. In the second
+          piece of the second last step of the previous calculations,
+          I wrote <m>\sqrt{\frac{x}{x+1}}</m>. Fitting with how I've
+          written other square root, I might have written
+          <m>\frac{\sqrt{x}}{\sqrt{x+1}}</m>. However, for <m>x \lt
+          -1</m>, both of these square roots are undefined. As
+          written, the square root of the fraction is defined, since
+          the ratio is a negative divided by a negative, which is
+          positive.)
+        </p>
+        <p>
+          Now I move on to <m>x=-1</m>. I only approach
+          from the left, due to the domain restrictions.
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow -1^-} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow -1^-} \pm \frac{3x^2 (x+1) +
+            x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow -1^-} \pm \frac{3x^2 (x+1)}{2x
+            \sqrt{x(x+1)}}  + \frac{x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow -1^-} \pm \frac{3x^2 (x+1)}{2x
+            \sqrt{x(x+1)}} + \lim_{x \rightarrow -1}
+            \frac{x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow -1^-} \pm \frac{3\sqrt{x(x+1)}}{2}
+            + \lim_{x \rightarrow -1^-} \frac{x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+        </md>
+        <p>
+          The first limit evaluates to <m>0</m>. The second limit is
+          more complicated. I can't cancel off all the term I want to
+          cancel off, since that would lead to square roots of
+          negative terms. However, I can understand this limit in the
+          form it currently have. The numerator approaches <m>-1</m>
+          and the denominator approaches <m>0</m>. Therefore, the
+          limit must approach <m>\pm \infty</m>. I conclude that there
+          is a vertical tangent at <m>x=-1</m>.
+          <xref ref="figure-activity-apc2" /> shows the curve with
+          both its cusp and its vertical tangent. It also shows the
+          lack of points between <m>x=-1</m> and <m>x=0</m>.
+        </p>
+        <figure xml:id="figure-activity-apc2">
+          <image xml:id="figure41" widht="80%">
             <asymptote>
-              size(12cm,8cm,IgnoreAspect);
+              size(10cm,5cm,IgnoreAspect);
+
               import contour;
               import graph;
               xaxis(Ticks);
               yaxis(Ticks);
 
-              real f(real x, real y) {return (x^2)/4+(y^2)/(64);}
-              draw(contour(f,(-2,-8),(2,8),new real[] {1}));
-
-              draw((-2,-7)--(-2,7));
-              draw((-2,8)--(2,8));
-              draw((sqrt(2)-1,sqrt(32)+4.4)--(sqrt(2)+1,sqrt(32)-4.4));
-              draw((0,-sqrt(48)-2.31)--(3,-sqrt(48)+4.62));
-
-              dot((-2,0));
-              label("$(-2,0)$",(-2,0),NW);
-
-              dot((0,8));
-              label("$(0,8)$",(0,8),NW);
-
-              dot((sqrt(2),sqrt(32)));
-              label("$(\sqrt{2},\sqrt{32})$",(sqrt(2),sqrt(32)),NE);
-
-              dot((1,-sqrt(48)));
-              label("$(1,-\sqrt{48})$",(1,-sqrt(48)),SE);
+              real f(real x, real y) {return x^3 + x^4 - y^2;}
+              draw(contour(f,(-2,-2),(2,2),new real[] {0}));
             </asymptote>
           </image>
         </figure>
-        <p>
-          <xref ref="figure-implicit2" /> shows the graph of the locus.
-          Looking at the three points where I evaluted the derivaitve,
-          I can see that the tangent lines have slopes which match my
-          calculations. 
-        </p>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Calculate the implicit derivative for the following locus.
-          Sketch the locus and observe the expected slopes; compare
-          those with the slopes given by the implicit derivatives.
+          Find and classify the singularities of this algebraic plane
+          curve.
         </p>
         <me>
-          x^2 - y^2 = 4 
+          y^2 = (x-3)^2(x-4)^2
         </me>
       </statement>
       <solution>
         <p>
-          First I differentiate both sides of the equation in the
-          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
-          a function of <m>x</m>, so when I differentiate an
-          expression in <m>y</m>, the chain rules applies and I
-          multiply by the derivative of the inside, which is the
-          unknown <m>\frac{dy}{dx}</m>. 
+          The curve is already presented in factored form. There are
+          no domain restrictions, since the right side is always
+          possitive for any <m>x</m> value. I calculate
+          the implicit derivative of the curve. 
         </p>
         <md>
           <mrow>
-            \frac{d}{dx} x^2 - y^2 \amp = \frac{d}{dx} 4 
+            \frac{d}{dx} y^2 \amp = \frac{d}{dx} (x-3)^2 (x-4)^2 
           </mrow>
           <mrow>
-            2x - 2y \frac{dy}{dx} \amp = 0 
+            2y \frac{dy}{dx} \amp = 2(x-3)(x-4)^2 + 2(x-3)^2(x-4)
           </mrow>
           <mrow>
-            \frac{dy}{dx} = \frac{x}{y} 
+            \frac{dy}{dx} \amp = \frac{2(x-3)(x-4)^2 + 2(x-3)^2(x-4)}{2y} 
           </mrow>
         </md>
         <p>
-          By solving for <m>\frac{dy}{dx}</m>, I get an expression in
-          both <m>x</m> and <m>y</m> that describes the derivative. I
-          can evalute this at a few points. 
+          Then I use the original curve to solve for <m>y</m> and
+          replace <m>y</m> in the implicit derivative. 
         </p>
         <md>
           <mrow>
-            \frac{dy}{dx} (6,-\sqrt{32}) = \frac{-6}{\sqrt{32}} = -
-            \frac{6}{\sqrt{32}} 
+            y \amp = \pm \sqrt{(x-3)^2(x-4)^2} = \pm (x-3)(x-4)
           </mrow>
           <mrow>
-            \frac{dy}{dx} (-6,-\sqrt{32}) = \frac{-6}{-\sqrt{32}} =
-            \frac{6}{\sqrt{32}} 
+            \frac{dy}{dx} \amp = \pm \frac{(x-3)(x-4)^2 +
+            (x-3)^2(x-4)}{(x-3)(x-4)} 
           </mrow>
         </md>
         <p>
-          In addition, the slopes at <m>(-2,0)</m> and <m>(2,0)</m>
-          are undefined due to division by zero. Possibly there are
-          vertical tangents here. 
+          The singularities happen at the undefined points of the
+          implicit derivative. These are the points where the
+          denominator is zero. For this curve, the possible
+          singularities are at <m>x=3</m> and <m>x=4</m>. 
         </p>
-        <figure xml:id="figure-implicit3">
-          <caption>Implicit Derivatives to <m>x^2 - y^2 =
-            4</m></caption>
-          <image xml:id="figure32" width="80%">
+        <p>
+          For each of the undefined points, I calculate the limit of
+          the implicit derivative approaching the undefined points. I
+          start with <m>x=3</m>.
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 3} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 3} \pm \frac{(x-3)(x-4)^2 +
+            (x-3)^2(x-4)}{(x-3)(x-4)} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 3} \pm ((x-4) + (x-3) = \pm 1 
+          </mrow>
+        </md>
+        <p>
+          There are two limit values, so this is a double point node. 
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 4} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 4} \pm \frac{(x-3)(x-4)^2 +
+            (x-3)^2(x-4)}{(x-3)(x-4)} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 4} \pm ((x-4) + (x-3) = \pm 1 
+          </mrow>
+        </md>
+        <p>
+          Again, there are two limit values, so this is a double point
+          node. 
+          <xref ref="figure-activity-apc3" /> shows the curve and both
+          the double point nodes.
+        </p>
+        <figure xml:id="figure-activity-apc3">
+          <image xml:id="figure42" widht="80%">
             <asymptote>
-              size(12cm,8cm,IgnoreAspect);
+              size(10cm,5cm,IgnoreAspect);
+
               import contour;
               import graph;
               xaxis(Ticks);
               yaxis(Ticks);
 
-              real f(real x, real y) {return x^2-y^2;}
-              draw(contour(f,(-9,-9),(9,9),new real[] {4}));
-
-              draw((-2,-9)--(-2,9));
-              draw((2,-9)--(2,9));
-              draw((-9, -8.84)--(8, 9.18));
-              draw((9, -8.84)--(-8, 9.18));
-
-              dot((2,0));
-              label("$(2,0)$",(2,0),NE);
-
-              dot((-2,0));
-              label("$(-2,0)$",(-2,0),NW);
-
-              dot((6,-sqrt(32)));
-              label("$(6,-\sqrt{32})$",(6,-sqrt(32)),NE);
-
-              dot((-6,-sqrt(32)));
-              label("$(-6,-\sqrt{32})$",(-6,-sqrt(32)),NW);
+              real f(real x, real y) {return (x-3)^2*(x-4)^2 - y^2;}
+              draw(contour(f,(1,-2),(5,2),new real[] {0}));
             </asymptote>
           </image>
         </figure>
-        <p>
-          <xref ref="figure-implicit3" /> shows the graph of the locus.
-          Looking at the three points where I evaluted the derivaitve,
-          I can see that the tangent lines have slopes which match my
-          calculations. 
-        </p>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Calculate the implicit derivative for the following locus.
-          Sketch the locus and observe the expected slopes; compare
-          those with the slopes given by the implicit derivatives.
+          Find and classify the singularities of this algebraic plane
+          curve.
         </p>
         <me>
-          xy = 1 
+          y^2 = x(x-1)(x-2) 
         </me>
       </statement>
       <solution>
         <p>
-          First I differentiate both sides of the equation in the
-          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
-          a function of <m>x</m>, so when I differentiate an
-          expression in <m>y</m>, the chain rules applies and I
-          multiply by the derivative of the inside, which is the
-          unknown <m>\frac{dy}{dx}</m>. 
+          The curve is already factored. There are domain
+          restrictions, since the right side cannot be negative. The
+          right side is positive when <m>0 \leq x \leq 1</m> and <m>x
+          \geq 2</m>, so those are the valid <m>x</m> coordinates for
+          points on the curve. I calculate the implicit derivative of
+          the curve.
         </p>
         <md>
           <mrow>
-            \frac{d}{dx} xy \amp = \frac{d}{dx} 1 
+            \frac{d}{dx} y^2 \amp = \frac{d}{dx} x(x-1)(x-2)
           </mrow>
           <mrow>
-            x \frac{dy}{dx} + y \amp = 0 
+            2y \frac{dy}{dx} \amp = (x-1)(x-2) + x(x-2) + x(x-1) 
           </mrow>
           <mrow>
-            \frac{dy}{dx} = \frac{-y}{x} 
+            \frac{dy}{dx} \amp = \frac{(x-1)(x-2) + x(x-2) +
+            x(x-1)}{2y} 
           </mrow>
         </md>
         <p>
-          By solving for <m>\frac{dy}{dx}</m>, I get an expression in
-          both <m>x</m> and <m>y</m> that describes the derivative. I
-          can evalute this at a few points. 
+          Then I use the original curve to solve for <m>y</m> and
+          replace <m>y</m> in the implicit derivative. 
         </p>
         <md>
           <mrow>
-            \frac{dy}{dx} (1,1) = -1 
+            y \amp = \pm \sqrt{x(x-1)(x-2)} 
           </mrow>
           <mrow>
-            \frac{dy}{dx} (-1,-1) = -1 
-          </mrow>
-          <mrow>
-            \frac{dy}{dx} \left( 3, \frac{1}{3} \right) =
-            \frac{-1}{9} 
-          </mrow>
-          <mrow>
-            \frac{dy}{dx} \left( \frac{-1}{3}, -3 \right) = -9
+            \frac{dy}{dx} \amp = \pm \frac{(x-1)(x-2) + x(x-2) +
+            x(x-1)}{2\sqrt{x(x-1)(x-2)}}
           </mrow>
         </md>
-        <figure xml:id="figure-implicit4">
-          <caption>Implicit Derivatives to <m>xy = 1</m></caption>
-          <image xml:id="figure33" width="80%">
+        <p>
+          The singularities happen at the undefined points of the
+          implicit derivative. These are the points where the
+          denominator is zero. For this curve, there are potential
+          singularities at <m>x=0,1,2</m>. 
+        </p>
+        <p>
+          For each of the undefined points, I calculate the limit of
+          the implicit derivative approaching the undefined points. 
+          I'll start with <m>x=0</m>. Due to the domain restrictions,
+          I only approach from the right.
+        </p>
+        <md>
+          <mrow>
+            \amp \lim_{x \rightarrow 0^+} \frac{dy}{dx} = 
+            \frac{1}{2} \lim_{x \rightarrow 0^+} \pm \frac{(x-1)(x-2) +
+            x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{2} \lim_{x \rightarrow 0^+} \pm \left[
+            \frac{(x-1)(x-2)}{\sqrt{x(x-1)(x-2)}}  +
+            \frac{x(x-2)}{\sqrt{x(x-1)(x-2)}}  +
+            \frac{x(x-1)}{\sqrt{x(x-1)(x-2)}} \right] 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{2} \lim_{x \rightarrow 0^+} \pm \left[
+            \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
+            \sqrt{\frac{x(x-2)}{x-1}}  +
+            \sqrt{\frac{x(x-1)}{x-2}} \right]
+          </mrow>
+          <mrow>
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 0^+} 
+            \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
+            \lim_{x \rightarrow 0^+} \sqrt{\frac{x(x-2)}{x-1}}  +
+            \lim_{x \rightarrow 0^+} \sqrt{\frac{x(x-1)}{x-2}}
+            \right] 
+          </mrow>
+        </md>
+        <p>
+          The second and third limits are zero. In the first limit,
+          the numerator approaches <m>2</m> and the denominator
+          approaches <m>0</m>, so I conclude the limit is <m>\pm
+          \infty</m> and that there is a vertical tangent at
+          <m>x=0</m>.  I'll next look at <m>x=1</m>. Due to the domain
+          restrictions, I only approach from the left. 
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 1^-} \frac{dy}{dx} \amp = 
+            \frac{1}{2} \lim_{x \rightarrow 1^-} \pm \frac{(x-1)(x-2) +
+            x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
+          </mrow>
+          <mrow>
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 1^-}
+            \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
+            1^-} \sqrt{\frac{x(x-2)}{x-1}} + \lim_{x \rightarrow
+            1^-} \sqrt{\frac{x(x-1)}{x-2}} \right] 
+          </mrow>
+        </md>
+        <p>
+          The first and third limits are zero. In the second limit,
+          the numerator approaches <m>-1</m> and the denominator
+          approaches <m>0</m>, so I conclude the limit is <m>\pm
+          \infty</m> and that there is a vertical tangent at
+          <m>x=0</m>.  The last point to consider is <m>x=2</m>. Due
+          to the domain restrictions, I only approach from the right. 
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 2^+} \frac{dy}{dx} \amp = 
+            \frac{1}{2} \lim_{x \rightarrow 2^+} \pm \frac{(x-1)(x-2) +
+            x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
+          </mrow>
+          <mrow>
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 2^+}
+            \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
+            2^+} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
+            2^+} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
+            \right] 
+          </mrow>
+        </md>
+        <p>
+          The first and second limits are zero. In the third limit,
+          the numerator approaches <m>2</m> and the denominator
+          approaches <m>0</m>, so I conclude the limit is <m>\pm
+          \infty</m> and that there is a vertical tangent at
+          <m>x=2</m>. 
+          <xref ref="figure-activity-apc4" /> shows the curve and all
+          three the vertical tangents. The curve has no singularities. 
+          (This question also has subtleties in how the square roots
+          are written. You might notice in the first two calculation,
+          the square root need to capture the whole fraction as one,
+          while in the last calculation, the squares can be separated
+          in the numerator and denominator. This is all done to make
+          the square root well-defined, so that there is no risk of
+          taking the square root of a negative number in any of these
+          limits.) 
+        </p>
+        <figure xml:id="figure-activity-apc4">
+          <image xml:id="figure43" widht="80%">
             <asymptote>
-              size(12cm,8cm,IgnoreAspect);
+              size(10cm,5cm,IgnoreAspect);
+
               import contour;
               import graph;
               xaxis(Ticks);
               yaxis(Ticks);
 
-              real f(real x, real y) {return x*y;}
-              draw(contour(f,(-4,-4),(4,4),new real[] {1}));
-
-              draw((-2,4)--(4,-2));
-              draw((-4,2)--(2,-4));
-              draw((-4,1.11)--(4,0.22));
-              draw((-1.11,4)--(-0.22,-4));
-
-              dot((1,1));
-              label("$(1,1)$",(1,1),NE);
-
-              dot((-1,-1));
-              label("$(-1,-1)$",(-1,-1),SW);
-
-              dot((3,0.33));
-              label("$\left( 3, \frac{1}{3} \right)$",(3,0.33),NE);
-
-              dot((-0.33,-3));
-              label("$\left( \frac{-1}{3}, 3 \right)$",(-0.33,-3),SW);
+              real f(real x, real y) {return x*(x-1)*(x-2) - y^2;}
+              draw(contour(f,(-2,-2),(4,2),new real[] {0}));
             </asymptote>
           </image>
         </figure>
-        <p>
-          <xref ref="figure-implicit4" /> shows the graph of the locus.
-          Looking at the three points where I evaluted the derivaitve,
-          I can see that the tangent lines have slopes which match my
-          calculations. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate the implicit derivative for the following locus.
-          Sketch the locus and observe the expected slopes; compare
-          those with the slopes given by the implicit derivatives.
-        </p>
-        <me>
-          x^2 + y^2 = -3 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I could go through the process here of calculating the
-          implicit derivative. That process would produce an
-          expression for <m>\frac{dy}{dx}</m>, but the expression
-          would be useless. This locus doesn't have any points!
-          Therefore, it can't have any tangent lines.
-        </p>
       </solution>
     </activity>
   </subsection>
   <subsection xml:id="subsection-week2-concepts">
     <title>Conceptual Review Questions</title>
-    <ul>
-      <li>
-        <p>
-          Why are hyperbolics like trigonometric functions?
-        </p>
-      </li>
-      <li>
-        <p>
-          What is hyperbolic angle and how does it define the
-          hyperbolic functions?  
-        </p>
-      </li>
-      <li>
-        <p>
-          Why are there sign differences between hyperbolic and
-          trigonometric identities?
-        </p>
-      </li>
-    </ul>
-  </subsection>
-  <subsection xml:id="subsection-week2-extra-practice">
-    <title>Extra Practice Activities</title>
-    <activity>
-      <statement>
-        <p>
-          Calculate these limits.
-        </p>
-        <ol>
-          <li><me>
-            \lim_{x \rightarrow \infty} \frac{\sinh x}{x^4} 
-          </me></li>
-          <li><me>
-            \lim_{x \rightarrow 0} \frac{\sin x}{\sinh x}
-          </me></li>
-        </ol>
-      </statement>
-      <solution>
-        <ol>
-          <li>
-            <me>
-              \lim_{x \rightarrow \infty} \frac{\sinh x}{x^4} =
-              \lim_{x \rightarrow \infty} \frac{e^x - e^{-x}}{2x^4}
-              = \infty 
-            </me>
-            <p>
-              I can change the hyperbolics into their exponential
-              form and use asymptotic analysis. Then I see the
-              numerator has higher asymptotic order.
-            </p>
-          </li>
-          <li>
-            <me>
-              \lim_{x \rightarrow 0} \frac{\sin x}{\sinh x} =
-              \lim_{x \rightarrow 0} \frac{\sin x}{x} \lim_{x
-              \rightarrow 0} \frac{x}{\sinh x} = 1 \cdot 1 = 1
-            </me>
-            <p>
-              This is a neat trick. By multiplying by
-              <m>\frac{x}{x}</m>, which doesn't change the fraction,
-              I can split this up and use the known limits for
-              <m>\frac{\sin x}{x}</m> and <m>\frac{\sinh x}{x}</m>.
-            </p>
-          </li>
-        </ol>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate these derivatives.
-        </p>
-        <ol>
-          <li><me>
-            \frac{d}{dx} \sinh 2x \coth x
-          </me></li>
-          <li><me>
-            \frac{d}{dx} \frac{\sinh^2 x}{e^x} 
-          </me></li>
-        </ol>
-      </statement>
-      <solution>
-        <ol>
-          <li>
-            <md>
-              <mrow>
-                \frac{d}{dx} \sinh 2x \coth x \amp = \frac{d}{dx} 2
-                \sinh x \cosh x \frac{\cosh x}{\sinh x} 
-              </mrow>
-              <mrow>
-                \amp = 2 \frac{d}{dx} \cosh^2 x = 4 \cosh x
-                \frac{d}{dx} \cosh x = 4 \cosh x \sinh x 
-              </mrow>
-            </md>
-            <p>
-              This is a product rule derivative.
-            </p>
-          </li>
-          <li>
-            <md>
-              <mrow>
-                \frac{d}{dx} \frac{\sinh^2 x}{e^x} \amp = \frac{d}{dx}
-                \frac{e^{2x} - 2 - e^{-2x}}{4e^x} = \frac{1}{4}
-                \frac{d}{dx} e^x - 2e^{-x} + e^{-3x} 
-              </mrow>
-              <mrow>
-                \amp = \frac{1}{4} \left( e^x + 2e^{-x} - 3e^{-3x}
-                \right) 
-              </mrow>
-            </md>
-            <p>
-              I change the hyperbolic into an exponential, since
-              there was an exponential in the denominator. That
-              changed this into three straightforward derivatives. In
-              any exponential with more than just <m>x</m> in the
-              exponent, I use the chain rule for the derivative.
-            </p>
-          </li>
-        </ol>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate these integrals.
-        </p>
-        <ol>
-          <li><me>
-            \int_{\ln 2}^{\ln 4} \cosh x dx 
-          </me></li>
-          <li><me>
-            \int_0^{\ln 5} \sinh^2 x + \cosh^2 x dx 
-          </me></li>
-        </ol>
-      </statement>
-      <solution>
-        <ol>
-          <li>
-            <md>
-              <mrow>
-                \int_{\ln 2}^{\ln 4} \cosh x dx \amp = \left. \sinh x
-                \right|_{\ln 2}^{\ln 4} = \frac{e^{\ln 4} - e^{-\ln 4}
-                - e^{\ln 2}+ e^{-\ln 2}}{2} 
-              </mrow>
-              <mrow>
-                \amp = \frac{4 - \frac{1}{4} - 2 + \frac{1}{2}}{2} =
-                \frac{9}{8} 
-              </mrow>
-            </md>
-            <p>
-              This is a direct antiderivative. After the
-              antiderivative, I use the exponential form to evaluate
-              on the bounds.
-            </p>
-          </li>
-          <li>
-            <md>
-              <mrow>
-                \int_0^{\ln 5} \sinh^2 x + \cosh^2 x dx \amp =
-                \int_0^{\ln 5} \cosh (2x) = \left. \frac{1}{2} \sinh
-                (2x) \right|_0^{\ln 5} 
-              </mrow>
-              <mrow>
-                \amp = \frac{1}{2} \frac{e^{2\ln 5} - e^{-2\ln 5}}{2}
-                - 0 = \frac{1}{4} \left( 25 - \frac{1}{25} \right) 
-              </mrow>
-              <mrow>
-                \amp = \frac{624}{100} = \frac{156}{25}
-              </mrow>
-            </md>
-            <p>
-              I use a identity to turn this into a fairly direct
-              integral. (To deal with the <m>(2x)</m> inside the
-              hyperbolic cosine, I use a substitution <m>u = 2x</m>.)
-              I use the exponential form to evaluate on the bounds.
-            </p>
-          </li>
-        </ol>
-      </solution>
-    </activity>
+    <p>
+      <ul>
+        <li>
+          What are the ways that an implicit derivative can be
+          undefined?
+        </li>
+        <li>
+          What is a singularity?
+        </li>
+      </ul>
+    </p>
   </subsection>
 </section>

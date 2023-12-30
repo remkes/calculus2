@@ -1,62 +1,88 @@
 <section xml:id="section-week6-activity">
   <title>Week 6 Activity</title>
-  <subsection xml:id="subsection-activity-trig-integrals">
-    <title>Trigonometric Integrals</title>
+  <subsection xml:id="subsection-activity-parametric-curves">
+    <title>Parametric Curves - Tangents and Lengths</title>
     <activity>
       <statement>
         <p>
-          Calculate this integral.
+          This parametric curve is two revolutions of the logarithmic
+          spiral. 
         </p>
-        <me>
-          \int \sin^3 x \cos^4 x dx 
-        </me>
+        <md>
+          <mrow>
+            \gamma(t) = (e^t \cos t, e^t \sin t) \amp \amp t \in [0, 4\pi]
+          </mrow>
+        </md>
+        <p>
+          Calculate <m>\frac{dy}{dx}</m> and identify some points
+          with vertical tangents. Then calculate the length of the
+          curve. 
+        </p>
       </statement>
       <solution>
+        <figure xml:id="figure-parametric-activity1">
+          <image xml:id="figure47" width="80%">
+            <asymptote>
+              size(16cm,10cm);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return exp(t)*cos(3*t);}
+              real y(real t) {return exp(t)*sin(3*t);}
+
+              draw(graph(x,y,-3,2));
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          The power of sine is odd. Therefore, if I seperate just
-          <m>\sin x</m>, I should be able to setup a cosine
-          substitution.
-        </p>
-        <me>
-          \int \sin^3 x \cos^4 x dx = \int \sin^2x
-          \cos^4 x \sin x dx .
-        </me>
-        <p>
-          Then I change everything into cosine, except the one
-          seperate sine function.
+          First I calcualte the derivatives of the two components.
+          Then I divide by <m>y</m> derivative by the <m>x</m>
+          derivative to get an expression for the slope.
         </p>
         <md>
           <mrow>
-            \amp = \int (1-\cos^2 x) \cos^4 x \sin x dx 
+            \frac{dx}{dt} \amp = e^t \cos t - e^t \sin t 
+          </mrow>
+          <mrow>
+            \frac{dy}{dt} \amp = e^t \sin t + e^t \cos t 
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \frac{ e^t \sin t + e^t \cos t }{ e^t
+            \cos t - e^t \sin t} = \frac{\sin t + \cos t}{\cos t -
+            \sin t}
           </mrow>
         </md>
         <p>
-          Then I use a cosine substitution. 
+          There are vertical tangents whenever the denominator of
+          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
+          not. This happens when <m>\cos t = \sin t</m>, which happens
+          at <m>\frac{\pi}{4}</m> plus any multiple  of <m>\pi</m>.
         </p>
-        <md>
-          <mrow>
-            u \amp = \cos x 
-          </mrow>
-          <mrow>
-            du \amp = - \sin x dx 
-          </mrow>
-        </md>
         <p>
-          Using this substitution gives a polynomial integral. I can
-          split it up using linearity and evalute each piece. When I
-          am done that, I reverse the substitution. 
+          I put the derviatives of the components into the length
+          formula and then calculate the resulting integral. After
+          cancelling of terms which easily cancel, I use the
+          trig identity <m>\sin^2 t + \cos^2 t = 1</m> to simplify the
+          integral, leaving a reasonable exponential integral. 
         </p>
         <md>
           <mrow>
-            \int \sin x (1-\cos^2 x) \cos^4 x dx \amp = - \int
-            (1-u^2)u^4 du 
+            L \amp = \int_0^{4\pi} e^t \sqrt{ \cos^2 t - 2 \cos t \sin
+            t + \sin^2 t + \sin^2 t + 2\sin t \cos t + \cos^2 t} dt 
           </mrow>
           <mrow>
-            \amp = \int u^6 du - \int u^4 du = \frac{u^7}{7} -
-            \frac{u^5}{5} + c 
+            \amp = \int_0^{4\pi} e^t \sqrt{ 2(\cos^2 t + \sin^2 t)}
+            dt
           </mrow>
           <mrow>
-            \amp = \frac{\cos^7 x}{7} - \frac{\cos^5 x}{5} + c 
+            \amp = \int_0^{4\pi} \sqrt{2} e^t dt = \sqrt{2}e^t
+            \Big|_0^{4\pi} 
+          </mrow>
+          <mrow>
+            \amp = \sqrt{e^{4\pi}} - \sqrt{2} = \sqrt{2} \left(
+            e^{4\pi} - 1 \right)
           </mrow>
         </md>
       </solution>
@@ -64,88 +90,100 @@
     <activity>
       <statement>
         <p>
-          Calculate this integral.
+          This parametric curve is the Archimedian spiral.
+        </p>
+        <md>
+          <mrow>
+            \gamma(t) = (t \cos t, t \sin t) \amp \amp t \in [0, 4\pi]
+          </mrow>
+        </md>
+        <p>
+          Calculate <m>\frac{dy}{dx}</m> and identify some points
+          with vertical tangents. Then calculate the length of the
+          curve. 
+        </p>
+        <p>
+          In the arclength calculation, I will get to an integral
+          which needs a trig substitution. Instead of doing that trig
+          substitution, I can use the form found on the table of
+          integrals.
         </p>
         <me>
-          \int \sin^4 x \cos^2 x dx 
+          \int \sqrt{a^2 + x^2} dx = \frac{x}{2} \sqrt{a^2 + x^2} +
+          \frac{a^2}{2} \ln \left( x + \sqrt{a^2 + x^2} \right) + c
         </me>
       </statement>
       <solution>
+        <figure xml:id="figure-parametric-activity2">
+          <image xml:id="figure48" width="80%">
+            <asymptote>
+              size(16cm,10cm);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return t*cos(t);}
+              real y(real t) {return t*sin(t);}
+
+              draw(graph(x,y,0,4*pi));
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          Both powers are even, so a substitution will not work
-          directly. Instead, I use double angle identities to reduce
-          the exponents. Expansion of the resulting binomial terms
-          produces four different integrals.
+          First I calcualte the derivatives of the two components.
+          Then I divide by <m>y</m> derivative by the <m>x</m>
+          derivative to get an expression for the slope.
         </p>
         <md>
           <mrow>
-            \int \sin^4 x \cos^2 x dx \amp = \int \left( \frac{1 -
-            \cos 2x}{2} \right)^2 \left( \frac{1 + \cos 2x}{2} \right)
-            dx 
+            \frac{dx}{dt} \amp = -t \sin t + \cos t 
           </mrow>
           <mrow>
-            \amp = \frac{1}{8} \int (1 - 2 \cos (2x) + \cos^2
-            (2x))(1+\cos (2x)) dx 
+            \frac{dy}{dt} \amp = t \cos t + \sin t 
           </mrow>
           <mrow>
-            \amp = \frac{1}{8} \int 1 - \cos (2x) - \cos^2 (2x) + \cos^3
-            (2x) dx 
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{8} \left[ \int 1 dx - \int \cos (2x) dx -
-            \int \cos^2 (2x) dx + \int \cos^3 (2x) dx \right] 
+            \frac{dy}{dx} \amp = \frac{t \cos t + \sin t}{-t \sin t +
+            \cos t}
           </mrow>
         </md>
         <p>
-          The first two integrals are done directly with known
-          antiderivatives. The third needs another double angle
-          identity. In the fourth, since the power is odd, I can
-          seperate one cosine function, change everything else to
-          sine, and use a sine substitution. The specific substitution
-          here is <m>u = \sin (2x)</m> with <m>du = 2 \cos (2x) dx
-          </m>, or <m>\frac{1}{2} du = \cos (2x) dx</m>.
+          There are vertical tangents whenever the denominator of
+          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
+          not. This happens twice every revolution, when the
+          denominators vanishes.  precise value of the parameter
+          <m>t</m> at those points is challenging.
         </p>
-        <md>
-          <mrow>
-            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} - \int
-            \left( \frac{ 1 + \cos (4x)}{2} \right) dx + \int \cos^2 (2x)
-            \cos (2x) dx \right] 
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
-            \frac{1}{2} \int 1 dx - \frac{1}{2} \int \cos (4x) dx + \int
-            (1-\sin^2 (2x)) \cos (2x) dx \right]
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
-            \frac{x}{2} - \frac{\sin (4x)}{8} + \frac{1}{2} \int
-            (1-u^2) du \right] 
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
-            \frac{x}{2} - \frac{\sin (4x)}{8} + \frac{1}{2} \int du -
-            \frac{1}{2} \int u^2 du \right] 
-          </mrow>
-        </md>
         <p>
-          From here, I sipmlify and group terms as I can. I also
-          finish the <m>u</m> integral with known antiderivatives from
-          the power rule and then reverse the substitution. 
+          I put the derviatives of the components into the length
+          formula and then calculate the resulting integral. Again,
+          some term will cancel and I can use trig identities to
+          simplify some of the remianing term. When I
+          get to the square root integral, I just used the
+          antiderivative given in the question instead of doing the
+          whole process of the trig substitution.
         </p>
         <md>
           <mrow>
-            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
-            \frac{x}{2} - \frac{\sin (4x)}{8} + \frac{u}{2} -
-            \frac{u^3}{6} \right] + c
+            L \amp = \int_0^{4\pi} \sqrt{ t^2 \sin^2 t - 2t \cos t
+            \sin t + \cos^2 t + t^2 \cos^2 t + 2t \cos t \sin t +
+            \sin^2 t} dt 
           </mrow>
           <mrow>
-            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
-            \frac{x}{2} - \frac{\sin (4x)}{8} + \frac{\sin (2x)}{2} -
-            \frac{\sin^3 (2x)}{6} \right] + c
+            \amp = \int_0^{4\pi} \sqrt{t^2 (\cos^2 t + \sin^2 t) +
+            (\cos^2 t + \sin^2 t)} dt 
           </mrow>
           <mrow>
-            \amp = \frac{1}{8} \left[ \frac{x}{2} - \frac{\sin (4x)}{8} -
-            \frac{\sin^3 (2x)}{6} \right] + c
+            \amp = \int_0^{4\pi} \sqrt{t^2 + 1} 
+          </mrow>
+          <mrow>
+            \amp = \frac{t}{2} \sqrt{1 + t^2} +
+            \frac{1}{2} \ln \left| t + \sqrt{1 + t^2} \right|
+            \Bigg|_0^{4\pi} 
+          </mrow>
+          <mrow>
+            \amp = 2\pi \sqrt{1 + 16\pi^2} + \frac{1}{2} \ln \left(
+            4\pi + \sqrt{1 + 16\pi^2} \right) 
           </mrow>
         </md>
       </solution>
@@ -153,35 +191,89 @@
     <activity>
       <statement>
         <p>
-          Calculate this integral.
-        </p>
-        <me>
-          \int \tan^3 x \sec^4 x dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          There is an even power of secant, so a tangent substitution
-          should work well after isolating <m>\sec^2 x</m> and
-          turning the remaining secant terms into tangent terms. The
-          resulting <m>u</m> integral is a reasonable polynomial
-          integral. After completing it, I reverse the substitution.
+          This parametric curve is a parabola.
         </p>
         <md>
           <mrow>
-            \int \tan^3 x \sec^4 x dx \amp = \int \tan^3 x (1+\tan^2
-            x) \sec^2 x dx 
+            \gamma(t) = (t, at^2) \amp \amp t \in [0,5]
+          </mrow>
+        </md>
+        <p>
+          Calculate <m>\frac{dy}{dx}</m> and identify some points
+          with vertical tangents. Then calculate the length of the
+          curve. You can use the same antiderivative as the previous
+          question. 
+        </p>
+      </statement>
+      <solution>
+        <figure xml:id="figure-parametric-activity3">
+          <image xml:id="figure50" width="80%">
+            <asymptote>
+              size(16cm,10cm);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return t;}
+              real y(real t) {return t^2/(10);}
+              
+              draw(graph(x,y,0,5));
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          First I calcualte the derivatives of the two components.
+          Then I divide by <m>y</m> derivative by the <m>x</m>
+          derivative to get an expression for the slope.
+        </p>
+        <md>
+          <mrow>
+            \frac{dx}{dt} \amp = 1 
           </mrow>
           <mrow>
-            u \amp = \tan x \implies du = \sec^2 x dx 
+            \frac{dy}{dt} \amp = 2at 
           </mrow>
           <mrow>
-            \int \tan^3 x \sec^4 x dx \amp = \int u^3 (1+u^2) du =
-            \int u^3 du + \int u^5 du 
+            \frac{dy}{dx} \amp = 2at
+          </mrow>
+        </md>
+        <p>
+          There are vertical tangents whenever the denominator of
+          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
+          not. However, this denominator never vanishes, so there are
+          no vertical tangents. 
+        </p>
+        <p>
+          I put the derviatives of the components into the length
+          formula and then calculate the resulting integral. Again, I
+          use the a known antiderivative from the tables for the
+          square root integral instead of doing the whole trig
+          substitution. I need to do a little bit of algebra,
+          factoring <m>4a^2</m> out of the square root, to make the
+          square root integral fit the expression on the table.
+        </p>
+        <md>
+          <mrow>
+            L \amp = \int_0^5 \sqrt{1 + 4a^2 t^2} dt 
           </mrow>
           <mrow>
-            \amp = \frac{u^4}{4} + \frac{u^6}{6} + c =
-            \frac{\tan^4}{4} + \frac{\tan^6}{6} + c 
+            \amp = \int_0^5 2a \sqrt{\frac{1}{4a^2} + t^2} dt 
+          </mrow>
+          <mrow>
+            \amp = 2a \left. \frac{1}{2} t \sqrt{\frac{1}{4a^2} + t^2}
+            + \frac{1}{8a^2} \ln \left( \sqrt{\frac{1}{4a^2} + t^2} +
+            t \right) \right|_0^5 
+          </mrow>
+          <mrow>
+            \amp = 5a \sqrt{\frac{1}{4a^2} + 25} + \frac{1}{8a^2} \ln
+            \left( \sqrt{ \frac{1}{4a^2} + 25} + 5 \right) -
+            \frac{1}{8a^2} \ln \left( \sqrt{\frac{1}{4a^2}} \right) 
+          </mrow>
+          <mrow>
+            \amp = \frac{5}{2} \sqrt{1 + 100a^2} + \frac{1}{8a^2} \ln
+            \left( \frac{1}{2a} \sqrt{1 + 100a^2} + 5 \right) +
+            \frac{1}{8a^2} \ln (2a)
           </mrow>
         </md>
       </solution>
@@ -189,38 +281,98 @@
     <activity>
       <statement>
         <p>
-          Calculate this integral.
-        </p>
-        <me>
-          \int \sec^6 x dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          There is an even power of secant, so a tangent substitution
-          should work well after isolateing <m>\sec^2 x</m> and
-          turning the remaining secant terms into tangent terms. After
-          the tangent substitution, the resulting integral is a
-          polynomial integral. After completing the polynomial
-          integral, I reverse the substitution.
+          This parametric curve is called the astroid. 
         </p>
         <md>
           <mrow>
-            \int \sec^6 x dx \amp = \int (1+\tan^2 x)^2 \sec^2 x dx 
+            \gamma(t) = (\cos^3 t, \sin^3 t) \amp \amp t \in [0, 2\pi]
+          </mrow>
+        </md>
+        <p>
+          Calculate <m>\frac{dy}{dx}</m> and identify some points
+          with vertical tangents. Then calculate the length of the
+          curve. 
+        </p>
+      </statement>
+      <solution>
+        <figure xml:id="figure-parametric-activity4">
+          <image xml:id="figure49" width="80%">
+            <asymptote>
+              size(16cm,10cm);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return (cos(t))^3;}
+              real y(real t) {return (sin(t))^3;}
+
+              draw(graph(x,y,0,2*pi));
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          First I calcualte the derivatives of the two components.
+          Then I divide by <m>y</m> derivative by the <m>x</m>
+          derivative to get an expression for the slope.
+        </p>
+        <md>
+          <mrow>
+            \frac{dx}{dt} \amp = 3 \cos^2 t \sin t 
           </mrow>
           <mrow>
-            u \amp = \tan x \implies du = \sec^2 x dx 
+            \frac{dy}{dt} \amp = - 3 \sin^2 t \cos t 
           </mrow>
           <mrow>
-            \int \sec^6 x dx \amp = \int (1+u^2)^2 du = \int (1 + 2u^2
-            + u^4) du
+            \frac{dy}{dx} \amp = \frac{-\sin t}{\cos t} = - \tan t
+          </mrow>
+        </md>
+        <p>
+          There are vertical tangents whenever the denominator of
+          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
+          not. This happens when cosine vanishes, which is the two
+          parameter value <m>\frac{\pi}{2}</m> and
+          <m>\frac{3\pi}{2}</m>. (These are the known asymptote values
+          for tangent.)
+        </p>
+        <p>
+          I put the derviatives of the components into the length
+          formula and then calculate the resulting integral. I use the
+          trig identity <m>\sin^2 t + \cos^2 t = 1</m> to simplify the
+          integrand. 
+        </p>
+        <md>
+          <mrow>
+            L \amp = \int_0^{2\pi} 3 \sqrt{\cos^4 t \sin^2 t + \sin^4
+            t \cos^2 t} dt 
           </mrow>
           <mrow>
-            \amp = \int du + 2 \int u^2 du + \int u^4 du 
+            \amp = 3 \int_0^{2\pi} \sqrt{ \sin^2 t \cos^2 t (\cos^2 t
+            + \sin^2 t)} dt 
           </mrow>
           <mrow>
-            \amp = u + \frac{2u^3}{3} + \frac{u^5}{5} + c = \tan x +
-            \frac{2 \tan^3 x}{3} + \frac{\tan^5 x}{5} + c 
+            \amp = \int_0^{2\pi} 3 |\sin t \cos t| dt 
+          </mrow>
+          <mrow>
+            \amp = \int_0^{2\pi} \frac{3}{2} |\sin 2t| dt 
+          </mrow>
+        </md>
+        <p>
+          This is a bit tricky due to the absolue value. However, I
+          can use a symmetry argument. The expression <m>\sin 2t</m>
+          makes two periods over this domain. Each period has an area
+          above the axis and an area below, each for half a period.
+          The absolute value puts these areas above the axis. Over two
+          periods, there are four such areas, all with the same shape.
+          So I can integrate over the first quarter of this domain and
+          multiply by 4. That lets me drop the absolute value.
+        </p>
+        <md>
+          <mrow>
+            \amp = 4 \int_0^{\frac{\pi}{2}} \frac{3}{2} \sin 2t dt = 6
+            \int_0^{\frac{\pi}{2}} \sin 2t dt = 6 \left. \frac{-\cos
+            2t}{2} \right|_0^{\frac{\pi}{2}} = 6 \left( \frac{1}{2} +
+            \frac{1}{2} \right) = 6
           </mrow>
         </md>
       </solution>
@@ -228,819 +380,541 @@
     <activity>
       <statement>
         <p>
-          Calculate this integral.
+          This parametric curve is the cardiod.
         </p>
-        <me>
-          \int_0^{\frac{\pi}{3}} \tan x \sec^6 x dx 
-        </me>
+        <md>
+          <mrow>
+            \gamma(t) = (2 \cos t - \cos 2t,2 \sin t - \sin 2t) \amp
+            \amp t \in [0,2\pi]
+          </mrow>
+        </md>
+        <p>
+          Calculate <m>\frac{dy}{dx}</m> and identify some points
+          with vertical tangents. Then calculate the length of the
+          curve. 
+        </p>
       </statement>
       <solution>
+        <figure xml:id="figure-parametric-activity5">
+          <image xml:id="figure51" width="80%">
+            <asymptote>
+              size(16cm,10cm);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return 2*cos(t) - cos(2*t);}
+              real y(real t) {return 2*sin(t) - sin(2*t);}
+
+              draw(graph(x,y,0,2*pi));
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          There is an even power of secant, so I can isolate <m>\sec^2
-          x</m> and turn the rest into tangent terms. Then a tangent
-          substitution works. Since this is a definite integral, I'll
-          also change the bounds of the substitution, so that I can
-          finish the polynomial integral with the new bounds and don't
-          have to do an inverse substitution. 
+          First I calcualte the derivatives of the two components.
+          Then I divide by <m>y</m> derivative by the <m>x</m>
+          derivative to get an expression for the slope.
         </p>
         <md>
           <mrow>
-            \int_0^{\frac{\pi}{3}} \tan x \sec^6 x dx \amp =
-            \int_0^{\frac{\pi}{3}} \tan x (1+\tan^2 x)^2 \sec^2 x dx 
+            \frac{dx}{dt} \amp = -2 \sin t + 2 \sin 2t 
           </mrow>
           <mrow>
-            u \amp = \tan x \implies du = \sec^2 x dx 
+            \frac{dy}{dt} \amp = 2 \cos t - 2 \cos 2t 
           </mrow>
           <mrow>
-            x \amp = 0 \implies u = 0 
-          </mrow>
-          <mrow>
-            x \amp = \frac{\pi}{3} \implies u = \tan \frac{\pi}{3} =
-            \sqrt{3}
-          </mrow>
-          <mrow>
-            \amp = \int_0^{\sqrt{3}} u(1+u^2)^2 du = \int_0^{\sqrt{3}}
-            u(1+2u^2 + u^4) du
-          </mrow>
-          <mrow>
-            \amp = \int_0^{\sqrt{3}} u du + \int_0^{\sqrt{3}} 2u^3 du
-            + \int_0^{\sqrt{3}} u^5 du
-          </mrow>
-          <mrow>
-            \amp = \frac{u^2}{2} + \frac{u^4}{2} +
-            \frac{u^6}{6} \Bigg|_0^{\sqrt{3}} 
-          </mrow>
-          <mrow>
-            \amp = \frac{3}{2} + \frac {9}{2} + \frac{27}{6} =
-            \frac{63}{6} = \frac{31}{2}
-          </mrow>
-        </md>
-      </solution>
-    </activity>
-  </subsection>
-  <subsection xml:id="subsection-activity-trig-subs">
-    <title>Trigonometric Substitutions</title>
-    <activity>
-      <statement>
-        <p>
-          Calculate this integral using a trig substitution. (Hint:
-          after the substitution, write everything in terms of sine,
-          break up the denominator, and then write <m>\frac{1}{\sin
-          \theta}</m> as <m>\csc \theta</m>. Then you can use
-          antiderivatives from the tables for both of the resulting
-          trig integrals.) 
-        </p>
-        <me>
-          \int \frac{\sqrt{9-x^2}}{x} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          This is a sine substitution. I calculate the various pieces
-          of the substitution.
-        </p>
-        <md>
-          <mrow>
-            x \amp = 3 \sin \theta 
-          </mrow>
-          <mrow>
-            dx \amp = 3 \cos \theta d \theta 
-          </mrow>
-          <mrow>
-            \sqrt{9-x^2} \amp = \sqrt{9 - 9 \sin^2 \theta} = 3
-            \sqrt{1-\sin^2 \theta}
-          </mrow>
-          <mrow>
-            \amp = 3 \sqrt{\cos^2 \theta} = 3 \cos \theta 
+            \frac{dy}{dx} \amp = \frac{\cos t - \cos2t}{-\sin t + \sin 2t}
           </mrow>
         </md>
         <p>
-          Then I use the pieces to change all the parts of the
-          original integral into <m>\theta</m>. I simplify the result
-          first by writing everything in terms of sine and then by
-          split up the fraction and writing everything in the
-          numerator. 
+          There are vertical tangents whenever the denominator of
+          <m>\frac{dy}{dx}</m> approaches zero but the numerator does
+          not. I can use a double angle identity to change the
+          denominator to <m>(-\sin t + 2 \sin t \cos t)</m> and then
+          factor out of sine to get <m>\sin t(-1 + 2\cos t)</m>. The
+          zeros of the demonimator are the zeros of the sine function
+          (all multiples of <m>\pi</m>) and <m>\cos t =
+          \frac{1}{2}</m> ( in this range <m>\frac{\pi}{3}</m> and
+          <m>\frac{5\pi}{3}</m>). I have to reject <m>t = 0</m>, since
+          that is also a zero of the numerator and the limit of the
+          slope is not infinity, but there is a vertical tangent at
+          <m>t = \pi</m>. Similarly, since they are not zero of the
+          numerator, there are vertical tangents at
+          <m>\frac{\pi}{3}</m> and <m>\frac{5\pi}{3}</m> as well. 
+        </p>
+        <p>
+          I put the derviatives of the components into the length
+          formula and then calculate the resulting integral. The
+          integral simplifies using trig identities. After taking the
+          square root, I can use the same argument as the previous
+          question to get rid of the absolute value by integration
+          over a quarter of the domain and multiplying by 4. 
         </p>
         <md>
           <mrow>
-            \int \frac{\sqrt{9-x^2}}{x} dx \amp = \int \frac{3 \cos
-            \theta}{3 \sin \theta} 3 \cos \theta d \theta 
+            \amp L = 
           </mrow>
           <mrow>
-            \amp = 3 \int \frac{\cos^2 \theta}{\sin \theta} d \theta =
-            3 \int \frac{1 - \sin^2 \theta}{\sin \theta} d \theta 
+            \amp \int_0^{2\pi} \sqrt{ 4 \sin ^2 t - 8 \sin t \sin
+            2t + 4 \sin^2 2t + 4 \cos^2 2t - 8 \cos t \cos2t + 4\cos^2
+            t} dt 
           </mrow>
           <mrow>
-            \amp = 3 \int \frac{1}{\sin theta}  - \frac{\sin^2
-            \theta}{\sin \theta} d \theta 
-            = 3 \int \csc \theta d \theta  - 3 \int \sin \theta d
-            \theta 
-          </mrow>
-        </md>
-        <p>
-          This is a bit unusual (as I noted in the hint). If I do the
-          correct rearrangements, I don't actually need any other
-          substitution techniques; I can just use the antiderivatives
-          for <m>\sin \theta</m> and <m>\csc \theta</m> from the
-          tables. 
-        </p>
-        <me>
-          3 \int \csc \theta d \theta - 3 \int \sin \theta d \theta =
-          3 \ln |\csc \theta - \cot \theta| + 3 \cos \theta + c
-        </me>
-        <p>
-          To reverse the substitution, I need to write everything in a
-          form that I can substitute backward. I change the cosecant
-          and cotangent back to sine and cosine. I also multiply and
-          divide by <m>3</m> in both fractions, since my substitution
-          pieces all have <m>3</m> in them.
-        </p>
-        <md>
-          <mrow>
-            \amp = 3 \ln \left| \frac{1}{\sin \theta} - \frac{\cos
-            \theta}{\sin \theta} \right| +  3 \cos \theta + c 
+            \amp = \int_0^{2\pi} \sqrt{ 4 + 4 - 8 \sin t (2 \sin t
+            \cos t) - 8 \cos t (\cos^2 t - \sin^2 t)} dt
           </mrow>
           <mrow>
-            \amp = 3 \ln \left| \frac{3}{3 \sin \theta} - \frac{ 3
-            \cos \theta}{3 \sin \theta} \right| + 3 \cos \theta  + c 
-          </mrow>
-        </md>
-        <p>
-          Now everything looks like something from the substitution
-          calculations. I reverse the substitution. 
-        </p>
-        <me>
-          \int \frac{\sqrt{9-x^2}}{x} dx = 3 \ln \left| \frac{3 -
-          \sqrt{9-x^2}}{x} \right| + \sqrt{9-x^2} + c
-        </me>
-      </solution>
-     </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this integral using a trig substitution. (Hint:
-          after the substitution, you can write the sine terms as
-          cosecant terms and look for a known antiderivative from the
-          tables.) 
-        </p>
-        <me>
-          \int \frac{1}{x^2 \sqrt{3-3x^2}} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I need to do a little algebra before this is in the correct
-          form. I can take the <m>3</m> out of the square root (and
-          also out of the integral, since it is constant). 
-        </p>
-        <md>
-          <mrow>
-            \int \frac{1}{x^2 \sqrt{3-3x^2}} dx \amp =
-            \frac{1}{\sqrt{3}} \int \frac{1}{x^2 \sqrt{1-x^2}} dx
-          </mrow>
-        </md>
-        <p>
-          Now this is a sine substitution. I calculate the various
-          pieces of the substitution.
-        </p>
-        <md>
-          <mrow>
-            x \amp = \sin \theta 
+            \amp = \int_0^{2\pi} \sqrt{8 - 16 \sin^2 t \cos t - 8
+            \cos^3 t + 8 \sin^2 t \cos t} dt 
           </mrow>
           <mrow>
-            dx \amp = \cos \theta d\theta 
+            \amp = \int_0^{2\pi} \sqrt{8 - 8 \cos t (\sin^2 t + \cos^2
+            t)} dt 
           </mrow>
           <mrow>
-            \sqrt{1-x^2} \amp = \cos \theta  
-          </mrow>
-        </md>
-        <p>
-          Now I replace all the pieces of the original integral with
-          the trig substitution pieces. Then I can cancel out the
-          cosine term. 
-        </p>
-        <md>
-          <mrow>
-            \frac{1}{\sqrt{3}} \int \frac{1}{x^2\sqrt{1-x^2}} dx \amp
-            = \frac{1}{\sqrt{3}} \int \frac{1}{\sin^2 \theta \cos
-            \theta} \cos \theta d\theta
+            \amp = \sqrt{8} \int_0^{2\pi} \sqrt{1-\cos t} dt =
+            \sqrt{8} \int_0^{2\pi} \sqrt{ 2 \sin^2 2t} dt 
           </mrow>
           <mrow>
-            \amp = \frac{1}{\sqrt{3}} \int \frac{1}{\sin^2 \theta}
-            d\theta = \frac{1}{\sqrt{3}} \int \csc^2 \theta d \theta 
-          </mrow>
-        </md>
-        <p>
-          I get the integral of cosecant squared. This happens to have 
-          a basic antiderivatives in the tables. After using this
-          antiderivative, I write the result as sines and
-          cosines to reverse the substitution. I will need to multiply
-          and divide by <m>3</m> to make sure the expressions match the
-          substitution. Then I reverse the substitution.
-        </p>
-        <md>
-          <mrow>
-            \int \frac{1}{x^2 \sqrt{3-3x^2}} dx \amp =
-            \frac{1}{\sqrt{3}} (- \cot \theta)  + c = \frac{-\cos
-            \theta}{\sqrt{3} \sin \theta} + c 
+            \amp 4 \int_0^{2\pi} |\sin 2t| dt = 4 \cdot 4
+            \int_0^{\frac{\pi}{2}} \sin 2t dt 
           </mrow>
           <mrow>
-            \amp = \frac{-\cos \theta}{\sqrt{3} \sin \theta} + c =
-            \frac{-\sqrt{1-x^2}}{\sqrt{3} x} + c 
-          </mrow>
-        </md>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this integral using a trig substitution.
-        </p>
-        <me>
-          \int \frac{\sqrt{x^2-6}}{x} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          This is a secant substitution. I calculate the various
-          piece of the substitution. 
-        </p>
-        <md>
-          <mrow>
-            x \amp = \sqrt{6} \sec \theta 
-          </mrow>
-          <mrow>
-            dx \amp = \sqrt{6} \sec \theta \tan \theta d \theta 
-          </mrow>
-          <mrow>
-            \sqrt{x^2-6} \amp = \sqrt{6} \tan \theta  
-          </mrow>
-          <mrow>
-            \frac{x}{\sqrt{6}} \amp = \sec \theta \implies
-            \arcsec \left( \frac{x}{\sqrt{6}} \right) = \theta
-          </mrow>
-        </md>
-        <p>
-          Then I replace all the piece of the original integral
-          with the piece from the substitution. I can cancel of a
-          secant and one <m>\sqrt{6}</m> to simplify. 
-        </p>
-        <md>
-          <mrow>
-            \int \frac{\sqrt{x^2-6}}{x} dx \amp = \int \frac{\sqrt{6}
-            \tan \theta}{\sqrt{6} \sec \theta} \sqrt{6} \sec \theta
-            \tan \theta d \theta 
-          </mrow>
-          <mrow>
-            \amp = \sqrt{6} \int \tan^2 \theta d \theta 
-          </mrow>
-        </md>
-        <p>
-          I can use the square identity for tangent and secant to
-          write this as two reaonsable integrals (Remember that
-          <m>\sec^2 \theta</m> has a nice antiderivative in the
-          table.) 
-        </p>
-        <md>
-          <mrow>
-            \amp = \sqrt{6} \int \tan^2 \theta d \theta = \sqrt{6}
-            \int (\sec^2 \theta - 1) d \theta 
-          </mrow>
-          <mrow>
-            \amp = \sqrt{6} \int \sec^2 \theta d \theta - \sqrt{6}
-            \int d\theta 
-          </mrow>
-          <mrow>
-            \amp = \sqrt{6} \tan \theta - \sqrt{6} \theta + c 
-          </mrow>
-        </md>
-        <p>
-          Then I can reverse the substitution. I have already
-          calculated a term that I can use to replace the tangent. For
-          replaing <m>\theta</m>, I invert the substitution. 
-        </p>
-        <me>
-          \int \frac{\sqrt{x^2-6}}{x} dx = \sqrt{x^2-6} - \sqrt{6}
-          \arcsec \left( \frac{x}{\sqrt{6}} \right) + c 
-        </me>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this integral using a trig substitution.
-        </p>
-        <me>
-          \int_0^5 x^2 \sqrt{25-x^2} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          This is a sine substitution. I calculate the various pieces
-          of the substitution. Since this is a definite integral, I
-          also calculate the new bounds. Note that calculating the new
-          bounds involves inverting the sine function. To do this, I
-          just used a unit circle diagram.
-        </p>
-        <md>
-          <mrow>
-            x \amp = 5 \sin \theta 
-          </mrow>
-          <mrow>
-            dx \amp = 5 \cos \theta d \theta 
-          </mrow>
-          <mrow>
-            \sqrt{25-x^2} \amp = 5 \cos \theta 
-          </mrow>
-          <mrow>
-            x \amp = 0 \implies 5 \sin \theta = 0 \implies \theta = 0 
-          </mrow>
-          <mrow>
-            x \amp = 5 \implies 5 \sin \theta = 5 \implies \sin \theta
-            =1 \implies \theta = \frac{\pi}{2}  
-          </mrow>
-        </md>
-        <p>
-          Then I do the substitution, replacing all the piece from the
-          original as well as changing the bounds. I simplify by
-          pulling out the constants. 
-        </p>
-        <md>
-          <mrow>
-            \int_0^5 x^2 \sqrt{25-x^2} dx \amp =
-            \int_0^{\frac{\pi}{2}} 25 \sin^2 \theta 5 \cos \theta 5
-            \cos \theta d \theta
-          </mrow>
-          <mrow>
-            \amp = 625 \int_0^{\frac{\pi}{2}} \sin^2 \theta \cos^2
-            \theta d \theta 
-          </mrow>
-        </md>
-        <p>
-          After substitution, there are even powers of both sine and
-          cosine. I use the half-angle identities to reduce the
-          exponents. That produces two integrals. (notice that two
-          terms cancel when I multiply the binomials, leaving only two
-          terms). In the second integral, I have to use the half-angle
-          identities once again to deal with the <m>\cos^2
-          (2\theta)</m>. After doing so, all the remaining integrals
-          have straightforward antiderivatives.
-        </p>
-        <md>
-          <mrow>
-            \amp = 625 \int_0^{\frac{\pi}{2}} \left( \frac{1 - \cos
-            (2\theta)}{2} \right) \left( \frac{1 + \cos (2\theta)}{2}
-            \right) d \theta 
-          </mrow>
-          <mrow>
-            \amp = \frac{625}{4} \int_0^{\frac{\pi}{2}} 1 - \cos^2 (2
-            \theta) d \theta 
-          </mrow>
-          <mrow>
-            \amp = \frac{625}{4} \int_0^{\frac{\pi}{2}} d \theta -
-            \frac{625}{4} \int_0^{\frac{\pi}{2}} \left( \frac{1 + \cos
-            (4 \theta)}{2} \right) d \theta
-          </mrow>
-          <mrow>
-            \amp = \frac{625\pi}{8} - \frac{625}{8}
-            \int_0^{\frac{\pi}{2}} d \theta - \frac{625}{8}
-            \int_0^{\frac{\pi}{2}} \cos (4 \theta) d \theta 
-          </mrow>
-        </md>
-        <p>
-          Since I changed the bounds, I don't have to substitute
-          back. I can simply evaluate on the new bounds.
-        </p>
-        <md>
-          <mrow>
-            \amp = \frac{625\pi}{8} - \frac{625}{8} \frac{\pi}{2} -
-            \frac{625}{8} \frac{-\sin 4 \theta}{4}
-            \Bigg|_0^{\frac{\pi}{2}} 
-          </mrow>
-          <mrow>
-            \amp = \frac{625\pi}{8} - \frac{625\pi}{16} - 0 =
-            \frac{625\pi}{16}
-          </mrow>
-        </md>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this integral using a trig substitution.
-        </p>
-        <me>
-          \int_0^{10} \frac{1}{\sqrt{100 + x^2}} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          This is a tangent substitution. I calculate the various
-          pieces of the substitution, including the bounds.
-        </p>
-        <md>
-          <mrow>
-            x \amp = 10 \tan \theta 
-          </mrow>
-          <mrow>
-            dx \amp = 10 \sec^2 \theta d \theta 
-          </mrow>
-          <mrow>
-            \sqrt{100+x^2} \amp = \sec \theta 
-          </mrow>
-          <mrow>
-            x \amp = 0 \implies 10 \tan \theta = 0 \implies \tan
-            \theta = 0 \implies \theta = 0 
-          </mrow>
-          <mrow>
-            x \amp = 10 \implies 10 \tan \theta = 10 \implies \tan
-            \theta = 1 \implies \theta = \frac{\pi}{4} 
-          </mrow>
-        </md>
-        <p>
-          Then I perform the substitution, change the bounds, and
-          simplify. One of the secant terms cancels. After that, I can use
-          the tables to get the antiderivative of sectant.
-        </p>
-        <md>
-          <mrow>
-            \int_0^{10} \frac{1}{\sqrt{100 + x^2}} dx \amp =
-            \int_0^{\frac{\pi}{4}} \frac{1}{\sec \theta} \sec^2 \theta
-            d \theta
-          </mrow>
-          <mrow>
-            \amp = \int_0^{\frac{\pi}{4}} \sec \theta d \theta 
-          </mrow>
-          <mrow>
-            \amp = \ln | \tan \theta + \sec \theta|
-            \Big|_0^{\frac{\pi}{4}} 
-          </mrow>
-        </md>
-        <p>
-          Since I changed the bounds in the substitution, I don't
-          need a reverse substitution. I can just evaluate on these
-          bounds.
-        </p>
-        <md>
-          <mrow>
-            \amp = \ln \left| \tan \frac{\pi}{4} + \sec \frac{\pi}{4}
-            \right| - \ln \left| \tan 0 + \sec 0 \right|
-          </mrow>
-          <mrow>
-            \amp = \ln | 1 + \sqrt{2} | - \ln |0 + 1| = \ln |1 +
-            \sqrt{2}|
+            \amp = 16 \left. \frac{-\cos 2t}{2}
+            \right|_0^{\frac{\pi}{2}} = 8 \left( \cos 0 - \cos
+            \frac{\pi}{2} \right) = 8
           </mrow>
         </md>
       </solution>
     </activity>
   </subsection>
-  <subsection xml:id="subsection-activity-improper-integrals">
-    <title>Improper Integrals</title>
+  <subsection xml:id="subsection-activity-parametric-curves2">
+    <title>Parametric Curves - Parametrization by Arclenth</title>
     <activity>
       <statement>
         <p>
-          Calculate this improper integral and determine if it
-          converges.
-        </p>
-        <me>
-          \int_1^\infty \frac{1}{x^3} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I find the antiderivative using the inverse power rule and
-          then take the limit as the upper bound approaches
-          <m>\infty</m>.
+          This parametric curve is the quadratic spiral. 
         </p>
         <md>
           <mrow>
-            \int_1^\infty \frac{1}{x^3} dx \amp = \lim_{a \rightarrow
-            \infty} \int_1^a x^{-3} dx 
-          </mrow>
-          <mrow>
-            \amp = \lim_{a \rightarrow \infty} \frac{x^{-2}}{-2}
-            \Bigg|_1^a = \lim_{a \rightarrow \infty} \frac{1}{2}
-            \left( \frac{-1}{a^2} + \frac{1}{1} \right) = \frac{1}{2} 
+            \gamma(t) = (t^2 \cos t, t^2 \sin t) \amp \amp t \in [0,
+            \infty)
           </mrow>
         </md>
         <p>
-          This improper integral converges.
+          Parametrize the curve by arclength. 
+        </p>
+      </statement>
+      <solution>
+        <figure xml:id="figure-parametric-activity6">
+          <image xml:id="figure45" width="80%">
+            <asymptote>
+              size(16cm,10cm);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return t^2*cos(t);}
+              real y(real t) {return t^2*sin(t);}
+
+              draw(graph(x,y,0,4*pi));
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          I follow the three part algorithm presented in the notes and
+          the videos. First I setup the integral to calculate the
+          arclength suntion. I need the two derivatives of the
+          components, which I then put into the square root term of
+          the integral. The integral gets pretty messy. 
+        </p>
+        <md>
+          <mrow>
+            \frac{dx}{dt} \amp = 2 t \cos t - t^2 \sin t 
+          </mrow>
+          <mrow>
+            \frac{dy}{dt} \amp = 2 t \sin t + t^2 \cos t 
+          </mrow>
+        </md>
+        <p>
+          I'll calculate the sum of the square of the derivative by
+          itself and then insert it into the arclength integral. After
+          expanding the squares, several terms cancel. Then, after
+          factoring and grouping, trig identities help me make more
+          simplifications. 
+        </p>
+        <md>
+          <mrow>
+            \left( \frac{dx}{dt} \right)^2  \amp = 4t^2 \cos^2 t -
+            4t^3 \cos t \sin t + t^4 \sin^2 t 
+          </mrow>
+          <mrow>
+            \left( \frac{dy}{dt} \right)^2 \amp = 4t^2 \sin^2 t + 4t^3
+            \cos t \sin t + t^4 \cos t du 
+          </mrow>
+          <mrow>
+            \left( \frac{dx}{dt} \right)^2 + \left( \frac{dy}{dx}
+            \right)^2 \amp = 4t^2 (\cos^2 t + \sin^2 t) + t^4(\cos^2 t
+            + \sin^2 t)
+          </mrow>
+          <mrow>
+            \amp = 4t^2 + t^4 = t^2(4+t^2) 
+          </mrow>
+          <mrow>
+            s(t) \amp = \int_0^t u \sqrt{4+u^2} du 
+          </mrow>
+        </md>
+        <p>
+          Since there is a <m>u</m> outside the square root, this
+          looks likes a reasonable substitution using <m>v = 4 +
+          u^2</m> with <m>d = 2u du</m>. I also change the bounds so
+          that I don't have to do the reverse substitution.
+        </p>
+        <md>
+          <mrow>
+            s \amp = \int_4^{4+t^2} \frac{\sqrt{v}}{2} dv = 
+            \frac{v^{\frac{3}{2}}}{3} \Bigg|_4^{4+t^2} =
+            \frac{(4+t^2)^\frac{3}{2}}{3} - \frac{8}{3} 
+          </mrow>
+        </md>
+        <p>
+          Then I invert the arclength function.
+        </p>
+        <md>
+          <mrow>
+            s + \frac{8}{3} \amp = \frac{(4+t^2)^\frac{3}{2}}{3}
+          </mrow>
+          <mrow>
+            3s + 8 \amp = (1+t^2)^\frac{3}{2} 
+          </mrow>
+          <mrow>
+            \left( 3s + 8 \right)^\frac{2}{3} \amp = 4+t^2 
+          </mrow>
+          <mrow>
+            \left( 3s + 8 \right)^\frac{2}{3} - 4 \amp = t^2 
+          </mrow>
+          <mrow>
+            \sqrt{\left( 3s + 8 \right)^\frac{2}{3} -4} \amp = t 
+          </mrow>
+          <mrow>
+            t(s) \amp = \sqrt{\left( 3s + 8 \right)^\frac{2}{3} -4} 
+          </mrow>
+        </md>
+        <p>
+          Finally, I replace the original parameter <m>t</m> with
+          <m>t(s)</m> from the inversion calculation.
+        </p>
+        <md>
+          <mrow>
+            \gamma(s) \amp = \left( \left( \left( 3s + 8
+            \right)^\frac{2}{3} -4 \right) \cos \left( \sqrt{\left( 3s
+            + 8 \right)^\frac{2}{3} -4} \right), \right.
+          </mrow>
+          <mrow>
+            \amp \left. \left( \left( 3s + 8 \right)^\frac{2}{3} -4
+            \right) \sin \left( \sqrt{\left( 3s + 8
+            \right)^\frac{2}{3} -4} \right) \right) 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          This parametric curve is an alternate parametrization of the
+          circle. 
+        </p>
+        <md>
+          <mrow>
+            \gamma(t) = \left( \frac{\cos t - \sin t}{\sqrt{2}},
+            \frac{\cos t + \sin t}{\sqrt{2}} \right) \amp \amp t \in
+            \left[ \frac{-\pi}{4}, \frac{7\pi}{4} \right]
+          </mrow>
+        </md>
+        <p>
+          Parametrize the curve by arclength. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I follow the three part algorithm presented in the notes and
+          the videos. First I setup the integral to calculate the
+          arclength suntion. I start with the derivatives and then put
+          them into the square root term in the arclength integral.
+        </p>
+        <md>
+          <mrow>
+            \frac{dx}{dt} \amp = \frac{1}{\sqrt{2}} \left( - \sin t -
+            \cos t \right) 
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \frac{1}{\sqrt{2}} \left( - \sin t +
+            \cos t \right) 
+          </mrow>
+          <mrow>
+            \left( \frac{dx}{dt} \right)^2 \amp = \frac{1}{2} \left(
+            \sin^2 t + 2\cos t \sin t + \cos^2 t \right) 
+          </mrow>
+          <mrow>
+            \left( \frac{dy}{dx} \right)^2 \amp = \frac{1}{2} \left(
+            \sin^2 t - 2 \cos t \sin t + \cos^2 t \right) 
+          </mrow>
+          <mrow>
+            \left( \frac{dx}{dy} \right)^2 +  \left( \frac{dy}{dx}
+            \right)^2 \amp = \frac{1}{2} \left( 2\sin^2 t + 2\cos^2 t
+            \right) = \frac{2}{2} = 1 
+          </mrow>
+        </md>
+        <p>
+          When calculating the sums of the square roots, I get some
+          nice cancellations. What remains can be reduced to a
+          constant with trig identities. That leaves a reasonably easy
+          arclength integral.
+        </p>
+        <md>
+          <mrow>
+            s(t) \amp = \int_{\frac{-\pi}{4}}^t du = u 
+            \Bigg|_{\frac{-\pi}{4}}^t = t + \frac{\pi}{4} 
+          </mrow>
+          <mrow>
+            s(t) \amp = t + \frac{\pi }{4} 
+          </mrow>
+        </md>
+        <p>
+          Then I invert the arclength function.
+        </p>
+        <md>
+          <mrow>
+            s - \frac{\pi }{4} \amp = t \implies t = s + \frac{\pi}{4}
+          </mrow>
+        </md>
+        <p>
+          Finally, I replace the original parameter <m>t</m> with
+          <m>t(s)</m> from the inversion calculation. I could directly
+          replace <m>t</m>, but if I make use of the some identities
+          for sums and differences, I get a more succinet form of the
+          reparametrized curve. 
+        </p>
+        <md>
+          <mrow>
+            \gamma(t) \amp = \left( \frac{\cos t - \sin t}{\sqrt{2}},
+            \frac{\cos t + \sin t}{\sqrt{2}} \right) = \left(
+            \frac{1}{\sqrt{2}} \sqrt{2} \sin \left( \frac{\pi}{4} - t
+            \right), \frac{1}{\sqrt{2}} \sqrt{2} \sin \left(
+            \frac{\pi}{4} + t \right) \right) 
+          </mrow>
+        </md>
+        <p>
+          Now I replace <m>t</m> with <m>s + \frac{\pi}{4}</m>.
+        </p>
+        <md>
+          <mrow>
+            \gamma (s) \amp = \left( \sin \left( \frac{\pi}{4} - t
+            \right), \sin \left( \frac{\pi}{4} + t \right) \right) 
+          </mrow>
+          <mrow>
+            \amp = \left( \sin \left( \frac{\pi}{4} - s +
+            \frac{\pi}{4} \right), \sin \left( \frac{\pi}{4} + s -
+            \frac{\pi}{4} \right) \right)
+          </mrow>
+          <mrow>
+            \amp = \left( \sin \left( -s + \frac{\pi}{2} \right), \sin
+            (s) \right) = (\cos (-s), \sin (s)) = (\cos s, \sin s)
+          </mrow>
+        </md>
+        <p>
+          At the end of all this work, I have just recovered the most
+          basic parametrization of the circle. However, this makes
+          sense, since each curve has only one parametrization by
+          arclength. Starting with any parametrization of the circle,
+          the algorithm should produce this same answer as the
+          parametrization by arclength. 
         </p>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Calculate this improper integral and determine if it
-          converges. (You can do a substitution first and then the
-          limit for the improper integral.) 
-        </p>
-        <me>
-          \int_1^\infty \frac{\ln x}{x} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          I use a substitution to solve the integral, including
-          changing the bounds. I can deal with an infinite bound by
-          determining how the new variable changes as the original
-          variables goes to <m>\infty</m>.
+          This parametric curve is an alternate parametrization of the
+          half-circle.
         </p>
         <md>
           <mrow>
-            u \amp = \ln x 
-          </mrow>
-          <mrow>
-            du \amp = \frac{1}{x} dx 
-          </mrow>
-          <mrow>
-            x \amp = 1 \implies u = \ln 1 = 0 
-          </mrow>
-          <mrow>
-            x \amp \rightarrow \infty \implies u \rightarrow \infty 
+            \gamma(t) = \left( \frac{1-t^2}{1+t^2}, \frac{2t}{1+t^2}
+            \right) \amp \amp t \in [0, \infty)
           </mrow>
         </md>
         <p>
-          The last step in the substitution comes from the properties
-          of the logarithm. If <m>x \rightarrow \infty</m>, then since
-          the logarithm grows without bound, <m>u</m> will also
-          diverge to infinity. Then I perform the substitution.
+          Parametrize the curve by arclength. 
         </p>
-        <me>
-          \int_1^\infty \frac{\ln x}{x} dx = \int_0^\infty u du 
-        </me>
+      </statement>
+      <solution>
         <p>
-          Now I can use a limit to evalute this improper integral.
+          I follow the three part algorithm presented in the notes and
+          the videos. First I setup the integral to calculate the
+          arclength suntion. I calculate the two derivatives and them
+          put them into the square root term in the arclength
+          integral. 
         </p>
-        <me>
-          = \lim_{a \rightarrow \infty} \frac{u^2}{2} \Bigg|_0^a
-          = \lim_{a \rightarrow \infty} \frac{a^2}{2} = \infty 
-        </me>
+        <md>
+          <mrow>
+            \frac{dx}{dt} \amp = \frac{(1+t^2)(-2t) -
+            2t(1-t^2)}{(1+t^2)^2} = \frac{-4t}{(1+t^2)^2} .
+          </mrow>
+          <mrow>
+            \frac{dy}{dt} \amp = \frac{(1+t^2)(2) - 2t(2t)}{(1+t^2)^2}
+            = \frac{2-2t^2}{(1+t^2)^2} 
+          </mrow>
+          <mrow>
+            s(t) \amp = \int_0^t \frac{1}{(1+u^2)^2} \sqrt{16u^2 + 4 -
+            8u^2 + 4u^4} du 
+          </mrow>
+          <mrow>
+            \amp = \int_0^t \frac{1}{(1+u^2)^2} \sqrt{4 + 8
+            u^2 + 4u^4} du 
+          </mrow>
+          <mrow>
+            \amp = \int_0^t \frac{1}{(1+u^2)^2} 2 \sqrt{(1+u^2)^2} du
+            = \int_0^t \frac{2}{1+u^2} du 
+          </mrow>
+          <mrow>
+            \amp = 2 \arctan u \Big|_0^t = 2 \arctan t 
+          </mrow>
+        </md>
         <p>
-          This improper integral diverges.
+          Then I invert the arclength function.
+        </p>
+        <md>
+          <mrow>
+            t \amp = \tan \frac{s}{2} 
+          </mrow>
+        </md>
+        <p>
+          Finally, I replace the original parameter <m>t</m> with
+          <m>t(s)</m> from the inversion calculation.
+        </p>
+        <md>
+          <mrow>
+            \gamma(s) \amp = \left( \frac{1-\tan^2 \left( \frac{s}{2}
+            \right) }{1 + \tan^2 \left( \frac{s}{2} \right)}, \frac{2
+            \tan \left( \frac{s}{2} \right)}{1 + \tan^2 \left(
+            \frac{s}{2} \right)} \right) = \left( \frac{1-\tan^2
+            \left( \frac{s}{2} \right) }{\sec^2 \left( \frac{s}{2}
+            \right)}, \frac{2 \tan \left( \frac{s}{2} \right)}{\sec^2
+            \left( \frac{s}{2} \right)} \right) 
+          </mrow>
+          <mrow>
+            \amp = \left( \cos^2 \left( \frac{s}{2} \right) - \sin^2
+            \left( \frac{s}{2} \right), 2 \sin \left( \frac{s}{2}
+            \right) \cos \left( \frac{s}{2} \right) \right) = ( \cos
+            s, \sin s)
+          </mrow>
+        </md>
+        <p>
+          After this use of the double-angle identities, I do recover
+          the simple parametriztaion of the circle.
         </p>
       </solution>
     </activity>
     <activity>
       <statement>
         <p>
-          Calculate this improper integral and determine if it
-          converges.
+          This parametric curve is the quadrifolium. 
         </p>
-        <me>
-          \int_1^\infty x e^{-x} dx 
-        </me>
+        <md>
+          <mrow>
+            \gamma(t) = (\cos t \sin 2t, \sin t \sin 2t) \amp \amp t \in
+            [0, 2\pi]
+          </mrow>
+        </md>
+        <p>
+          Parametrize the curve by arclength. (Go as far as you can
+          with the process for this question; the integral that
+          results is not actually solvable by elementary functions.) 
+        </p>
       </statement>
       <solution>
+        <figure xml:id="figure-parametric-activity7">
+          <image xml:id="figure46" width="80%">
+            <asymptote>
+              size(16cm,10cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return cos(t)*sin(2*t);}
+              real y(real t) {return sin(t)*sin(2*t);}
+
+              draw(graph(x,y,0,2*pi));
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          I set up the improper integral limit.
-        </p>
-        <me>
-          \int_1^\infty x e^{-x} dx = \lim_{a \rightarrow
-          \infty} \int_1^a x e^{-x} dx 
-        </me>
-        <p>
-          Then I use integration by parts. 
-        </p>
-        <md>
-          <mrow>
-            g(x) \amp = x \implies \frac{dg}{dx} = 1 
-          </mrow>
-          <mrow>
-            \frac{df}{dx} \amp = e^{-x} \implies f(x) = -e^{-x} 
-          </mrow>
-        </md>
-        <p>
-          I need to bring the limit all the way through the process of
-          integration by parts. The new integral after integration by
-          parts is a reasonable exponential integral. I evaluate the
-          first term and the antiderivative of the second integral on
-          the bounds (using the termporary bound <m>a</m>). 
-        </p>
-        <md>
-          <mrow>
-            \amp = \lim_{a \rightarrow \infty} \left( -xe^{-x}
-            \Big|_1^a + \int_1^a e^{-x} dx \right) = \lim_{a
-            \rightarrow \infty} -ae^{-a} + e^{-1} + -e^{-x} \Big|_1^a
-          </mrow>
-          <mrow>
-            \amp = \lim_{a \rightarrow \infty} \frac{-a}{e^a} +
-            \frac{1}{e} - \frac{1}{e^a} + \frac{1}{e} 
-          </mrow>
-        </md>
-        <p>
-          Then I just need to evalute the limit. In the first term,
-          the denominator with <m>e^a</m> clearly dominates over the
-          numerator with just <m>a</m>, so the limit is zero. 
-        </p>
-        <me>
-            \lim_{a \rightarrow \infty} \frac{-a}{e^a} +
-            \frac{1}{e} - \frac{1}{e^a} + \frac{1}{e} = 0 +
-            \frac{1}{e} + 0 + \frac{1}{e} = \frac{2}{e} 
-        </me>
-        <p>
-          This improper integral converges.
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this improper integral and determine if it
-          converges.
-        </p>
-        <me>
-          \int_0^1 \ln x dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The function is undefined at <m>x=0</m>, so I take a limit
-          approaching this bound.
-        </p>
-        <me>
-          \int_0^1 \ln x dx = \lim_{a \rightarrow 0^+} \int_a^1
-          \ln x dx 
-        </me>
-        <p>
-          Then I just calculate the integral, using the antiderivative
-          for the logarithm from the tables. After the antiderivative,
-          I apply the limit.
-        </p>
-        <me>
-          \lim_{a \rightarrow 0^+} x \ln x - x \Bigg|_a^1 =
-          \lim_{a \rightarrow 0^+} 1\ln 1 - 1 - a \ln a + a = -\infty
-        </me>
-        <p>
-          This improper integral diverges, since as <m>a</m> gets
-          close to zero, the logarithm <m>\ln a</m> diverges down to
-          negative infinity. I makes sense that the area represented
-          by the integral diverges to negative infinity, since the
-          asymptote for the logarithm is in the negative direction.
-          There is an infinite area below the <m>x</m> axis on this
-          range, not above it.
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this improper integral and determine if it
-          converges.
-        </p>
-        <me>
-          \int_0^1 \frac{1}{(x-1)^2} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The function is undefined at <m>1</m>, so we take a limit
-          approaching this bound. Then I take the antiderivative with
-          the inverse power rule (and, if I was being very careful and
-          explicit, a substitution <m>u = x-1</m> to make this power
-          rule work). 
+          I follow the three part algorithm presented in the notes and
+          the videos. First I setup the integral to calculate the
+          arclength suntion. I calculate the derivatives of the
+          coordinates and put those into the square root in the
+          arclength integral. Some trig identities help to simplify
+          the expressions. 
         </p>
         <md>
           <mrow>
-            \int_0^1 \frac{1}{(x-1)^2} dx \amp = \lim_{a
-            \rightarrow 1^-} \int_0^a \frac{1}{(x-1)^2} dx 
+            \frac{dx}{dt} \amp = - \sin t \sin 2t + 2 \cos t \cos 2t 
           </mrow>
           <mrow>
-            \amp = \lim_{a \rightarrow 1^-} \frac{-1}{x-1}
-            \Bigg|_0^a = \lim_{a \rightarrow 1^-} \frac{-1}{a-1} + 1
-            = \infty
+            \frac{dy}{dt} \amp = \cos t \sin 2t + 2 \sin t \cos 2t 
+          </mrow>
+          <mrow>
+            \left( \frac{dx}{dt} \right)^2 \amp = \sin^2 t \sin^2 2t -
+            4 \sin t \cos t \sin 2t \cos 2t + 4 \cos^2 t \cos^2 2t 
+          </mrow>
+          <mrow>
+            \left( \frac{dy}{dt} \right)^2 \amp = \cos^2 t \sin^2 2t +
+            + 4 \cos t \sin t \cos 2t \sin 2t + 4 \sin^2 t \cos^2 2t 
           </mrow>
         </md>
-        <p>
-          This improper integral diverges. (Note that I know the limit
-          value will approach specificaly  positive infinity. Since
-          the limit approaches <m>1</m> from the negative, the
-          denominator <m>a-1</m> will be negative. The numerator is
-          also negative, so the quotient will be positive. Since the
-          denominator is very close to zero, since the numerator is
-          fixed, and since the quotient is always positive, the limit
-          diverges to infinity.
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this improper integral and determine if it
-          converges.
-        </p>
-        <me>
-          \int_0^{\frac{\pi}{2}} \tan x dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          The function is undefined at <m>\frac{\pi}{2}</m>, so I take a
-          limit approaching this bound. I use the antiderivative of
-          tangent from the tables. 
-        </p>
+          When I add the squares of the two derivatives, the middle
+          terms cancel. Let me work with the remaining four terms to
+          simplify with trig identities. I notice that I can factor
+          out the terms with <m>(2t)</m> inside the trig functions and
+          use the square identity for sine a cosine.
         <md>
           <mrow>
-            \int_0^{\frac{\pi}{2}} \tan x dx \amp = \lim_{a
-            \rightarrow \frac{\pi}{2}^-} \int_0^a \tan x dx 
+            \amp \sqrt{ \left( \frac{dx}{dt} \right)^2 + \left(
+            \frac{dy}{dt} \right)^2 }
           </mrow>
           <mrow>
-            \amp = \lim_{a \rightarrow \frac{\pi}{2}^-} -\ln \cos x
-            \Bigg|_0^a = \lim_{a \rightarrow \frac{\pi}{2}^-} -\ln \cos
-            a + \ln \cos 0 = \infty
+            \amp = \sqrt{ \sin^2 t \sin^2 2t + 4 \cos^2 t \cos^2 2t +
+            \cos t \sin 2t + 4 \sin^2t \cos^2 2t}
+          </mrow>
+          <mrow>
+            \amp = \sqrt{\sin^2 2t(\sin^2 t + \cos^2 t) + 4 \cos^2 2t
+            (\sin^2 t + \cos^2 t)} 
+          </mrow>
+          <mrow>
+            \amp = \sqrt{\sin^2 2t + \cos^2 2t + 3 \cos^2 2t}
+          </mrow>
+          <mrow>
+            \amp = \sqrt{1 + 3 \cos^2 2t}
+          </mrow>
+          <mrow>
+            s(t) \amp = \int_0^t ds = \int_0^t \sqrt{1 + 3 \cos^2 2u} du
           </mrow>
         </md>
         <p>
-          This improper integral diverges. I know the limit is
-          divergent since, as <m>a \rightarrow \frac{\pi}{2}</m>,
-          cosine approaches 0 from the positive side, and the
-          logarithm of something approaching 0 from the positive side
-          is approaching <m>-\infty</m>. 
+          This is an elliptic integral, of the same style as the
+          elliptic integral that results from the calculation of the
+          perimeter of an ellipse. Such integrals do not have
+          elementary anti-derivatives, so short of inventing a new
+          function, I am not able to proceed. Theoretically, the
+          inverse of the function does exist and I could invent a name
+          for it to finish the process. But that name doesn't do much
+          without an investigation of the properties of the unknown
+          function.
         </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Calculate this improper integral using a trig substitution
-          first and then the improper integral limit after the trig
-          substitution.
-        </p>
-        <me>
-          \int_{2\sqrt{2}}^{4} \frac{1}{\sqrt{(16-x^2)^3}} dx 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          Even though this is an improper integral (it is undefined at
-          <m>x=4</m>), I can do the trig substitution first and then
-          do the limit for the improper integral. This is a sine
-          substitution. I calculate the various pieces of the
-          substitution, including the bounds.
-        </p>
-        <md>
-          <mrow>
-            x \amp = 4 \sin \theta 
-          </mrow>
-          <mrow>
-            dx \amp = 4 \cos \theta d \theta 
-          </mrow>
-          <mrow>
-            \sqrt{16-x^2} \amp = 4 \cos \theta 
-          </mrow>
-          <mrow>
-            x \amp = 4 \implies 4 \sin \theta = 4 \implies \sin \theta
-            = 1 \implies \theta = \frac{\pi}{2}
-          </mrow>
-          <mrow>
-            x \amp = 2\sqrt{2} \implies 4 \sin \theta = 2\sqrt{2}
-            \implies \sin \theta = \frac{1}{\sqrt{2}} \implies \theta
-            = \frac{\pi}{4}
-          </mrow>
-        </md>
-        <p>
-          Then I perform the substitution and simplify. This nicely
-          simplifies down to <m>\sec^2 \theta</m>, which has a known
-          antiderivative from the tables. 
-        </p>
-        <md>
-          <mrow>
-            \int_{2\sqrt{2}}^{4} \frac{1}{\sqrt{(16-x^2)^3}} dx \amp =
-            \int_{\frac{\pi}{4}}^{\frac{\pi}{2}} \frac{1}{64 \cos^3
-            \theta} 4 \cos \theta d \theta
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{16}\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}
-            \frac{1}{\cos^2 \theta} d \theta
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{16}\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}
-            \sec^2 \theta d \theta 
-          </mrow>
-          <mrow>
-            \amp = \frac{1}{16} \tan \theta
-            \Big|_{\frac{\pi}{4}}^{\frac{\pi}{2}}
-          </mrow>
-        </md>
-        <p>
-          Now I'll to the improper integral. Tangent is undefined at
-          <m>\frac{\pi}{2}</m>, so I can the limit approaching that
-          endpoint. 
-        </p>
-        <me>
-          \frac{1}{16} \tan \theta
-          \Big|_{\frac{\pi}{4}}^{\frac{\pi}{2}} = 
-          \lim_{a \rightarrow \frac{\pi}{2}} \frac{1}{16} \tan \theta
-          \Big|_{\frac{\pi}{4}}^{a} = 
-          \lim_{a \rightarrow \frac{\pi}{2}} \frac{1}{16} \left( \tan
-          a - 1 \right) = \infty
-       </me>
-       <p>
-        The limit diverges since I know that tangent has a vertical
-        asymptote at <m>\frac{\pi}{2}</m>. The improper integral does
-        not converge, and I conclude the area under the original
-        function on the given range was infinite. 
-       </p>
       </solution>
     </activity>
   </subsection>
@@ -1049,14 +923,17 @@
     <p>
       <ul>
         <li>
-          How are various trig identities useful in integration
-          strategies?
+          How does a parametric curve differ from a locus?
         </li>
         <li>
-          Why do trig substitution remove square roots?
+          How can the same shape have multiple parametrizations?
         </li>
         <li>
-          Why do limit allow us to consider improper integrals?
+          What does it mean to reparametrize a curve?
+        </li>
+        <li>
+          What is the parametrization by arclength and why is it
+          important?
         </li>
       </ul>
     </p>

@@ -1,0 +1,11 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xml:id="chapter-week12">
+  <title>Week 12</title>
+  <xi:include href="why-formality.ptx" />
+  <xi:include href="numbers.ptx" />
+  <xi:include href="theorems.ptx" />
+  <xi:include href="epilson-delta.ptx" />
+  <xi:include href="unused-activity.ptx" />
+  <xi:include href="related-rates.ptx" />
+  <xi:include href="surface-areas.ptx" />
+</chapter>
