@@ -229,7 +229,7 @@
           </mrow>
           <mrow>
             \frac{dy}{dx} \left( \sqrt{30}, -\sqrt{70} \right) =
-            -\frac{\sqrt{30}}{-\sqrt{70}} = \sqrt{\frac{3}{10}} 
+            -\frac{\sqrt{30}}{-\sqrt{70}} = \sqrt{\frac{3}{7}} 
           </mrow>
         </md>
         <p>
@@ -681,7 +681,7 @@
             <md>
               <mrow>
                 \frac{d}{dx} \frac{\sinh^2 x}{e^x} \amp = \frac{d}{dx}
-                \frac{e^{2x} - 2 - e^{-2x}}{4e^x} = \frac{1}{4}
+                \frac{e^{2x} - 2 + e^{-2x}}{4e^x} = \frac{1}{4}
                 \frac{d}{dx} e^x - 2e^{-x} + e^{-3x} 
               </mrow>
               <mrow>
