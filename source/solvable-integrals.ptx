@@ -12,12 +12,12 @@
     elementary functions, the derivative rules are a complete set of
     tools: any elementary function has a derivative which is another
     elementary function and that derivative can be calculated using
-    the known rules. For integrals, the situations is entirely
+    the known rules. For integrals, the situation is entirely
     different. The rules are much less algorithmic; there is much more
     guess work involved. More importantly, sometimes none of the rules
     work at all.  There are elementary functions <m>f(x)</m> such that
-    the integral <m>\int f(x) dx</m> has no solution which is an
-    elementary function.
+    the integral <m>\int f(x) dx</m> has no solution which is still
+    an elementary function.
   </p>
   <example>
     <statement>
@@ -41,7 +41,7 @@
     I've been talking about integral that are solvable by elementary
     functions. However, the class of solvable integrals is much larger
     than this if I allow myself to consider non-elementary functions.
-    An integral <m>f(x) dx</m> might not have a elementary
+    An integral <m>\int f(x) dx</m> might not have a elementary
     antiderivaitve, but it still might have some other kind of
     antiderivative. In fact, here is a nice proposition that tells
     me when antiderivatives exist.
@@ -56,14 +56,22 @@
     </statement>
   </proposition>
   <p>
+    This is a remarkable result. Continuous is not a very strong
+    condition. It's much weaker than, say, differentiable. Sharp
+    corners are fine, piecewise functions that line up are fine. Many,
+    many functions are integrable, have antiderivatives. 
+  </p>
+  <p>
     So these <sq>unsolvable</sq> integrals actually do have solutions.
-    There are functions which are the antiderivatives of these
-    fucntions. They are just not elementary functions. They are new
-    functions, with new names, new properties, new behaviour. In fact,
-    integrals without elementary antiderivatives are one of the most
-    significant source of new functions. There is a whole enormous
-    branch of mathematics that studies all these other functions:
-    names them, calculates their values, determines their properties. 
+    The solutions are new functions which are the antiderivatives of
+    these old 
+    functions. The new functions might just not be elementary functions. They might
+    be new functions, with new names, new properties, new behaviour.
+    In fact, integrals without elementary antiderivatives are one of
+    the most significant source of new functions. There is a whole
+    enormous branch of mathematics that studies all these other
+    functions: names them, calculates their values, determines their
+    properties. 
   </p>
   <p>
     This brings up an important and subtle theme in mathematics: what,
