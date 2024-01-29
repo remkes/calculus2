@@ -1,7 +1,7 @@
 <section xml:id="section-week2-activity">
   <title>Week 2 Activity</title>
   <subsection xml:id="subsection-activity-singularities">
-    <title>Singularities of Algebriac Plane Curves</title>
+    <title>Singularities of Algebraic Plane Curves</title>
     <activity>
       <statement>
         <p>
@@ -32,7 +32,7 @@
           </mrow>
           <mrow>
             \frac{dy}{dx} \amp = \frac{2x(1 + x^2) + 2x^3}{2y} =
-            \frac{x(1+x)^2 + x^3}{y} 
+            \frac{x(1+x^2) + x^3}{y} 
           </mrow>
         </md>
         <p>

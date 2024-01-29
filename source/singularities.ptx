@@ -279,6 +279,31 @@
       calculations and the limits can become a lot easier due to
       cancelation of some of the factors. 
     </p>
+    <p>
+      Before I start these examples, though, let me review a small bit
+      of the rules of exponents. How do I simplify this expression>
+      <me>
+        \frac{\sqrt{x-1}}{(x-1)^3} 
+      <me>
+      I can do this by writing the square root as an exponent and then
+      using the exponent laws. 
+      <me>
+        \frac{\sqrt{x-1}}{(x-1)^3} =
+        \frac{(x-1)^{\frac{1}{2}}}{(x-1)^3}
+      <me>
+      From this point, I can simplify as I wish. I might want
+      everything in the numerator, or everything in the denominator.
+      All of the following are possible result, depending on what kind
+      of for you want. 
+      <me>
+        \frac{(x-1)^{\frac{1}{2}}}{(x-1)^3} =
+        \frac{(x-1)^{\frac{-5}}2}} = \frac{1}{(x-2)^{\frac{5}{2}}} =
+        \frac{1}{(x-2)^2 \sqrt{x-2}} 
+      </me>
+      Throughout the examples and activity this week, I'll use this
+      simplification many times. I won't necessary make all the
+      exponential tricks explicit as I do the simplifications. 
+    </p>
     <example>
       <statement>
         <p>

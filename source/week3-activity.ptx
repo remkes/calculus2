@@ -35,7 +35,7 @@
           pieces, then do the replacement. 
           <md>
             <mrow>
-              \int 3x^2 (x^3 - 4)^5 dx \amp = \int (x^3-4)^4 (3x^2 dx) 
+              \int 3x^2 (x^3 - 4)^5 dx \amp = \int (x^3-4)^5 (3x^2 dx) 
             </mrow>
             <mrow>
               \amp = \int u^5 du = \frac{u^6}{6} + c
