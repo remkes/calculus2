@@ -293,11 +293,11 @@
           x}{\sinh x} = -\csch^2 x
         </mrow>
         <mrow>
-          \frac{d}{dx} \sech x \amp = \frac{d}{dx} \frac{1}{\cosh x}
+          \frac{d}{dx} \csch x \amp = \frac{d}{dx} \frac{1}{\sinh x}
           = - \csch x \ \coth x
         </mrow>
         <mrow>
-          \frac{d}{dx} \csch x \amp = \frac{d}{dx} \frac{1}{\sinh x}
+          \frac{d}{dx} \sech x \amp = \frac{d}{dx} \frac{1}{\cosh x}
           = - \sech x \tanh x
         </mrow>
       </md>
