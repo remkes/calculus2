@@ -56,8 +56,8 @@
       <li>
         <p>
           First and most counter-intuitive: the quantity that is being
-          measure is the <em>input</em> of the probability. When
-          talking about, say, height, it is familiary for height to be
+          measured is the <em>input</em> of the probability. When
+          talking about, say, height, it is familiar for height to be
           the dependent variable. Height depends on time, or position,
           or something else. For probabilities of heights, height is
           the independent variable. The function <m>f(x)</m> is asking
@@ -66,8 +66,8 @@
       </li>
       <li>
         <p>
-          The output <m>f(x)</m> is vague a measure of how likely the
-          measurement <m>x</m> is, but only vaguely. For continuous
+          The output <m>f(x)</m> is a measure of how likely the
+          measurement <m>x</m> is, but only very vaguely. For continuous
           probability, since infinitely many measurements are possible
           in a range, each individual precise measurement actually has
           zero probability. Instead, a probability is only given for a
@@ -85,10 +85,10 @@
       <li>
         <p>
           The interval <m>[a,b]</m> is the range of all possible
-          measurements. The integral condition in the definition is
-          simply saying that all measurements fall in this range (with
-          probability 1). Then, if <m>x_0</m> and <m>x_1</m> are in
-          the interval <m>[a,b]</m> (and <m>x_0 \lt x_1</m>), the
+          measurements. The integral condition in the definition 
+          says that all measurements fall in this range (with
+          probability 1). Then, if <m>x_0</m> and <m>x_1</m> (with
+          <m>x_0 \lt x_1</m>) are in the interval <m>[a,b]</m>, the
           probability of a measurement between <m>x_0</m> and
           <m>x_1</m> is given by the integral of the probability
           distribution.
@@ -97,7 +97,7 @@
          P([x_0,x_1])  = \int_{x_0}^{x_1} f(x) dx
         </me>
         <p>
-          This notation, where <m>P([a,b]</m> is the probability of a
+          This notation, where <m>P([a,b])</m> is the probability of a
           measurement in the range <m>[a,b]</m>, is conventional. I'll
           use this notation throughout this section. 
         </p>
@@ -105,7 +105,7 @@
       <li>
         <p>
           This probability <m>P</m> of a measurement in some range
-          will have <m>0 \leq P \leq 1</m>, depending on the endpoint
+          will have <m>0 \leq P \leq 1</m>, depending on the endpoints
           and the particular nature of the distribution.
           Continuous probabilities are not given in percentages;
           instead, they are given in fractions. If the integral
@@ -130,9 +130,9 @@
       </li>
       <li>
         <p>
-          Both the terms, probability density funciton and probability
-          distribution, are conventional. I'll mostly use
-          distribution. Technically, a distribution is an extension of
+          Both the terms, `probability density function' and `probability
+          distribution', are conventional. I'll mostly use the term 
+          `distribution'. Technically, a distribution is an extension of
           the notion of a function; there are distributions which are
           not actually functions. However, that subtlety isn't
           important for the examples in this course, so I'll just keep
