@@ -443,7 +443,7 @@
     <example>
       <statement>
         <me>
-          \sum_{k=1}^\infty \frac{(-1)^k}{k^2-1}
+          \sum_{k=2}^\infty \frac{(-1)^k}{k^2-1}
         </me>
         <p>
           This is an alternating series. The limit of the terms is
@@ -466,7 +466,7 @@
     <example>
       <statement>
         <me>
-          \sum_{k=1}^\infty \frac{1}{k^2-1}
+          \sum_{k=2}^\infty \frac{1}{k^2-1}
         </me>
         <p>
           The terms are asymptotically the same as
