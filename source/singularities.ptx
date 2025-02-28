@@ -284,13 +284,13 @@
       of the rules of exponents. How do I simplify this expression>
       <me>
         \frac{\sqrt{x-1}}{(x-1)^3} 
-      <me>
+      </me>
       I can do this by writing the square root as an exponent and then
       using the exponent laws. 
       <me>
         \frac{\sqrt{x-1}}{(x-1)^3} =
         \frac{(x-1)^{\frac{1}{2}}}{(x-1)^3}
-      <me>
+      </me>
       From this point, I can simplify as I wish. I might want
       everything in the numerator, or everything in the denominator.
       All of the following are possible result, depending on what kind

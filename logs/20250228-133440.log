@@ -1,0 +1,42 @@
+INFO    : PreTeXt-CLI version: 2.6.2
+
+INFO    : PreTeXt project found in `/Users/rkooistra/hub/calculus2`.
+INFO    : Building target web
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure33.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure33.html
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure32.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure32.html
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure30.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure30.html
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure31.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure31.html
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure01.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure01.html
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure03.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure03.html
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure02.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu/figure02.html
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-v9pu0uxu
+INFO    : Preparing to build into /Users/rkooistra/hub/calculus2/output/web.
+INFO    : discovering source file's directory name: /Users/rkooistra/hub/calculus2/source
+INFO    : verifying and expanding input directory: /Users/rkooistra/hub/calculus2/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/rkooistra/hub/calculus2/generated-assets
+INFO    : verifying and expanding input directory: /Users/rkooistra/hub/calculus2/source/../assets
+INFO    : input directory expanded to absolute path: /Users/rkooistra/hub/calculus2/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.3.3
+INFO    : Runestone Services (using newer, via online CDN query): version 7.5.9
+INFO    : Downloading Runestone Services, version 7.5.9
+INFO    : Extracting Runestone Services from archive file
+INFO    : converting /Users/rkooistra/hub/calculus2/source/main.ptx to HTML in /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-t4fxtyzq
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [section-algebraic-plane-curves] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located within: "subsection-derivatives-loci" (xml:id), "Derivatives of Loci" (title)
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

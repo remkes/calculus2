@@ -903,31 +903,34 @@
         <md>
           <mrow>
             \amp = \frac{19}{13} \ln |x-3| + \frac{1}{13} \int
-            \frac{\frac{7}{2} (2x + 7)}{x^2+ x+1} dx 
+            \frac{\frac{7}{2} \left(2x + \frac{4}{7} \right)}{x^2+
+            x+1} dx 
           </mrow>
           <mrow>
             \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \int \frac{2x
-            + }{x^2+ x+1} dx 
+            + 1}{x^2+ x+1} dx + \frac{7}{26} \int \frac{\frac{4}{7} -
+            1}{x^2 + x + 1} dx 
           </mrow>
           <mrow>
             \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \int \frac{2x
-            + 1}{x^2+ x+1} dx + \frac{7}{26} \int \frac{6}{x^2+x+1} dx 
+            + 1}{x^2+ x+1} dx + \frac{7}{26} \int
+            \frac{\frac{-3}{7}}{x^2+x+1} dx 
           </mrow>
           <mrow>
             \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \ln |x^2+x+1|
-            + + \frac{42}{26} \int \frac{1}{ \left(x + \frac{1}{2}
+            - \frac{3}{26} \int \frac{1}{ \left(x + \frac{1}{2}
             \right)^2 + \frac{3}{4}} dx 
           </mrow>
           <mrow>
             \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \ln |x^2+x+1|
-            + + \frac{21}{13} \left( \frac{2}{\sqrt{3}} \arctan \left(
+            - \frac{3}{26} \left( \frac{2}{\sqrt{3}} \arctan \left(
             \frac{2 \left( x + \frac{1}{2} \right)}{\sqrt{3}} \right)
             \right)  + c 
           </mrow>
           <mrow>
             \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \ln |x^2+x+1|
-            + + \frac{21}{13} \left( \frac{2}{\sqrt{3}} \arctan \left(
-            \frac{2x+1}{\sqrt{3}} \right) \right) + c
+            - \frac{\sqrt{3}}{13} \arctan \left( \frac{2x+1}{\sqrt{3}}
+            \right) + c
           </mrow>
         </md>
       </solution>
@@ -1155,6 +1158,14 @@
             5| + \frac{2}{5} \arctan (x+2) + c 
           </mrow>
         </md>
+        <p>
+          Finally, I put the two polynomial pieces back in to get the
+          complete antiderivative
+        </p>
+        <me>
+            \frac{x^2}{2} - 4x + \frac{-1}{5} \ln |x| + \frac{51}{10}
+            \ln |x^2 + 4x + 5| + \frac{2}{5} \arctan (x+2) + c 
+        </me>
       </solution>
     </activity>
     <activity>

@@ -1,0 +1,237 @@
+INFO    : PreTeXt-CLI version: 2.6.2
+
+INFO    : PreTeXt project found in `/Users/rkooistra/hub/calculus2`.
+INFO    : Building target web
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure34'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-2ktkyegz/figure34.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-2ktkyegz/figure34.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure35'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-8ie4y_57/figure35.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-8ie4y_57/figure35.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure36'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-juyu14aw/figure36.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-juyu14aw/figure36.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure37'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-z1pb2b76/figure37.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-z1pb2b76/figure37.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure08'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-bi9lj4_b/figure08.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-bi9lj4_b/figure08.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure09'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ujax2l4e/figure09.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ujax2l4e/figure09.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure44'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ns6e87wk/figure44.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ns6e87wk/figure44.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure10'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-jkeufl06/figure10.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-jkeufl06/figure10.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure11'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-u2vtg6oh/figure11.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-u2vtg6oh/figure11.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure12'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-wcq0clem/figure12.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-wcq0clem/figure12.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure13'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-4db9plkr/figure13.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-4db9plkr/figure13.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure14'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-uegb6m9l/figure14.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-uegb6m9l/figure14.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure15'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-2ttp8jcn/figure15.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-2ttp8jcn/figure15.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure16'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-s7nmxr7l/figure16.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-s7nmxr7l/figure16.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure17'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-4zm3e958/figure17.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-4zm3e958/figure17.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure47'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-cat1oml1/figure47.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-cat1oml1/figure47.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure48'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-dnjn7r11/figure48.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-dnjn7r11/figure48.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure50'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ei66a_pt/figure50.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ei66a_pt/figure50.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure49'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-3j3pk55i/figure49.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-3j3pk55i/figure49.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure51'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-zncvm5z0/figure51.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-zncvm5z0/figure51.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure45'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-n7fbpiq_/figure45.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-n7fbpiq_/figure45.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure46'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rk6a8f56/figure46.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rk6a8f56/figure46.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure21'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-jlyqa4ot/figure21.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-jlyqa4ot/figure21.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure22'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-0jp22j82/figure22.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-0jp22j82/figure22.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure24'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-cp17x1l2/figure24.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-cp17x1l2/figure24.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure27'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-g8i4g2an/figure27.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-g8i4g2an/figure27.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure26'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-f4vwt1w7/figure26.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-f4vwt1w7/figure26.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure53'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-43ecuv2n/figure53.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-43ecuv2n/figure53.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure52'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-hq8mil_h/figure52.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-hq8mil_h/figure52.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure28'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rm995f1m/figure28.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rm995f1m/figure28.html
+INFO    : converting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx to HTML graphics for placement in /Users/rkooistra/hub/calculus2/generated-assets/asymptote with method "AsyMethod.SERVER"
+INFO    : extracting Asymptote diagrams from /Users/rkooistra/hub/calculus2/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/rkooistra/hub/calculus2/publication/publication.ptx', 'subtree': 'figure29'}
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/extract-asymptote.xsl
+INFO    : converting /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rphzu4p4/figure29.asy to /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rphzu4p4/figure29.html
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-2ktkyegz
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-8ie4y_57
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-juyu14aw
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-z1pb2b76
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-bi9lj4_b
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ujax2l4e
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ns6e87wk
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-jkeufl06
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-u2vtg6oh
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-wcq0clem
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-4db9plkr
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-uegb6m9l
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-2ttp8jcn
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-s7nmxr7l
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-4zm3e958
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-cat1oml1
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-dnjn7r11
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-ei66a_pt
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-3j3pk55i
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-zncvm5z0
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-n7fbpiq_
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rk6a8f56
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-jlyqa4ot
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-0jp22j82
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-cp17x1l2
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-g8i4g2an
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-f4vwt1w7
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-43ecuv2n
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-hq8mil_h
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rm995f1m
+INFO    : Removing temporary directory /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-rphzu4p4
+INFO    : Preparing to build into /Users/rkooistra/hub/calculus2/output/web.
+INFO    : discovering source file's directory name: /Users/rkooistra/hub/calculus2/source
+INFO    : verifying and expanding input directory: /Users/rkooistra/hub/calculus2/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/rkooistra/hub/calculus2/generated-assets
+INFO    : verifying and expanding input directory: /Users/rkooistra/hub/calculus2/source/../assets
+INFO    : input directory expanded to absolute path: /Users/rkooistra/hub/calculus2/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.3.3
+INFO    : Runestone Services (using newer, via online CDN query): version 7.5.9
+INFO    : Using existing Runestone Services located in /Users/rkooistra/hub/calculus2/output/web/_static. Delete Runestone files there to force a fresh download.
+INFO    : converting /Users/rkooistra/hub/calculus2/source/main.ptx to HTML in /var/folders/2r/8zp7c2rs5717hjrm_rg_xqnr0000gn/T/ptx-6jgf7g8u
+INFO    : XSL conversion of /Users/rkooistra/hub/calculus2/source/main.ptx by /Users/rkooistra/.ptx/2.6.2/core/xsl/pretext-html.xsl
+INFO    : successful application of /Users/rkooistra/.ptx/2.6.2/core/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+
+INFO    : 
