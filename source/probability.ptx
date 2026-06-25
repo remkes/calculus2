@@ -42,9 +42,9 @@
           integrable function <m>f(x) : [a,b] \rightarrow [0,
           \infty)</m> such that
         </p>
-        <me>
+        <md>
           \int_a^b f(x) dx = 1
-        </me>
+        </md>
       </statement>
     </definition>
     <p>
@@ -93,9 +93,9 @@
           <m>x_1</m> is given by the integral of the probability
           distribution.
         </p>
-        <me>
+        <md>
          P([x_0,x_1])  = \int_{x_0}^{x_1} f(x) dx
-        </me>
+        </md>
         <p>
           This notation, where <m>P([a,b])</m> is the probability of a
           measurement in the range <m>[a,b]</m>, is conventional. I'll
@@ -205,20 +205,20 @@
           The probability of an event between <m>0</m> and <m>1</m> is
           calculated by the integral of the density on that range.
         </p>
-        <me>
+        <md>
           \int_0^1 e^{-x} dx = e^{-x} \Bigg|_0^1 = -e^{-1} +
           1 = 1 - \frac{1}{e} \doteq 0.632
-        </me>.
+        </md>.
         <p>
           Likewise, the probability of a measurement bewteen <m>1</m>
           and <m>2</m> is calculated by the integral of the density on
           that range. 
         </p>
-        <me>
+        <md>
           \int_1^2 e^{-x} dx = e^{-x}\Bigg|_1^2 = -e^{-2} +
           \frac{1}{e} = \frac{1}{e} - \frac{1}{e^2} =
           \frac{e-1}{e^2} \doteq 0.233
-        </me>.
+        </md>.
       </statement>
     </example>
     <example xml:id="example-gaussian-distribution">
@@ -245,10 +245,10 @@
           parameters <m>\mu</m> and <m>\sigma</m> and has the
           following form.
         </p>
-        <me>
+        <md>
           f(x) = \frac{1}{\sigma \sqrt{2\pi}}
           e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-        </me>
+        </md>
         <p>
           The constant <m>\frac{1}{\sigma \sqrt{2\pi}}</m> ensures that
           the integra over all of <m>\RR</m> is <m>1</m>, as required
@@ -261,17 +261,17 @@
           <m>0</m>. This specific bell curve is shown in <xref
           ref="figure-gaussian-distribution" />. 
         </p>
-        <me>
+        <md>
           f(x) = \frac{1}{\sqrt{\pi}} e^{-x^2} 
-        </me>
+        </md>
         <p>
           The fact that this function has the correct integral value
           for the definition is actually very difficult to establish.
           Specifically, look at this integral.
         </p>
-        <me>
+        <md>
            \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi} 
-        </me>
+        </md>
         <p>
           The function <m>e^{-x^2}</m> has no elementary
           antiderivative. Given the important of the gaussian
@@ -289,10 +289,10 @@
           This is called the <term>(continuous) uniform
           distribution</term>. 
         </p>
-        <me>
+        <md>
           f(x) = \left\{ \begin{matrix} \frac{1}{b-a} \amp x \in [a,b] \\ 0
           \amp x \notin [a,b] \end{matrix} \right.
-        </me>
+        </md>
         <p>
           In probability theory, it is often important to have these
           bases cases to compare again. Understanding the behaviour
@@ -321,16 +321,16 @@
       probability situation, the sume of all the probabilities must be
       <m>1</m>. 
     </p>
-    <me>
+    <md>
       \sum_{i=1}^n p_i = 1
-    </me>.
+    </md>.
     <p>
       The mean is the sum of the measurements multiplied by their
       probabilities.
     </p>
-    <me>
+    <md>
       \sum_{i=1}^n m_i p_i
-    </me>
+    </md>
     <p>
       These discrete calculations give inspiration for the continuous
       case. The major difference, for continuous probability, is that
@@ -349,9 +349,9 @@
           <m>[a,b]</m>. The average or mean of <m>f(x)</m> is defined
           to be the result of the following integral.
         </p>
-        <me>
+        <md>
           \mu = \int_a^b x f(x) dx
-        </me>
+        </md>
       </statement>
     </definition>
     <p>
@@ -498,9 +498,9 @@
           The integral evaluates to <m>\sqrt{pi}</m>/. This lets me
           finish the integarl. 
         </p>
-        <me>
+        <md>
           \mu =  \frac{\mu}{\sqrt{\pi}} \sqrt{\pi} = \mu
-        </me>
+        </md>
         <p>
           Unsurprisingly, given the choice of notation, the parameter
           <m>\mu</m> (which is the centre point of the bell curve) is
@@ -567,9 +567,9 @@
           unique number <m>c</m> such that the following equation
           holds. 
         </p>
-        <me>
+        <md>
           \int_a^c f(x) dx = \int_c^b f(x) dx = \frac{1}{2}
-        </me>
+        </md>
         <p>
           Since integrals are areas under the curve, and the total
           area on <m>[a,b]</m> is <m>1</m>, the median is the place
@@ -646,9 +646,9 @@
           integrable function on the same independent variable. The
           likely outcome of <m>g(x)</m> is called the expectation
           value of <m>g(x)</m> and is calculated by the following integral.
-          <me>
+          <md>
             \left\langle g(x) \right \rangle = \int_a^b g(x) f(x) dx
-          </me>
+          </md>
         </p>
       </statement>
     </definition>
@@ -698,10 +698,10 @@
           The <term>standard deviation</term> of the distribution is
           written <m>\sigma</m> and calculated by this integral. 
         </p>
-        <me>
+        <md>
           \sigma^2 = \left\lt  (x-\mu)^2 \right> = \int_a^b
           (x-\mu)^2 f(x) dx
-        </me>
+        </md>
       </statement>
     </definition>
     <p>

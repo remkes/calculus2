@@ -44,17 +44,17 @@
     </p>
     <ul>
       <li>
-        <me>
+        <md>
           \int \frac{1}{x+a} dx 
-        </me>
+        </md>
         <p>
           This can be sovled by substitution, using <m>u = x + a</m>
           with <m>du = dx</m>. 
         </p>
-        <me>
+        <md>
           \int \frac{1}{x+a} dx = \int \frac{1}{u} du = \ln |u| = \ln
           |x + a| + c
-        </me>
+        </md>
       </li>
       <li>
         <md>
@@ -66,27 +66,27 @@
           The same substitution as the previous integral solves this
           one; I've not shown the work. 
         </p>
-        <me>
+        <md>
           \int \frac{1}{(x+a)^n} = \frac{-1}{(n-1)(x-a)^{n-1}} + c 
-        </me>
+        </md>
       </li>
       <li>
-        <me>
+        <md>
           \int \frac{2x + a}{x^2+ac+b} dx
-        </me>
+        </md>
         <p>
           This can also be solved by a substitution, using <m>u = x^2 + ax
           +b</m> with <m>du = (2x+a)dx</m>. 
         </p>
-        <me>
+        <md>
           \int \frac{2x + a}{x^2+ax+b} dx = \int \frac{1}{u} du = \ln |u|
           = \ln |x^2 + ax + b| + c
-        </me>
+        </md>
       </li>
       <li>
-        <me>
+        <md>
           \int \frac{1}{(x-\alpha)^2 + \beta^2} dx 
-        </me>
+        </md>
         <p>
           This integral is a bit trickier. It also uses a substitution,
           <m>u = \frac{x-\alpha}{\beta}</m>, with <m>du = \frac{1}{\beta}
@@ -128,26 +128,26 @@
     </p>
     <ol>
       <li>
-        <me>
+        <md>
           \int \frac{1}{x + a} dx = \ln |x + a| + c 
-        </me>
+        </md>
       </li>
       <li>
-        <me>
+        <md>
           \int \frac{1}{(x + a)^n} dx = \frac{-1}{n-1}
           \frac{1}{(x-a)^{n-1}} + c
-        </me>
+        </md>
       </li>
       <li>
-        <me>
+        <md>
           \int \frac{2x + a}{x^2 + ax + b} dx = \ln |x^2 + ax +b| + c 
-        </me>
+        </md>
       </li>
       <li>
-        <me>
+        <md>
           \int \frac{1}{(x-\alpha)^2 + \beta^2} dx = \frac{1}{\beta}
           \arctan \left( \frac{x - \alpha}{\beta} \right) + c 
-        </me>
+        </md>
       </li>
     </ol>
   </subsection>

@@ -13,9 +13,9 @@
         series</term>. Infinite series are usually written with sigma
         notation.
       </p>
-      <me>
+      <md>
         \sum_{n=1}^\infty a_n
-      </me>
+      </md>
       <p>
         The number <m>n</m> is called the <term>index</term> and the
         numbers <m>a_n</m> are called the <term>terms</term>. 
@@ -46,9 +46,9 @@
           The <m>n</m>th <term>partial sum</term> of an infinite
           series is the sum of the first <m>n</m> terms.
         </p>
-        <me>
+        <md>
           s_n := \sum_{k=1}^n a_k
-        </me>
+        </md>
       </statement>
     </definition>
     <p>
@@ -65,10 +65,10 @@
           The value of an infinite series is the limit of the sequence
           of partial sums, if the limit exists.
         </p>
-        <me>
+        <md>
           \sum_{n=1}^\infty a_n := \lim_{n \rightarrow \infty} s_n =
           \lim_{n \rightarrow \infty} \sum_{k=1}^n a_k
-        </me>
+        </md>
         <p>
           If this limit exists, the series is <term>convergent</term>.
           Otherwise, the series is <term>divergent</term>.
@@ -77,9 +77,9 @@
     </definition>
     <p>
       With limits, writing
-      <me>
+      <md>
         \lim_{n \rightarrow a} a_n = \infty
-      </me>
+      </md>
       was a short hand. The symbol ``<m>infinity</m>'' was a way to
       write ``getting larger and larger without bound.'' Something
       similar happens for infinite series. Some divergent series
@@ -87,9 +87,9 @@
       (as in <xref ref="example-harmonic-series" /> below). For these
       series, it is common to use a very similar shorthand notation.
     </p>
-    <me>
+    <md>
       \sum_{n=1}^\infty a_n = \infty
-    </me>
+    </md>
     <p>
       Sometime, mathematicians also use the infinity symbol for
       convergence. This is somewhat taking liberties with our
@@ -97,9 +97,9 @@
       it nonetheless is practice. For a convergent series, I would
       indicate this convergence by the following notation.
     </p>
-    <me>
+    <md>
       \sum_{n=1}^\infty a_n \lt \infty
-    </me>
+    </md>
     <p>
       I would probably use this notation only for sums with all
       positive terms, where being ``less than infinity'' would clearly
@@ -115,9 +115,9 @@
           as the sum of a geometric series with common ratio
           <m>\frac{1}{2}</m>. 
         </p>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{1}{2^n}
-        </me>
+        </md>
         <p>
           I'll calculate the first few partial sums. 
         </p>
@@ -150,9 +150,9 @@
           From these first few partial sum, I can claim that there is
           a pattern of partial sums. 
         </p>
-        <me>
+        <md>
           s_n = \frac{2^n-1}{2n}
-        </me>
+        </md>
         <p>
           I haven't proved this pattern of partial sums, but there is
           still a strong informal argument for it. (Proving the
@@ -164,10 +164,10 @@
           partial sums, I can take the limit of the pattern to
           calculate the value of the infinite series.
         </p>  
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} s_n = \lim_{n \rightarrow
           \infty} \frac{2^n - 1}{2n} = 1
-        </me>
+        </md>
         <p>
           Unsurprisingly, I conclude that the total distance travelled
           from <m>0</m> to <m>1</m> is simply <m>1</m> unit. This
@@ -251,19 +251,19 @@
           Taking every second power of two gives partial sums
           larger than the sequence of positive numbers.
         </p>
-        <me>
+        <md>
           s_{2^{2k-2}} > k \hspace{2cm} \forall k \geq 2
-        </me>
+        </md>
         <p>
           The lower bounds get larger and larger. The limit of the
           sequence of partial sums is larger than this limit of larger
           bounds.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} s_n = \lim_{k \rightarrow
           \infty} s_{2^{2k-2}} \geq \lim_{k \rightarrow \infty} k =
           \infty
-        </me>
+        </md>
         <p>
           The harmonic series is divergent. This is something of a
           surprising result, since the harmoinc series looks similar
@@ -380,9 +380,9 @@
           The <term>factorial</term> of a natural number <m>n</m> is
           written <m>n!</m>. It is defined to be the product of all
           natural numbers up to and including <m>n</m>.
-          <me>
+          <md>
             n! = (1)(2)(3)(4)(5)\ldots(n-2)(n-1)(n)
-          </me>
+          </md>
         </p>
         <p>
           In addition, <m>0! = 1</m>. 
@@ -393,9 +393,9 @@
       The factorial grows very rapidly. Even by 
       <m>n=40</m>, the factorial is already a ridiculously large
       number.
-      <me>
+      <md>
         40! =815915283247897734345611269596115894272000000000
-      </me>
+      </md>
     </p>
     <p>
       Asymptotically, the factorial grows even faster than the
@@ -439,10 +439,10 @@
           possibly leveling off at some value, perhaps less than 3. I 
           can't prove it now, but the value of this series is surprising.
         </p>
-        <me>
+        <md>
           \sum_{n=0}^{\infty} \frac{1}{n!} = \lim_{n \rightarrow
           \infty} s_n = e
-        </me>
+        </md>
         <p>
           This is another definition for the number <m>e</m>. I'll
           prove that this definition is equivalent to the previous
@@ -518,16 +518,16 @@
         <p>
           (The Test for Divergence) Consider an infinite series.
         </p>
-        <me>
+        <md>
           \sum_{n=1}^\infty a_n
-        </me>
+        </md>
         <p>
           Assume that the limit of the terms of the series is non
           zero. 
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow a_n} \neq 0
-        </me>
+        </md>
         <p>
           Under this assumption, the series must diverge. 
         </p>
@@ -559,9 +559,9 @@
           Let <m>r \in \RR</m>. The <term>geometric series</term>
           with common ratio <m>r</m> is this series.
         </p>
-        <me>
+        <md>
           \sum_{n=0}^\infty r^n
-        </me>
+        </md>
       </statement>
     </definition>
     <proposition>
@@ -581,19 +581,19 @@
         the very last products will cancel out, leaving a relatively 
         simple expression.
       </p>
-      <me>
+      <md>
         s_k = 1 + r + r^2 + r^3 + \ldots + r^k = \frac{1-r}{1-r}
         \left( 1 + r + r^3 + r^3 + \ldots + r^k \right) =
         \frac{(1-r^k)}{1-r}
-      </me>
+      </md>
       <p>
         The convergence of the series is shown by the limit of these
         partial sums.
       </p>
-      <me>
+      <md>
         \sum_{n=0}^\infty r^n = \lim_{k \rightarrow \infty}
         \frac{1-r^k}{1-r} = \frac{1}{1-r}
-      </me>
+      </md>
       <p>
         This limit is <m>\frac{1}{1-r}</m> only because of the
         assuming that <m>|r| \lt 1</m>. Under that assuming, the power
@@ -614,9 +614,9 @@
           The <m>\zeta</m> series is the infinite series with terms
           <m>\frac{1}{n^p}</m>.
         </p>
-        <me>
+        <md>
           \zeta(p) = \sum_{n=1}^\infty \frac{1}{n^p}
-        </me>
+        </md>
       </statement>
     </definition>
     <proposition>

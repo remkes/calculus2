@@ -25,9 +25,9 @@
           If <m>\gamma(t) = (x(t), y(t))</m> is a parametric curve, then
           the slope of the parametric curve is given by the expression 
         </p>
-        <me>
+        <md>
           \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}
-        </me>
+        </md>
         <p>
           If either of the derivatives are undefined, or if
           <m>x^\prime(t) = 0</m> at some value of <m>t</m>, the slope
@@ -179,10 +179,10 @@
       combination by this <m>\Delta t</m>. On the right side, I can
       bring the <m>\Delta t</m> into the square root. 
     </p>
-    <me>
+    <md>
       \frac{\Delta s}{\Delta t} = \sqrt{ \left( \frac{\Delta x}{\Delta
       t} \right)^2 + \left( \frac{\Delta y}{\Delta t} \right)^2} 
-    </me>
+    </md>
     <p>
       Then I can take the limit of this expression as <m>\Delta t
       \rightarrow 0</m>. Under the square root, the limit will produce
@@ -197,10 +197,10 @@
           The speed of the parametric curve is the derivative
           <m>\frac{ds}{dt}</m> and is calculated as follows. 
         </p>
-        <me>
+        <md>
           \frac{ds}{dt} = \sqrt{\left( \frac{dx}{dt} \right)^2 +
           \left( \frac{dy}{dt} \right)^2}
-        </me>
+        </md>
       </statement>
     </definition>
     <p>
@@ -314,10 +314,10 @@
           parameter goes from <m>a</m> to <m>b</m>, is the
           integral of speed.
         </p>
-        <me>
+        <md>
           L = \int_a^b \frac{ds}{dt} dt  = \int_a^b \sqrt{\frac{dx}{dt}^2
           +\frac{dy}{dt}^2}dt
-        </me>
+        </md>
         <p>
           The distance travelled along a parametric curve is typically
           called the <term>arclength</term>.
@@ -336,10 +336,10 @@
           <m>x^\prime(t) = -\sin t</m> and <m>y^\prime(t) = \cos
           t</m>. 
         </p>
-        <me>
+        <md>
           L = \int_0^{2\pi} \sqrt{ \sin^2 t+ \cos^2 t}dt =
           \int_0^{2\pi} dt = 2\pi
-        </me>
+        </md>
         <p>
           Unsurprisingly, the arclength of the circle is its
           circumference: <m>2\pi</m>. Let me check another
@@ -348,11 +348,11 @@
           <m>t \in [0, 2\pi/3]</m>. The derivatives are <m>x^\prime(t)
           = -3\cos 3t</m> and <m>y^\prime = 3 \cos 3</m>. 
         </p>
-        <me>
+        <md>
           L = \int_0^{\frac{2\pi}{3}} \sqrt{ 9\sin^2 3t+ 9\cos^2
           3t}dt = \int_0^{\frac{2\pi}{3}} 3 dt = \frac{2\pi}{3} 3 =
           2\pi
-        </me>
+        </md>
         <p>
           The alternate parametrization still calculates the correct
           circumference. 
@@ -470,9 +470,9 @@
           The expression before the sine term here is exactly the
           square of eccentricity, so I'll replace it with <m>e</m>. 
         </p>
-        <me>
+        <md>
          = a \int_0^{2\pi} \sqrt{ 1 - e^2 \cos^2 t}dt
-        </me>
+        </md>
         <p>
           If <m>e=0</m>, then the cosine disappears and I have an easy
           integral. In this form, however, the integration is very
@@ -517,18 +517,18 @@
           To prove this, I'll calculate the derviative of the
           composition <m>f(g(u))</m>. 
         </p>
-        <me>
+        <md>
           \frac{d}{du} f(g(u)) = f^\prime(g(u)) \frac{dg}{du} =
           f^\prime(t) \frac{dg}{du} 
-        </me>
+        </md>
         <p>
           I replaced <m>g(u)</m> with <m>t</m> in the first
           term on the right, since the substitution is, indeed, <m>t =
           g(u)</m>. Then I'll solve for the first term on the right.
         </p>
-        <me>
+        <md>
           f^\prime(t) = \frac{d}{du} f(g(u)) \frac{1}{\frac{dg}{du}}
-        </me>
+        </md>
         <p>
           This is the desired transformation, completing the proof. 
         </p>
@@ -571,10 +571,10 @@
           Let me start by writing the arclength integral in the
           parameter <m>t</m>
         </p>
-        <me>
+        <md>
           L = \int_{a}^{b} \sqrt{ \frac{dx}{dt}^2 +
           \frac{dy}{dt}^2} dt
-        </me>
+        </md>
         <p> 
           Now I will apply the substitution <m>t = g(u)</m>. The
           differential changes as <m>dt = g^\prime(u) du </m>. For the
@@ -582,12 +582,12 @@
           ref="lemma-substitution-derivative" /> to both. This lets me
           do the entire substitution.
         </p>
-        <me>
+        <md>
           = \int_{g^{-1}(a)}^{g^{-1}(b)} \sqrt{ \left(
           \frac{dx(g(u))}{du} \frac{1}{\frac{dg}{du}} \right)^2
           +\left( \frac{dy(g(u))}{du} \frac{1}{\frac{dg}{du}} \right)^2} 
           \frac{dg}{du} du 
-        </me>
+        </md>
         <p>
           The denominator in both of the terms in the square root is
           the same, so I can make this a commmon denominator. Then
@@ -610,11 +610,11 @@
           Then the two derivatives outside the square root simply
           cancel. 
         </p>
-        <me>
+        <md>
           = \int_{g^{-1}(a)}^{g^{-1}(b)} \sqrt{ \left(
           \frac{dx(g(u))}{du} \right)^2 + \left( \frac{dy(g(u))}{du}
           \right)^2} du 
-        </me>
+        </md>
         <p>
           This is precisely the expression for arclength calculation
           in the parameter <m>u</m>. I started with the expression for
@@ -690,9 +690,9 @@
           integral is called the <term>arclength function</term> of
           the parametric curve.
         </p>
-        <me>
+        <md>
           s(t) = \int_a^t \sqrt{(x^\prime(u))^2 + (y^\prime(u))^2} du
-        </me>
+        </md>
       </statement>
     </definition>
     <p>

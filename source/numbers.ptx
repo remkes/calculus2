@@ -88,9 +88,9 @@
       They let us define division of integers by simply writing the
       fraction <m>\frac{a}{b}</m>. We can then define division of
       rationals (assuming <m>c \neq 0</m>) by
-      <me>
+      <md>
         \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}
-      </me>.
+      </md>.
     </p>
     <p>
       However, there is one new subtlety involved in <m>\QQ</m>. Unlike
@@ -99,9 +99,9 @@
       <m>\frac{4}{10}</m> represent the same number. In addition to
       the rules of arthimetic of these new fraction-symbols, we also
       need a rule which identifies redundant symbols. The rule is this:
-      <me>
+      <md>
         \frac{a}{b} = \frac{c}{d} \iff ad = bc
-      </me>.
+      </md>.
     </p>
     <definition>
       <statement>
@@ -219,11 +219,11 @@
       decimal expansions are a convenient notational tool for Cauchy's
       definition. In brief, we can easily see how a decimal
       expansions is, implicitly, an infinite sum. For example:
-      <me>
+      <md>
         4.0983243\ldots = 4 + \frac{0}{10} + \frac{9}{100} +
         \frac{8}{1000} + \frac{3}{10^4} + \frac{2}{10^5} +
         \frac{4}{10^6} + \frac{3}{10^7} + \ldots 
-      </me>
+      </md>
     </p>
     <p>
       For our current purposes, we'll leave aside the further

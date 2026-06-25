@@ -21,9 +21,9 @@
       define continuity; I prefer this definition: A function <m>f</m>
       is continuous at a point <m>a</m> if <m>a</m> is in the domain
       of <m>f</m> and 
-      <me>
+      <md>
         \lim_{x \rightarrow a} f(x) = f(a)
-      </me>.
+      </md>.
     </p>
     <p>
       In a continuous function, the limit is just the function value.
@@ -145,9 +145,9 @@
           If <m>f</m> is continuous on <m>[a,b]</m>, continuously
           differentiable on <m>(a,b)</m>, then there exists a value
           <m>c \in (a,b)</m> such that
-          <me>
+          <md>
             f^\prime(c) = \frac{f(b) - f(a)}{b-a}
-          </me>
+          </md>
         </p>
       </statement>
     </theorem>

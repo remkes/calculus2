@@ -190,9 +190,9 @@
       consider curves that have the following form, where <m>p(x)</m> is
       a polynomial of degree three or more.
     </p>
-    <me>
+    <md>
       y^2 = p(x) 
-    </me>
+    </md>
     <p>
       Even though this is specializing a great deal, it still allows
       for many interesting and important examples. The degree of the
@@ -282,24 +282,24 @@
     <p>
       Before I start these examples, though, let me review a small bit
       of the rules of exponents. How do I simplify this expression>
-      <me>
+      <md>
         \frac{\sqrt{x-1}}{(x-1)^3} 
-      </me>
+      </md>
       I can do this by writing the square root as an exponent and then
       using the exponent laws. 
-      <me>
+      <md>
         \frac{\sqrt{x-1}}{(x-1)^3} =
         \frac{(x-1)^{\frac{1}{2}}}{(x-1)^3}
-      </me>
+      </md>
       From this point, I can simplify as I wish. I might want
       everything in the numerator, or everything in the denominator.
       All of the following are possible result, depending on what kind
       of for you want. 
-      <me>
+      <md>
         \frac{(x-1)^{\frac{1}{2}}}{(x-1)^3} =
         (x-1)^{\frac{-5}{2}} = \frac{1}{(x-2)^{\frac{5}{2}}} =
         \frac{1}{(x-2)^2 \sqrt{x-2}} 
-      </me>
+      </md>
       Throughout the examples and activity this week, I'll use this
       simplification many times. I won't necessary make all the
       exponential tricks explicit as I do the simplifications. 
@@ -313,10 +313,10 @@
           since <m>x \geq 1</m> gives a negative on the right side,
           which is impossible with <m>y^2</m> on the left. I calculate
           the implicit derivative.
-          <me>
+          <md>
             2 y \frac{dy}{dx} = -6x - 3x^2 \implies \frac{dy}{dx} =
             \frac{-6x-3x^2}{2y} = \frac{-3x(2+x)}{2y} 
-          </me>
+          </md>
         </p>
         <p>
           This is well defined except when <m>y=0</m> which, for this
@@ -326,9 +326,9 @@
           Now I solve for <m>y</m> to get <m>y = \pm
           \sqrt{(1-x)(2+x)^2} = \pm (2+x)\sqrt{1-x} </m>. I use this
           to replace <m>y</m> in the implicit derivative.
-          <me>
+          <md>
             \frac{dy}{dx} = \pm \frac{-3x(2+x)}{2\sqrt{1-x} (2+x)}
-          </me>
+          </md>
         </p>
         <p>
           Then I look at the limits as I approach the undefined

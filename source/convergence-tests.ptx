@@ -40,10 +40,10 @@
           the terms of two infinite series. Then an inequality of the
           terms implies an inequality of the series. 
         </p>
-        <me>
+        <md>
           a_n \leq b_n \ \ \forall n \in \NN \implies
           \sum_{n=1}^\infty a_n \leq \sum_{n=1}^\infty b_n
-        </me>
+        </md>
         <p>
           In addition, let <m>a_n</m> and <m>b_n</m> be positive for
           all <m>n \in \NN</m> (and still assume <m>a_n \leq b_n</m>).
@@ -70,9 +70,9 @@
     </p>
     <example xml:id="example-convergence1">
       <statement>
-        <me>
+        <md>
           \sum_{n=3}^\infty \frac{1}{n-2}
-        </me>
+        </md>
         <p>
           The terms <m>\frac{1}{n-2}</m> are larger that
           <m>\frac{1}{n}</m> and the harmonic series <m>\sum
@@ -83,9 +83,9 @@
     </example>
     <example xml:id="example-convergence2">
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{1}{3^n + 4n + 1}
-        </me>
+        </md>
         <p>
           The terms <m>\frac{1}{3^n + 4n + 1}</m> are smaller that
           <m>\frac{1}{3^n}</m>. These terms <m>\frac{1}{3^n}</m> are
@@ -97,9 +97,9 @@
     </example>
     <example xml:id="example-convergence3">
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{n+1}{n^2}
-        </me>
+        </md>
         <p>
           The terms <m>\frac{n+1}{n^2}</m> are larger than
           <m>\frac{1}{n}</m>. The latter are the terms of the
@@ -109,17 +109,17 @@
     </example>
     <example xml:id="example-convergence4">
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{2^n}{n!}
-        </me>
+        </md>
         <p>
           For <m>n \geq 4</m>, I can make this comparison. 
         </p>
-        <me>
+        <md>
           \frac{2^n}{n!} = \frac{2}{1} \frac{2}{2} \frac{2}{3}
           \ldots \leq \frac{2}{3} \left( \frac{1}{2} \right)^{n-3} =
           \frac{16}{3} \frac{1}{2^n} 
-        </me>
+        </md>
         <p>
           Therefore, the terms of this series are smaller than the
           terms of a geometric series with common
@@ -152,10 +152,10 @@
           same asymptotic order (in the variable <m>n</m>), then the
           two series
         </p>
-        <me>
+        <md>
           \sum_{n=1}^\infty a_n \hspace{1cm} \text{ and }
           \hspace{1cm} \sum_{n=1}^\infty b_n
-        </me>
+        </md>
         <p>
           have the same convergence behaviour: either they both
           converge or they both diverge.
@@ -178,23 +178,23 @@
           to geometric series or a <m>\zeta</m> series is used to
           check their absolute convergence.
         </p>
-        <me>
+        <md>
           \sum_{n=3}^\infty \frac{(-1)^n}{n^6 + n^4 - 3n - 1} 
-        </me>
+        </md>
         <p>
           This series is absolutely convergent by asymptotic comparison to
           <m>\frac{1}{n^6}</m>.
         </p>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{(-1)^n \arctan n}{n^2} 
-        </me>
+        </md>
         <p>
           This series is absolutely convergent by asymptotic
           comparison to <m>\frac{1}{n^2}</m>.
         </p>
-        <me>
+        <md>
           \sum_{n=2}^\infty \frac{(-1)^n}{\ln n} 
-        </me>
+        </md>
         <p>
           This series is analyzed by 
           asymptotic comparison to <m>\frac{1}{\ln n}</m>. This series
@@ -231,9 +231,9 @@
           series is convergent if and only if the following improper
           integral is convergent.
         </p>
-        <me>
+        <md>
           \int_1^\infty f(x) dx
-        </me>
+        </md>
       </statement>
     </proposition>
     <p>
@@ -251,10 +251,10 @@
           me write the corresponding improper integral in three cases.
           First, when <m>p=1</m>. In this 
         </p>
-        <me>
+        <md>
           \int_1^\infty \frac{1}{x} dx = \lim_{a \rightarrow \infty}
           \ln x \Bigg|_1^\infty = \infty 
-        </me>
+        </md>
         <p>
           This integral diverges, so the <m>\zeta</m> seris also
           diverges for <m>p=1</m>. Now consider any <m>p \lt 1</m>.
@@ -264,11 +264,11 @@
           proves that the <m>\zeta</m> series diverges for  <m>p \lt
           1</m>.  Finally, I'll do the integral when <m>p \gt 1</m>.
         </p>
-        <me>
+        <md>
           \int_1^\infty \frac{1}{x^p} dx = \lim_{a \rightarrow \infty}
           \frac{1}{(1-p) x^{p-1}} \Bigg|_1^a = \lim_{a \rightarrow
           \infty} \frac{1}{(1-p)a} + \frac{1}{p-1} = \frac{1}{p-1} 
-        </me>
+        </md>
         <p>
           This integral converges, showing that the <m>\zeta</m> series
           converges when <m>p \gt 1</m>.  
@@ -288,10 +288,10 @@
           (Ratio Test) If <m>a_n</m> are the terms of a series,
           consider the limit of the ratio of the terms.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n}
           \right|
-        </me>
+        </md>
         <p>
           If this limit is greater than <m>1</m> (including
           infinity), then the series diverges. If this limit is less
@@ -306,9 +306,9 @@
           (Root Test) If <m>a_n</m> are the terms of a series,
           consider the limit of the roots of the terms.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \sqrt[n]{|a_n|}
-        </me>
+        </md>
         <p>
           If this limit is greater than <m>1</m> (or infinity), then
           the series diverges. If this limit is less than <m>1</m>,
@@ -394,10 +394,10 @@
         <p>
           For an extreme example, consider this series.
         </p>
-        <me>
+        <md>
           \sum_{n=1}^{10^{300}} (n^2 +n)^{75} + \sum_{n=10^{300} +
           1}^\infty \frac{1}{n^2}
-        </me>
+        </md>
         <p>
           The first <m>10^{300}</m> terms of this series are enormous
           numbers and their sum is simply ridiculous. However, the
@@ -418,9 +418,9 @@
     </p>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty n^{-\frac{2}{3}}
-        </me>
+        </md>
         <p>
           The terms are <m>\frac{1}{n^{\frac{2}{3}}}</m>, so this is a
           <m>\zeta</m> series. Since <m>\frac{2}{3} \lt 1</m>, this
@@ -430,9 +430,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{k=1}^\infty \frac{2^k}{e^k}
-        </me>
+        </md>
         <p>
           The terms are <m>\left( \frac{2}{e} \right)^k</m>, so this
           is a geometric series. <m>\frac{2}{e} \lt 1</m> so the
@@ -442,9 +442,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{k=2}^\infty \frac{(-1)^k}{k^2-1}
-        </me>
+        </md>
         <p>
           This is an alternating series. The limit of the terms is
           zero, so the series converges using the alternating series
@@ -454,9 +454,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \sin \left( \frac{n^2+1}{n} \right)
-        </me>
+        </md>
         <p>
           The terms do not tend to zero, so the series is divergent by
           the test for divergence.
@@ -465,9 +465,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{k=2}^\infty \frac{1}{k^2-1}
-        </me>
+        </md>
         <p>
           The terms are asymptotically the same as
           <m>\frac{1}{k^2}</m>. Those terms are from a convergent
@@ -478,9 +478,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{k=1}^\infty \frac{(-1)^k k}{e^k}
-        </me>
+        </md>
         <p>
           This is an alternating series. The limit of the terms is
           zero, so the series converges by the alternating series
@@ -490,9 +490,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{3}{2 + e^n}
-        </me>
+        </md>
         <p>
           The terms are asymptotically equivalent to
           <m>\frac{1}{e^n}</m>. There are the terms of a 
@@ -504,9 +504,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{k=1}^\infty \frac{k\sqrt{k}}{k^3}
-        </me>
+        </md>
         <p>
           The term are asymptotically equivalent to
           <m>\frac{1}{k^{\frac{3}{2}}}</m>. These are the terms of a 
@@ -518,9 +518,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{(-1)^n n}{n^3+4}
-        </me>
+        </md>
         <p>
           This is an alternating series. The limit of the terms is
           zero, so
@@ -536,9 +536,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{k=1}^\infty \frac{2^k k!}{k^k}
-        </me>
+        </md>
         <p>
           The factorial suggests that the ratio test is the best
           approach. I'll calculate the limit of the ratio of the
@@ -565,21 +565,21 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{k=1}^\infty k^5 e^{-k}
-        </me>
+        </md>
         <p>
           The index is in the exponent, so I'll try the ratio test. I
           calcualte the limit of the ratio of the terms.
         </p>
-        <me>
+        <md>
           \lim_{k \rightarrow \infty} \left| \frac{a_{k+1}}{a_k}
           \right| = \lim_{k \rightarrow \infty} \frac{(k+1)^5
           e^k}{k^5 e^{k+1}} = \lim_{k \rightarrow \infty}
           \frac{1}{e} \left( \frac{k+1}{k} \right)^5 = \lim_{k
           \rightarrow \infty} \frac{1}{e} \left( 1 + \frac{1}{k}
           \right)^5 = \frac{1}{e} \lt 1
-        </me>
+        </md>
         <p>
           By the ratio test, since the limit is less than 1, this
           series is convergent.
@@ -588,9 +588,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{\ln n^2}{n^2}
-        </me>
+        </md>
         <p>
           This involves a logarithm, so I'll try integral test. The
           resulting integral uses a substitution with <m>u = ln x</m>.
@@ -618,9 +618,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{(n!)^2}{(2n+4)!}
-        </me>
+        </md>
         <p>
           The presence of a factorial means that ratio test is
           probably the best. I'll calculate the limit of the ratio of
@@ -645,9 +645,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{n!}{e^{n^2}}
-        </me>
+        </md>
         <p>
           There are factorials again, so ratio test is likely the best
           choice.
@@ -673,9 +673,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{\ln n}{\sqrt[3]{n}}
-        </me>
+        </md>
         <p>
           With the logarithm and the square root functions involved,
           the integral test is most appropriate here. However, the
@@ -726,24 +726,24 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=2}^\infty \frac{1}{n \ln n}
-        </me>
+        </md>
         <p>
           I use the integral text again. In the integral, I use the
           substitution <m>u = \ln x</m>.
         </p>
-        <me>
+        <md>
           \int_2^\infty \frac{1}{x \ln x} dx = \int_{\ln 2}^\infty
           \frac{1}{u} du = \ln u \Big|_{\ln 2}^\infty = \infty
-        </me>
+        </md>
         <p>
           The integral is divergent, so the sum is divergent as well.
           Also, note the following inequality.
         </p>
-        <me>
+        <md>
           \frac{1}{n} > \frac{1}{n \ln n} > \frac{1}{n^p}
-        </me>
+        </md>
         <p>
           It seems that comparison should be helpful with a series of
           this type. However, the inequality shows that this series
@@ -759,18 +759,18 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty ne^{-n^2}
-        </me>
+        </md>
         <p>
           I use the integral test again. In the integral, I use the
           substitution <m>u =x^2</m>.
         </p>
-        <me>
+        <md>
           \int_1^\infty x e^{-x^2} dx = \frac{1}{2} \int_1^\infty
           e^{-u} du = \left. \frac{-1}{2} e^{-u} \right|_1^\infty =
           \frac{e}{2} \lt \infty
-        </me>
+        </md>
         <p>
           The integral converges, so the sum does as well. Note,
           again, that the sum <em>does not</em> have the value
@@ -780,18 +780,18 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty (-1)^n 3^{\frac{1}{n}}
-        </me>
+        </md>
         <p>
           The root test is good for exponents, so let me try that
           test. I calculate the limit of the <m>n</m>th root of the
           term.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \sqrt[n]{3^{\frac{1}{n}}} =
           \lim_{n \rightarrow \infty} 3^{\frac{1}{2n}} = 1
-        </me>
+        </md>
         <p>
           This limit is 1, so the test is inconclusive. Instead of
           using the root test, I could look at the limit of the terms.
@@ -802,9 +802,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \left( \frac{n}{n+1} \right)^{n^2}
-        </me>
+        </md>
         <p>
           I use the root test again. I take the limit of the <m>n</m>
           roots of the terms. 
@@ -830,9 +830,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \sum_{n=1}^\infty \tan \left( \frac{1}{n} \right)
-        </me>
+        </md>
         <p>
           There is an interesting comparison argument which I can use
           to tackle this difficult example. The derivative of tangent

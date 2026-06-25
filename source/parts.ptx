@@ -8,10 +8,10 @@
       recall the product rule, for <m>f(x)</m> and <m>g(x)</m>
       differentiable functions. 
     </p>
-    <me>
+    <md>
       \frac{d}{dx} f(x) g(x) = \frac{df}{dx} g(x) + f(x)
       \frac{dg}{dx}
-    </me>
+    </md>
     <p>
       I'm simply going to integrate both sides of this equation. On
       the left, the integral of a derivative returns the  original
@@ -35,9 +35,9 @@
       This is a rule about integrals, but it's not clear how to use
       it. I'm going to isolate one of the two integral pieces. 
     </p>
-    <me>
+    <md>
       \int \frac{df}{dx} g dx = fg - \int f \frac{dg}{dx} dx
-    </me>
+    </md>
     <p>
       This might be more useful, since it tells me how to transform
       certain integral. This is useful enough that there is a name for
@@ -51,9 +51,9 @@
           equation for the integral of <m>\frac{df}{dx} g</m> is
           called <term>integration by parts</term>.
         </p>
-        <me>
+        <md>
           \int \frac{df}{dx} g dx = fg - \int f \frac{dg}{dx} dx
-        </me>
+        </md>
       </statement>
     </definition>
     <p>
@@ -81,18 +81,18 @@
       <m>dg</m> for the integrals). I'm not going to use that notation,
       but for reference, here is what the rule looks like. 
     </p>
-    <me>
+    <md>
       \int g df = fg - \int f dg
-    </me>
+    </md>
     <p>
       If I have a definite integral, I can still use integration by
       parts. On the middle term (the term which is not an integral), I
       have to evalute on the bounds. 
     </p>
-    <me>
+    <md>
       \int_a^b \frac{df}{dx} g(x) dx = f(x)g(x) \Bigg|_a^b  - \int_a^b
       f(x) \frac{dg}{dx} dx 
-    </me>
+    </md>
   </subsection>
   <subsection xml:id="parts-examples">
     <title>Examples</title>
@@ -144,10 +144,10 @@
           This choice worked, and I was able to continue on to the
           complete solution. As with all integration problems, I can
           check my answer by differentiation.
-          <me>
+          <md>
             \frac{d}{dx} (x-1)e^x + c = e^x \frac{d}{dx} (x-1) + (x-1)
             \frac{d}{dx} e^x = e^x + xe^x - e^x = xe^x
-          </me>
+          </md>
         </p>
       </statement>
     </example>
@@ -229,10 +229,10 @@
           middle term. After integration by parts, the remaining
           integral is a simple antiderivative.
         </p>
-        <me>
+        <md>
           \int_1^2 x e^x dx = xe^x \Bigg|_1^2 - \int_1^2 e^x dx = 2e^2
           - e - e^x \Bigg|_1^2 = 2e^2 - e - e^2 + e = e^2
-        </me>
+        </md>
       </statement>
     </example>
     <example>
@@ -269,10 +269,10 @@
           <m>\frac{df}{dx}= 1</m> which leads to <m>f = x</m> and
           <m>\frac{dg}{dx} = \frac{1}{x}</m>.
         </p>
-        <me>
+        <md>
           \int \ln x dx = x \ln x - \int \frac{x}{x} dx = x \ln x -
           \int 1 dx = x \ln x - x + c
-        </me>
+        </md>
       </statement>
     </example>
     <example>
@@ -324,11 +324,11 @@
           equation, to cancel it from the right and add it to the
           left.
         </p>
-        <me>
+        <md>
           \int e^{ax} \sin bx dx - \frac{b^2}{a^2} \int e^{ax} \sin
           bx dx = \frac{e^{ax}\sin bx}{a} - \frac{be^{ax} \cos
           bx}{a^2} 
-        </me>
+        </md>
         <p>
           Now I'll rewrite the left side, factoring out the common
           integral term from both pieces. After doing that, I can
@@ -368,10 +368,10 @@
           \frac{\pi^2}{4}</m> bcoming <m>u = \sqrt{\frac{\pi^2}{4}} =
           \frac{\pi}{2}</m>.
         </p>
-        <me>
+        <md>
           \int_0^{\frac{\pi^2}{4}} \sin \sqrt{x} dx =
           \int_0^{\frac{\pi}{2}} 2u \sin u du 
-        </me>
+        </md>
         <p>
           then I'm going to use integration by parts to solve the
           integral that results from the substitution. I will choose

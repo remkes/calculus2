@@ -260,17 +260,17 @@
         <p>
           The statement
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} a_n = L
-        </me>
+        </md>
         <p>
           means that as <m>n</m> gets larger and larger without bound,
           <m>a_n</m> gets closer and closer to <m>n</m>. Similarly,
           the statement
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} a_n = \infty
-        </me>
+        </md>
         <p>
           means that as <m>n</m> gets larger and larger without bound
           <m>a_n</m> also gets larger and larger without bound.
@@ -362,10 +362,10 @@
           still difficult to determine. One such limit is the limit
           definition of the number <m>e</m>.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \left( 1 + \frac{1}{n}
           \right)^n = e
-        </me>
+        </md>
         <p>
           Asymptotic analysis has trouble with this limit because the
           term inside the brackets approaches <m>1</m>. <m>1</m> to
@@ -394,12 +394,12 @@
           Then some algebra lets me determine a recurivse definition
           for the <m>a_n</m>. 
         </p>
-        <me>
+        <md>
           \frac{f_{n+1}}{f_n} = \frac{f_n}{f_n} +
           \frac{f_{n-1}}{f_n} \implies a_n = 1 +
           \frac{1}{\frac{f_n}{f_{n-1}}} \implies a_n = 1 +
           \frac{1}{a_{n-1}}
-        </me>
+        </md>
         <p>
           Now I have a recursive definition for the sequences of
           Fibonacci ratios. Recursive definition are problematic for
@@ -407,9 +407,9 @@
           for calculating these limits. Let me restate this recurvise
           definition.
         </p>
-        <me>
+        <md>
           a_n = 1 + \frac{1}{a_{n-1}}
-        </me>
+        </md>
         <p>
           The trick is to take the limit of both sides of the
           equation. On the left, I have the limit that I want to

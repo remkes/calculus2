@@ -22,10 +22,10 @@
       the same term.) Here is a simple example that just multiplies
       the two denominators together. 
     </p>
-    <me>
+    <md>
       \frac{1}{x-3} + \frac{1}{x+4} = \frac{(x+4) +
       (x-3)}{(x-3)(x+4)} = \frac{2x+1}{x^2+x-12}
-    </me>
+    </md>
     <p>
       However, like with fractions, its often wise to make use of
       common factors already existing in the denominators. To add the
@@ -76,11 +76,11 @@
       find new numerators <m>p_i</m> to undo the common denominator,
       as in the following expression.
     </p>
-    <me>
+    <md>
       \frac{p(x)}{q(x)} = \frac{p_1(x)}{q_1(x)} +
       \frac{p_2(x)}{q_2(x)} + \frac{p_3(x)}{q_3(x)} + \ldots +
       \frac{p_r(x)}{q_r(x)}
-    </me>
+    </md>
     <p>
       Partial fractions tries to calculate these numerators. It is
       often a long and complicated process. Instead of trying to
@@ -89,17 +89,17 @@
     </p>
     <example xml:id="example-pf1">>
       <statement>
-        <me>
+        <md>
           \frac{x+2}{(x+1)(x-6)}
-        </me>
+        </md>
         <p>
           The partial fraction decomposition should write this as two
           fractions, each of which have only one of the two factors of
           the denominator. 
         </p>
-        <me>
+        <md>
           \frac{x+2}{(x+1)(x-6)} = \frac{a}{x-6} + \frac{b}{x+1}
-        </me>
+        </md>
         <p>
           The problem of partial fractions is to calculate the
           numerators <m>a</m> and <m>b</m>. This is the general
@@ -111,20 +111,20 @@
           numerators, I'll then simply construct the common
           denominator on the right side. 
         </p>
-        <me>
+        <md>
           \frac{x+2}{(x+1)(x-6)} = \frac{a}{x-6} + \frac{b}{x+1} =
           \frac{a(x+1) + b(x-6)}{(x-6)(x+1)} = \frac{(a+b)x +
           (a-6b)}{(x+1)(x-6)}
-        </me>
+        </md>
         <p>
           Taking the right side to common denominator makes the
           denominators the same. Since this is an equality, this means
           the numerators must also be the same. I write that fact as
           an equation.
         </p>
-        <me>
+        <md>
           x+2 = (a+b)x + (a-6b)
-        </me>
+        </md>
         <p>
           Now this is the next general step: I compare coefficients in
           the equation of numerators. This will give a system of
@@ -155,10 +155,10 @@
           numerators. I can now write the original partial fraction
           decomposition with these values in the numerators.
         </p>
-        <me>
+        <md>
           \frac{x+2}{(x+1)(x-6)} = \frac{\frac{8}{7}}{x-6} +
           \frac{\frac{-1}{7}}{x+1}
-        </me>
+        </md>
         <p>
           That's the end of the process. The right side is the partial
           fraction composition: it is common denominator in reverse.
@@ -201,19 +201,19 @@
     </ol>
     <example xml:id="example-pf2">>
       <statement>
-        <me>
+        <md>
           \frac{x^2+1}{(x+1)(x-2)(x-3)} 
-        </me>
+        </md>
         <p>
           There are three linear factors in the denominator. I expect
           the partial fractions decomposition to split up into three
           pieces, one for each of these linear factors. The numerators
           will be constant. This is the form I expect: 
         </p>
-        <me>
+        <md>
           \frac{x^2+1}{(x+1)(x-2)(x-3)} = \frac{a}{x+1} + \frac{b}{x-2}
           + \frac{c}{x-3}
-        </me>
+        </md>
         <p>
           Now I need to determine the unknowns <m>a</m>, <m>b</m>
           and <m>c</m>. I do this by taking the partial fractions
@@ -246,10 +246,10 @@
           numerators must be as well. I write the equation of the
           numerators. 
         </p>
-        <me>
+        <md>
           x^2 + 1 = x^2 + 0x + 1= (a+b+c)x^2 + (-5a-2b-c)x +
           (6a-3b-2c)
-        </me>
+        </md>
         <p>
           Two polynomials are only equal if all their coefficients are
           equal, so I get three equations, one for each coefficient. I
@@ -339,10 +339,10 @@
           numerators. This lets me finish the partial fraction
           decomposition.
         </p>
-        <me>
+        <md>
           \frac{x^2+1}{(x+1)(x-2)(x-3)} = \frac{\frac{1}{6}}{x+1} -
           \frac{\frac{5}{3}}{x-2} + \frac{\frac{5}{2}}{x-3}
-        </me>
+        </md>
       </statement>
     </example>
     <example xml:id="example-pf3">
@@ -350,18 +350,18 @@
         <p>
           Here is an example with an irreducible factor.
         </p>
-        <me>
+        <md>
           \frac{x^2-x-1}{(x-1)(x^2-2x+3)} 
-        </me>
+        </md>
         <p>
           The discriminant of the quadratic <m>x^2 - 2x + 3</m>
           is <m>-8</m>, so it is irreducible and cannot be factored
           any further. Therefore, I am looking for a partial
           fraction decomposition of the following form.
-          <me>
+          <md>
             \frac{x^2- x - 1}{(x-1)(x^2-2x+3)} = \frac{a}{x-1} +
             \frac{bx+c}{x^2-2x+3}
-          </me>
+          </md>
         </p>
         <p>
           I take the right side to common denominator.
@@ -412,10 +412,10 @@
         <p>
           This finishes the partial fraction decomposition.
         </p>
-        <me>
+        <md>
           \frac{x^2-x-1}{(x-1)(x^2-2x+3)} = \frac{\frac{-1}{2}}{x-1} +
           \frac{\frac{3}{2} x - \frac{1}{2}}{x^2 - 2x +3}
-        </me>
+        </md>
       </statement>
     </example>
   </subsection>
@@ -437,12 +437,12 @@
       partial fractions, I need a decomposition that includes a sum of
       terms with various powers of this linear denominator.
     </p>
-    <me>
+    <md>
       \frac{a_1}{(x-\alpha)} + 
       \frac{a_2}{(x-\alpha)^2} + 
       \frac{a_3}{(x-\alpha)^3} + \ldots + 
       \frac{a_n}{(x-\alpha)^n} 
-    </me>
+    </md>
     <p>
       This gives enough piece to put together the original rational
       function. If I don't have all these terms, I won't have enough
@@ -451,9 +451,9 @@
     </p>
     <example xml:id="example-pf4">
       <statement>
-        <me>
+        <md>
           \frac{2x-3}{(x-1)(x+2)^2}
-        </me>
+        </md>
         <p>
           To account for the repeated root, I look for a partial
           fraction decomposition of the following form.
@@ -553,10 +553,10 @@
           The system is solved, so I can write the partial fraction
           decomposition.
         </p>
-        <me>
+        <md>
           \frac{2x-3}{(x-1)(x+2)^2} = \frac{\frac{-1}{9}}{x-1} +
           \frac{\frac{1}{9}}{x+2} + \frac{\frac{7}{3}}{(x+2)^2}
-        </me>
+        </md>
       </statement>
     </example>
   </subsection>

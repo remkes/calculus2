@@ -19,9 +19,9 @@
       For the geometric series, this new perspective defines a
       function <m>f(x)</m>.
     </p>
-    <me>
+    <md>
       f(x) = \sum_{n=0}^\infty x^n
-    </me>
+    </md>
     <p>
       The domain of this function is <m>|x|\lt 1</m>, since those are
       the values of the parameter (now the variable) where the
@@ -47,9 +47,9 @@
       called these series <sq><m>\zeta</m> series</sq> is that the
       associated function is called the Riemann <m>\zeta</m>-function.
     </p>
-    <me>
+    <md>
       \zeta(x) = \sum_{n=0}^\infty \frac{1}{n^x}
-    </me>
+    </md>
     <p>
       The domain of this function is <m>(1,\infty)</m>, since that is
       where the series converges. (In other branches of mathematics,
@@ -63,9 +63,9 @@
       <m>f(x)</m> when the terms <m>a_n</m> of the series also depend
       on <m>x</m>.
     </p>
-    <me>
+    <md>
       f(x) = \sum_{n=1}^\infty a_n(x)
-    </me>
+    </md>
     <p>
       Notice that the variable of the function, <m>x</m>, is not the
       index of the sum <m>n</m>. These two numbers are different and
@@ -86,9 +86,9 @@
       A polynomial <m>p(x)</m> of degree <m>d</m> can be written as a
       finite sum in sigma notation.
     </p>
-    <me>
+    <md>
       p(x) = \sum_{n=0}^d c_n x^n
-    </me>
+    </md>
     <p>
       The terms involve powers of the variables (<m>x^n</m>) and
       coefficients of those powers (<m>c_n</m>). What if I let the
@@ -100,9 +100,9 @@
         <p>
           A series of the form
         </p>
-        <me>
+        <md>
           f(x) = \sum_{n=0}^\infty c_n x^n
-        </me>
+        </md>
         <p>
           is called a <term>power series</term>. The real numbers
           <m>c_n</m> are called the <term>coefficients</term> of the
@@ -123,9 +123,9 @@
         <p>
           A series of the form
         </p>
-        <me>
+        <md>
           f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
-        </me>
+        </md>
         <p>
           is called a <term>power series centered at
           <m>\alpha</m></term>. The numbers <m>c_n</m> are still
@@ -269,9 +269,9 @@
       <statement>
         <p>
           Consider a power series centered at <m>x = \alpha</m>.
-          <me>
+          <md>
             f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
-          </me>
+          </md>
         </p>
         <p>
           Such a series will have precisely one of three convergence
@@ -478,9 +478,9 @@
         <p>
          Consider power series centered at <m>\alpha</m>.
         </p>
-        <me>
+        <md>
           f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
-        </me>
+        </md>
         <p>
           This <m>f</m> is a continuous function inside its radius of
           convergence. In addition, <m>f</m> is infinitely
@@ -516,9 +516,9 @@
           <m>f</m> is calculated term-wise, simply by differentiating
           every term in the series.
         </p>
-        <me>
+        <md>
           f^\prime(x) = \sum_{n=1}^\infty c_n n(x-\alpha)^{n-1}
-        </me>
+        </md>
         <p>
           Therefore, the derivative is a power series as well;
           moreover, it will have the same radius of convergence as the
@@ -536,10 +536,10 @@
           then <m>f</m> is integrable and its indefinite integral is
           calculated termwise. 
         </p>
-        <me>
+        <md>
           \int f(x) dx= \sum_{n=0}^\infty c_n
           \frac{(x-\alpha)^{n+1}}{n+1} + C
-        </me>
+        </md>
       </statement>
     </proposition>
     <p>
@@ -558,42 +558,42 @@
       section, I'm going to briefly introduce some common notation for
       particular cases of this phenomenon. Consider a series where all
       the odd terms are zero (centered at <m>0</m> for convenience). 
-      <me>
+      <md>
         f(x) = c_0 + 0x + c_2x^2 + 0x^3 + c_4x^4 + 0x^5 + \ldots 
-      </me>
+      </md>
       I could similarly consider a series where all the even terms
       are zero. 
-      <me>
+      <md>
         f(x) = 0 + c_1x + 0 + c_3x^3 + 0x^4 + c_45^5 + 0x^6 + \ldots 
-      </me>
+      </md>
       If I want to index all the even numbers, I can write <m>k =
       2n</m> for <m> n \in \NN</m>. Similarly, I can index all the
       odd numbers by writing <m>k = (2n+1)</m> for <m>n \in \NN</m>.
       Using these tools, I could write a series with only odd or even
       non-zero terms. The series
-      <me>
+      <md>
         f(x) = \sum_{n=0}^\infty c_{2n} (x-\alpha)^{2n}
-      </me>
+      </md>
       is a series with only even terms. The series.
-      <me>
+      <md>
         g(x) = \sum_{n=0}^\infty c_{2n-1} (x-\alpha)^{2n+1}
-      </me>
+      </md>
       is a series with only odd terms. 
     </p>
     <p>
       Some extra care must be taken with calculating radii of
       convergence for these series. The formula
-      <me>
+      <md>
         R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
         \right| 
-      </me>
+      </md>
       relies on the assumption that all <m>c_n \neq 0</m>. This is not
       true for these series with only odd term or even terms. For
       series with such patterns, I need a slightly different approach.
       Take the example series
-      <me>
+      <md>
         f(x) = \sum_{n=0}^\infty c_{2n} (x-\alpha)^{2n}
-      </me>
+      </md>
       that only has even terms. Implicitly, even though I can assume
       <m>c_{2n} \neq 0</m>, all of the missing coefficient
       <m>c_{2n+1}</m> are zero.  To use the calculation for radius of
@@ -601,28 +601,28 @@
       force this series into such a form by some clever manipulation
       of exponents. Using the laws of exponents, I adjust the power of
       <m>(x-\alpha)</m>.
-      <me>
+      <md>
         f(x) = \sum_{n=0}^\infty c_{2n} ((x-\alpha)^2)^{n}
-      </me>
+      </md>
       Then I also re-index the coefficients: what I called
       <m>c_{2n}</m> before, I'll just call <m>c_n</m>.
-      <me>
+      <md>
         f(x) = \sum_{n=0}^\infty c_{n} ((x-\alpha)^2)^{n}
-      </me>
+      </md>
       Then this is a series with all non-zero coefficients (with the
       assumption that the original <m>c_{2n}</m> were non-zero).
       However, it is now a power series in <m>x^2</m>, not <m>x</m>.
       Therefore, if I calculate a radius of convergence <m>R</m>, the
       resulting inequality is
-      <me>
+      <md>
         (x-\alpha)^2 \in \left( - R, R \right)
-      </me>
+      </md>
       To get the actual bound on <m>x</m> itself requires manipulating
       the inequalities that bound <m>x^2</m>. The result is this.
-      <me>
+      <md>
         (x-\alpha) \in \left( - \sqrt{R}, \sqrt{R} \right) \implies 
         x \in \left( \alpha - \sqrt{R}, \alpha + \sqrt{R} \right) 
-      </me>
+      </md>
       In summary, there is often a way to get to a domain of convergence
       for this type of series, but it can be difficult and unwieldy. 
     </p>
@@ -632,14 +632,14 @@
       exponents of our power series. If a power series had non-zero
       terms only when the exponent was a power of <m>3</m>, I could
       write it as
-      <me>
+      <md>
         f(x) = \sum_{n=0}^\infty (x-\alpha)^{3n}
-      </me>.
+      </md>.
       If the power series had non-zero exponents only for every fifth
       number starting at <m>7</m>, I could write it as
-      <me>
+      <md>
         f(x) = \sum_{n=0}^\infty (x-\alpha)^{5n + 7}
-      </me>.
+      </md>.
       In either case, I'd have to use similar kinds of tricks to
       reduce it to a series in <m>x^3</m> or <m>x^5</m>, then
       calculate the radius, then manipulate the inequalities to figure
@@ -660,10 +660,10 @@
         <p>
           The Bessel functions of order <m>k \in \NN</m> are given by
           this series.
-          <me>
+          <md>
             J_k(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{2^{2n+k}
             ((n+k)!)^2}
-          </me>
+          </md>
         </p>
         <p>
           The Bessel functions are like the trigonometric functions,
@@ -678,9 +678,9 @@
       <statement>
         <p>
           The Bessel-Clifford functions are givesn by this series.
-          <me>
+          <md>
             C_k(x) = \sum_{n=0}^\infty \frac{\pi (k+n) x^n}{n!}
-          </me>
+          </md>
         </p>
       </statement>
     </example>
@@ -690,9 +690,9 @@
           The Polylogarithm functions are given by this series. (Note
           that for <m>s=1</m> the polylogarithm is <m>Li_1(x) = -\ln
           (1-x)</m>, the conventional logarithm).
-          <me>
+          <md>
             Li_s(x) = \sum_{n=0}^\infty \frac{x^{n}}{n^s}
-          </me>
+          </md>
         </p>
       </statement>
     </example>

@@ -50,9 +50,9 @@
         <p>
           Consider this rational fucntion.
         </p>
-        <me>
+        <md>
           \frac{x^4+3x^2+2x+4}{x^2+4} 
-        </me>
+        </md>
         <p>
           This rational function is not proper. The degree of the
           numerator is <m>4</m> and the degree of the denomintor is
@@ -171,10 +171,10 @@
           becomes the new numerator. The result of the long division
           is this equation. 
         </p>
-        <me>
+        <md>
           \frac{x^4+3x^2+2x+4}{x^2+4} = x^2 - 1 +
           \frac{2x+8}{x^2+4}
-        </me>
+        </md>
         <p>
           This is now the sum of a polynomial (which is easy to deal
           with) and a proper rational function. 
@@ -251,9 +251,9 @@
           <term>multiplicity</term> of the factor. For example, consider
           this factored polynomial.
         </p>
-        <me>
+        <md>
           p(x) = (x-3)^4(x-5)^2(x^2 + 4x + 1)^7
-        </me>
+        </md>
         <p>
           In this polynomial, the linear factor <m>(x-3)</m> has
           multiplicity <m>4</m>; the linear factor <m>(x-5)</m> has

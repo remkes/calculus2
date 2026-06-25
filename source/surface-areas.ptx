@@ -47,16 +47,16 @@
   <p>
     Then the area of each infinitesimal cylinder is circumference
     times width.
-    <me>
+    <md>
       dA = 2\pi f(x) dx = 2\pi f(x) \sqrt{ 1 + (f^\prime(x))^2} dx
-    </me>
+    </md>
   </p>
   <p>
     The surface area calcluation is the integral of these
     infinitesimal pieces.
-    <me>
+    <md>
       A = \int_a^b 2\pi f(x) \sqrt{1 + (f^\prime(x))^2} dx
-    </me>
+    </md>
   </p>
   <example>
     <statement>

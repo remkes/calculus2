@@ -40,16 +40,16 @@
   <p>
     To try to make this point, conisder the following series. 
   </p>
-  <me>
+  <md>
     \sum_{n=1}^\infty \frac{n^2+4n}{(n!)2^n}
-  </me>
+  </md>
   <p>
     Using methods from later in this week, this series converges. This
     sum represents a number. Let me label that number.
   </p>
-  <me>
+  <md>
     \alpha = \sum_{n=1}^\infty \frac{n^2+4n}{(n!)2^n}
-  </me>
+  </md>
   <p>
     Now I can do arithemtic with <m>\alpha</m>. I can use it in other
     equations, in other functions, in other series even. It is
@@ -66,10 +66,10 @@
     some familiar number, I can use the series to approximate the
     number. For example, here is the fourth partial sum of the series. 
   </p>
-  <me>
+  <md>
     \frac{5}{2} + \frac{12}{8} + \frac{21}{48} + \frac{32}{384} =
     \frac{217}{48}
-  </me>
+  </md>
   <p>
     This is an approximation for <m>\alpha</m>.  If I add more terms,
     I will get a closer approximation. This is the best way to get a

@@ -25,9 +25,9 @@
           take a very simple reaction: the product of <m>NaCl</m> salt
           from free <m>Na^+</m> and <m>Cl^-</m> ions. We write this
           reaction as:
-          <me>
+          <md>
             Na^+ + Cl^- \rightarrow NaCl
-          </me>
+          </md>
         </p>
         <p>
           Let <m>N</m>, <m>C</m> and <m>S</m> (for salt) represent the
@@ -37,10 +37,10 @@
           Mathematically, this is <m>N + S = c_1</m> or <m>C + S =
           c_2</m> for some constants <m>c_1</m> and <m>c_2</m>. We
           can differentiate both equations.
-          <me>
+          <md>
             \frac{dN}{dt} = - \frac{dS}{dt} \hspace{1cm} \text{ and }
             \hspace{1cm} \frac{dC}{dt} = - \frac{dS}{dt}
-          </me>
+          </md>
         </p>
         <p>
           The result is what we call a related rate. We have an
@@ -128,10 +128,10 @@
           b^2</m>. Since <m>l</m> is constant, this is the
           relationship we need between <m>a</m> and <m>b</m>. We
           differentiate with respect to time.
-          <me>
+          <md>
             0 = 2a \frac{da}{dt} + 2b \frac{db}{dt} \implies
             \frac{da}{dt} = -\frac{b}{a} \frac{db}{dt}
-          </me>
+          </md>
         </p>
         <p>
           Notice that this depends on <m>a</m> and <m>b</m>. For
@@ -143,10 +143,10 @@
           the ladder is <m>\sqrt{74}</m> meters and <m>a=7</m> with
           <m>b=5</m> then when <m>\frac{db}{dt} = 3 m/s</m> we
           calculate
-          <me>
+          <md>
             \implies \frac{da}{dt} = -\frac{b}{a} \frac{db}{dt} =
             \frac{-5}{7} 3 = \frac{-15}{7} m/s
-          </me>.
+          </md>.
         </p>
         <p>
           If we fed in different values for <m>a</m>, <m>b</m> or
@@ -240,16 +240,16 @@
           water cone <m>V_1</m> and the volume in the cube <m>V_2</m>
           is constant. That is <m>V_1 + V_2 = c</m>. Then we can
           relate the volumes to the heights.
-          <me>
+          <md>
             V_1 = \frac{1}{3} \pi h_1^3 \hspace{1cm} \text{ and }
             \hspace{1cm} V_2 = 100 h_2
-          </me>
+          </md>
         </p>
         <p>
           That gives this relationship between the heights.
-          <me>
+          <md>
             \frac{1}{3} \pi h_1^3 + 100 h_2 = c
-          </me>
+          </md>
         </p>
         <p>
           We differentiate this relationship.
@@ -273,11 +273,11 @@
           <m>\frac{dh_1}{dt} = -0.05m/2</m> what is
           <m>\frac{dh_2}{dt}</m>? We just use the derived related
           rates equation.
-          <me>
+          <md>
             \frac{dh_2}{dt} = \frac{-\pi h_1^2}{100} \frac{dh_1}{dt} =
             \frac{-\pi 2^2}{100} \frac{5}{100} = \frac{-20\pi}{10000}
             \doteq 0.0063 m/s
-          </me>
+          </md>
         </p>
       </statement>
     </example>
@@ -291,19 +291,19 @@
           temperature, which we also assume is constant. First, let's
           solve for <m>P</m> and differentiate with respect to time
           <m>t</m>.
-          <me>
+          <md>
             P = \frac{nRT}{V} \implies \frac{dP}{dt} =
             \frac{-nRT}{V^2} \frac{dV}{dt}
-          </me>
+          </md>
         </p>
         <p>
           Likewise, we can solve for <m>V</m> and differentiate with
           respect to time.
-          <me>
+          <md>
             V = \frac{nRT}{P} \implies \frac{dV}{dt} =
             \frac{-nRT}{P^2} \frac{dP}{dt} \implies \frac{dP}{dt} =
             \frac{-P^2}{nRT} \frac{dV}{dt}
-          </me>
+          </md>
         </p>
       </statement>
     </example>

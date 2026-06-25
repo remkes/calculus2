@@ -108,10 +108,10 @@
           substitution, I can use the form found on the table of
           integrals.
         </p>
-        <me>
+        <md>
           \int \sqrt{a^2 + x^2} dx = \frac{x}{2} \sqrt{a^2 + x^2} +
           \frac{a^2}{2} \ln \left( x + \sqrt{a^2 + x^2} \right) + c
-        </me>
+        </md>
       </statement>
       <solution>
         <figure xml:id="figure-parametric-activity2">

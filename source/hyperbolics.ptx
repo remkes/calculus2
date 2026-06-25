@@ -127,9 +127,9 @@
       <m>x</m> and <m>y</m> coordinates and the circle is the locus of
       <m>x^2 + y^2 = 1</m>. For the hyperbolics, the equation is now
       <m>x^2 - y^2 = 1</m>, so the fundamental hyperbolic identity is
-      <me>
+      <md>
         \cosh^2 \theta - \sinh^2 \theta = 1
-      </me>.
+      </md>.
     </p>
     <p>
       In parallel with the trigonometric functions, there are many
@@ -137,10 +137,10 @@
       same as the trigonometric identities excepts for differences in
       sign. I'll give two examples here; the rest are found in the
       reference materials.
-      <me>
+      <md>
         \sinh (x+y) = \sinh x \cosh y + \cosh x \sinh y \hspace{2cm}
         \tanh^2 x = 1 - \sech^2 x
-      </me>
+      </md>
     </p>
     <p>
       Also in parallel with trigonometry, the remaining hyperbolic
@@ -156,10 +156,10 @@
       are actually not new functions at all. They can be quite easily
       built out of exponentials. For the base functions <m>\sinh
       x</m> and <m>\cosh x</m>, here are the exponential definition.
-      <me>
+      <md>
         \cosh x = \frac{e^x + e^{-x}}{2} \hspace{1cm} \text{ and }
         \hspace{1cm} \sinh x = \frac{e^x - e^{-x}}{2}
-      </me>.
+      </md>.
     </p>
     <p>
       With this definition, the remaining four hyperbolics are defined
@@ -187,9 +187,9 @@
     <p>
       I can also reverse the exponential identities to give a 
       pleasant description of the exponential function.
-      <me>
+      <md>
         e^x = \cosh x + \sinh x
-      </me>.
+      </md>.
     </p>
     <p>
       This leads us to an interesting question: if hyperbolics relate
@@ -215,7 +215,7 @@
       restrictive than they were for trigonometric functions. Since
       the inverse switches domain and range, the resulting range in
       the table will be the domain of the inverse.
-      <me>
+      <md>
         \begin{array}{llll} 
           \text{ Function } \amp \text{ Restricted Domain } \amp
           \text{ Resulting Range } \amp \text{ Inverse Function } \\ 
@@ -228,7 +228,7 @@
           \coth x \amp x \neq 0 \amp (-\infty,-1) \cup (1, \infty)
           \amp \arccoth x
         \end{array}
-      </me>
+      </md>
     </p>
     <p>
       Since the hyperbolics have exponential descripions, I expect
@@ -262,9 +262,9 @@
       zero, I can use the techniques I already know from limits:
       algebraic manipulation to adjust the limit or L'Höpital's Rule.
       Much like trig, there is one special limit which is very useful.
-      <me>
+      <md>
         \lim_{x \rightarrow 0} \frac{\sinh x}{x} = 1 
-      </me>
+      </md>
     </p>
     <p>
       Now I'll move on to derivatives. The following derivatives of
@@ -316,7 +316,7 @@
       equations. This table summarizies three of the most basic and
       most important DEs and their solutions (where <m>a</m> and
       <m>b</m> are real constants).
-      <me>
+      <md>
         \begin{array}{ll} 
           \text{ DE } \amp \text{ Solution } \\ 
           \hline
@@ -324,7 +324,7 @@
           \dfrac{d^2f}{dx^2} = -f \amp f = a \sin x + b \cos x \\[1em]
           \dfrac{d^2f}{dx^2} = f \amp f = a \sinh x + b \cosh x 
         \end{array}
-      </me>
+      </md>
     </p>
     <p>
       The derivatives of (most of) the inverse hyperbolic are as

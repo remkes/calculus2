@@ -36,10 +36,10 @@
         I'll return to the rational function from example <xref
         ref="example-pf1" />. 
       </p>
-      <me>
+      <md>
         \frac{x+2}{(x+1)(x-6)} = \frac{\frac{8}{7}}{x-6} +
         \frac{\frac{-1}{7}}{x+1}
-      </me>
+      </md>
       <p>
         Now I integrate the two pieces. For each piece on the right,
         I can pull out the constants to integrate the typical linear
@@ -68,10 +68,10 @@
         I'll return to the rational function from example <xref
         ref="example-pf2" />. 
       </p>
-      <me>
+      <md>
         \frac{x^2+1}{(x+1)(x-2)(x-3)} = \frac{\frac{14}{9}}{x+1} -
         \frac{\frac{25}{9}}{x-2} + \frac{\frac{10}{3}}{x-3}
-      </me>
+      </md>
       <p>
         Now the integral breaks up into three integrals. I can pull
         out the constants, so I get three ordinary linear integrals.
@@ -101,10 +101,10 @@
         I'll return to the rational function from example <xref
         ref="example-pf3" />. 
       </p>
-      <me>
+      <md>
         \frac{x^2-x-1}{(x-1)(x^2-2x+3)} = \frac{\frac{-1}{2}}{x-1}
         + \frac{\frac{3}{2} x - \frac{1}{2}}{x^2 - 2x +3}
-      </me>
+      </md>
       <p>
         Then I integrate. The linear form is familiar and easy by
         thie point. For the quadratic form, I have to do a bunch
@@ -119,9 +119,9 @@
         (adding, multiplying) to construct the desired form for the
         rational function. 
       </p>
-      <me>
+      <md>
         \int \frac{\frac{3}{2} x - \frac{1}{2}}{x^2 - 2x +3} dx
-      </me>
+      </md>
       <p>
         The derivative of the denominator is <m>2x - 2</m>. I want
         to get this expression in the numerator. To do this, I write
@@ -129,22 +129,22 @@
         adjustment to factor <m>\frac{3}{4}</m> out of the whole
         expression. 
       </p>
-      <me>
+      <md>
         = \int \frac{ \frac{3}{4} 2x - \frac{1}{2}}{x^2-2x+3} dx 
         = \int \frac{ \frac{3}{4} 2x - \frac{3}{4}
         \frac{2}{3}}{x^2-2x+3} dx = \frac{3}{4} \int \frac{2x -
         \frac{2}{3}}{x^2-2x+3} dx 
-      </me>
+      </md>
       <p>
         Now the <m>2x</m> is correct, but the constant term in the
         numerator isn't. It needs to be <m>-2</m>. To make this
         happen, I add and subtract <m>-2</m> in the numerator. 
       </p>
-      <me>
+      <md>
         = \frac{3}{4} \int \frac{2x + (- 2 + 2) - \frac{2}{3})}
         {x^2-2x+3} dx = \frac{3}{4} \int \frac{(2x - 2) +
         \frac{4}{3}} {x^2-2x+3} dx
-      </me>
+      </md>
       <p>
         Then I split the integral up into two pieces. (Not in the
         last step, I can pull out the <m>\frac{4}{3}</m> from the
@@ -167,9 +167,9 @@
         that piece. For the second integral, I need to complete the
         square. 
       </p>
-      <me>
+      <md>
         = \frac{3}{4} \ln |x^2-2x+3| + \int \frac{1}{(x-1)^2 +2} dx 
-      </me>
+      </md>
       <p>
         Now this second integral has the correct form as well for
         the arctangent integral, with <m>\alpha - 1</m> and <m>\beta
@@ -211,10 +211,10 @@
         I'll return to the rational function from example <xref
         ref="example-pf4" />. 
       </p>
-      <me>
+      <md>
         \frac{2x-3}{(x-1)(x+2)^2} = \frac{\frac{-1}{9} }{x-1} +
         \frac{\frac{1}{9}}{x+2} +  \frac{\frac{7}{3}}{(x+2)^2}
-      </me>
+      </md>
       <p>
         The integral splits up into three integrals. After pulling
         out the constants, these directly use the two linear forms

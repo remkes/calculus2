@@ -42,9 +42,9 @@
           functions, it is conventional to refer to the curve with one
           symbol, typically the greek letter <m>\gamma</m>.
         </p>
-        <me>
+        <md>
           \gamma(t) = (x(t), y(t))
-        </me>
+        </md>
       </statement>
     </definition>
     <p>

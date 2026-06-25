@@ -7,9 +7,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{4}{(x-5)(x+3)} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -85,9 +85,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{3x^3 + x -7}{(x-1)(x+3)} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -255,9 +255,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{x^5 + 8x^3 - 2x - 1}{(x-4)(x+2)} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -523,9 +523,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{x^2}{(x-2)^3} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -595,9 +595,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{2x^2 + 3x + 4}{(x-1)(x-2)(x-3)} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -695,9 +695,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{1}{(x-2)^2(x-3)^2} 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -805,9 +805,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{2x^2+1}{(x-3)(x^2+x+1)}
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -940,9 +940,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{x^4-x^2-1}{x(x^2+4x+5)}
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -1162,10 +1162,10 @@
           Finally, I put the two polynomial pieces back in to get the
           complete antiderivative
         </p>
-        <me>
+        <md>
             \frac{x^2}{2} - 4x + \frac{-1}{5} \ln |x| + \frac{51}{10}
             \ln |x^2 + 4x + 5| + \frac{2}{5} \arctan (x+2) + c 
-        </me>
+        </md>
       </solution>
     </activity>
     <activity>
@@ -1173,9 +1173,9 @@
         <p>
           Solve this integral using partial fractions.
         </p>
-        <me>
+        <md>
           \int \frac{3}{(x-2)^2(x^2-x+3)} 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -1303,9 +1303,9 @@
           like this to show how these questions can easily become a
           great deal of work.) 
         </p>
-        <me>
+        <md>
           \int \frac{2x^2+4x-1}{(x^2+3x+4)(x^2+6)}
-        </me>
+        </md>
       </statement>
       <solution>
         <p>

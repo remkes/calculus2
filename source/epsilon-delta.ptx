@@ -3,9 +3,9 @@
   <subsection xml-id="subsection-finite-limits">
     <p>
       Our definition of limits in Calculus I was intuitive. The limit
-      <me>
+      <md>
         \lim_{x \rightarrow a} f(x) = L
-      </me>
+      </md>
       meant as <m>x</m> gets closer and closer to a, <m>f(x)</m> gets
       closer and closer to <m>L</m>. This is intuitive, since we
       haven't really said what this <sq>closer and closer</sq>
@@ -32,11 +32,11 @@
     </p>
     <definition>
       <statement>
-        <me>
+        <md>
           \lim_{x \rightarrow a} f(x) = L \text{ means } \forall
           \epsilon > 0 \ \ \exists \delta > 0 \text{ such that } |x-a|
           \lt  \delta \implies |f(x) - L| \lt  \epsilon
-        </me>.
+        </md>.
       </statement>
     </definition>
     <p>
@@ -80,28 +80,28 @@
       <statement>
         <p>
           Let's start with a simple limit.
-          <me>
+          <md>
             \lim_{x \rightarrow 2} 4x = 8
-          </me>
+          </md>
         </p>
         <p>
           We need to know how to choose <m>\delta</m> in response to
           <m>\epsilon</m>. If, for example, <m>\epsilon =
           \frac{1}{10}</m> then take <m>\delta = \frac{1}{40}</m>.
           This allows a calculation of the relative closenesses.
-          <me>
+          <md>
             |x-2| \lt  \frac{1}{40} \implies |4x-8| = 4 |x-2| \lt  4
             \frac{1}{40} = \frac{1}{10}
-          </me>
+          </md>
         </p>
         <p>
           We can generalize this calculation. If we are given an
           <m>\epsilon</m>, we can choose <m>\delta =
           \frac{\epsilon}{4}</m> such that
-          <me>
+          <md>
             |x-2| \lt  \delta \implies |4x-8| = 4 |x-2| \lt  4 \delta
             = \epsilon
-          </me>.
+          </md>.
         </p>
         <p>
           This example shows the general technique: we choose
@@ -113,9 +113,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \lim_{x \rightarrow 2} x^2 = 4
-        </me>.
+        </md>.
         <p>
           This one is a bit more challenging, since the choice of
           <m>delta</m> is a little more subtle. Given
@@ -127,10 +127,10 @@
           <m>4</m>. In particular, we know that <m>|x+2|\lt 5</m>.
           This gives us the two necessary pieces which we use in prove
           the limit implication.
-          <me>
+          <md>
             |x-2| \lt  \delta \implies |x^2-4| = |(x-2)(x+2)| =
             |x-2||x+2| \lt  5 \frac{\epsilon}{5} = \epsilon
-          </me>.
+          </md>.
         </p>
       </statement>
     </example>
@@ -151,29 +151,29 @@
     </p>
     <definition>
       <statement>
-        <me>
+        <md>
           \lim_{x \rightarrow \infty} f(x) = L \text{ means } \forall
           \epsilon > 0 \exists M \in \NN \text{ such that }  x > M
           \implies |f(x) - L| \lt  \epsilon
-        </me>.
+        </md>.
       </statement>
     </definition>
     <definition>
       <statement>
-        <me>
+        <md>
           \lim_{x \rightarrow a} f(x) = \infty \text{ means } \forall
           N \in \NN \exists \delta > 0 \text{ such that }  |x-a| \lt
           \delta \implies f(x) > N
-        </me>.
+        </md>.
       </statement>
     </definition>
     <definition>
       <statement>
-        <me>
+        <md>
           \lim_{x \rightarrow \infty} f(x) = \infty \text{ means }
           \forall N \in \NN 0 \exists M \in \NN \text{ such that }  x
           > M \implies f(x) > N
-        </me>.
+        </md>.
       </statement>
     </definition>
     <p>

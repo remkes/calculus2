@@ -13,10 +13,10 @@
         If <m>f(x)</m> is analytic, its <m>d</m>th <term>Taylor
         polynomials</term> centered at <m>\alpha</m> is the truncation
         of its Taylor series, stopping at <m>(x-\alpha)^d</m>.
-        <me>
+        <md>
           f(x) \cong \sum_{n=0}^d \frac{f^{(n)}(\alpha)}{n!}
           (x-\alpha)^n
-        </me>
+        </md>
       </p>
     </statement>
   </definition>
@@ -196,9 +196,9 @@
         version of the logarithm, which has a radius of convergence of
         <m>R = 1</m>. 
       </p>
-      <me>
+      <md>
         -\ln (1-x) = \sum_{n=0}^\infty \frac{x^{n+1}}{n+1} dx
-      </me>
+      </md>
       <p>
         Using some clever arithmetic, I can write <m>\ln 2 = - \ln
         \frac{1}{2} = - \ln \left( 1 - \frac{1}{2} \right)</m>. This

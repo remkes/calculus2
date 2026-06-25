@@ -25,18 +25,18 @@
     the sum can be written explicitly using the ordinary notation for
     sums. This is called removing terms from the series. 
   </p>
-  <me>
+  <md>
     \sum_{n=0}^\infty a_n = a_0 + a_1 + a_2 + \sum_{n=3}^\infty a_n
-  </me>
+  </md>
   <p>
     Third, I can shift the indices.  The key idea here is balance:
     whatever I do to the index in the bounds, I must do the opposite to
     the index in the terms to balance it out.
   </p>
-  <me>
+  <md>
     \sum_{n=0}^\infty a_n = \sum_{n=1}^\infty a_{n-1} =
     \sum_{n=-1}^\infty a_{n+1}
-  </me>
+  </md>
   <p>
     Note that the linearity properties required the bounds of the
     series to match up. Shifting and/or removing terms is very useful

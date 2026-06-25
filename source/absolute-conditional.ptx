@@ -15,9 +15,9 @@
           <m>a_n>0 \ \forall n \in \NN</m>. the following
           series is called an alternating series.
         </p>
-        <me>
+        <md>
           \sum_{n=1}^\infty (-1)^{n+1} a_n
-        </me>
+        </md>
         <p>
           Since the <m>a_n</m> are positive, the <m>(-1)^n</m> ensure
           that each consecutive term in the series changes sign, from
@@ -70,10 +70,10 @@
           The alternating harmonic series is the harmonic series with
           <m>(-1)^n</m> in the numerator.
         </p>
-        <me>
+        <md>
           \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = 1 - \frac{1}{2} +
           \frac{1}{3} - \frac{1}{4} + \ldots
-        </me>
+        </md>
       </statement>
     </definition>
     <p>
@@ -186,9 +186,9 @@
           decreasing order.)  It can be proved that this converges to
           certain values of the logarithm.
         </p>
-        <me>
+        <md>
           A(m,n) = \ln 2 + \frac{1}{2} \ln \left( \frac{m}{n} \right)
-        </me>.
+        </md>.
         <p>
           In particular, the combination of one positive and four
           negative terms sums to zero.
@@ -235,9 +235,9 @@
           A convergent series <m>\sum a_n</m> is called
           <term>absolutely convergent</term> if
         </p>
-        <me>
+        <md>
           \sum_{n=1}^\infty |a_n| \lt  \infty
-        </me>.
+        </md>.
         <p>
           Otherwise, if a series is convergent but not absolutely
           convergent, it is called <term>conditionally

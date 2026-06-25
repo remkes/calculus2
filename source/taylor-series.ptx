@@ -5,9 +5,9 @@
     <p>
       Once again, consider the geometric series:
     </p>
-    <me>
+    <md>
       f(x) = \sum_{n=0}^\infty x^n = \frac{1}{1-x}
-    </me>
+    </md>
     <p>
       Unlike most of the power series I could define, I actually
       know the values of the geometric series. This series, as a
@@ -28,9 +28,9 @@
       <m>\alpha</m> and find coefficients <m>c_n</m> to build the
       series. 
     </p>
-    <me>
+    <md>
       f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
-    </me>
+    </md>
     <p>
       These two pieces of information, the centre point and the
       coefficients, they are everything. Often I can choose the centre
@@ -89,9 +89,9 @@
       it work. Therefore, assume there is a 
       series expression of <m>f(x)</m>. 
     </p>
-    <me>
+    <md>
       f(x) = \sum_{n=0}^\infty c_n (x - \alpha)^n
-    </me>
+    </md>
     <p>
       Now I will calculate the value of <m>f</m> and is derivatives
       evaluated at the centre point <m>\alpha</m>. Recall that to
@@ -139,9 +139,9 @@
       try to show the pattern. Based on what I've done so far, I can
       argue for the following general pattern.
     </p>
-    <me>
+    <md>
       c_n = \frac{f^{(n)}(\alpha)}{n!}
-    </me>
+    </md>
     <p>
       Now I have a way to calculate the coefficient in terms of the
       derivatives of <m>f(x)</m> at the chosen centre point.
@@ -155,10 +155,10 @@
         <p>
           If <m>f</m> is analytic at <m>\alpha</m>, then the Taylor
           series for <m>f</m> has the following form.
-          <me>
+          <md>
             f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(\alpha)}{n!}
             (x-\alpha)^n
-          </me>
+          </md>
         </p>
       </statement>
     </proposition>
@@ -179,10 +179,10 @@
       <p>
         Assume there is an equation of power series. 
       </p>
-      <me>
+      <md>
         \sum_{n=0}^\infty c_n (x-\alpha)^n = \sum_{n=0}^\infty b_n
         (x-\alpha)^n
-      </me>
+      </md>
       <p>
         The coefficients are determined by the derivatives. But the
         functions are the same, so they must have the same derivatives
@@ -217,11 +217,11 @@
           <m>e^x</m>. If I choose <m>\alpha=0</m> as the centre point,
           then all these derivatives evaluate to <m>1</m>. Then I can
           write the series. 
-          <me>
+          <md>
             e^x = \sum_{n=0}^\infty \frac{1}{n!}x^n = 1 + x +
             \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} +
             \frac{x^5}{120} + \ldots
-          </me>
+          </md>
         </p>
         <p>
           I can check that the radius of convergence for this series
@@ -242,22 +242,22 @@
       which was completely opaque and mysterious before, is now given
       by a series.
     </p>
-    <me>
+    <md>
       e^{\pi} = \sum_{n=0}^\infty \frac{\pi^n}{n!} = 1 + \pi +
       \frac{\pi^2}{2} + \frac{\pi^3}{6} + \frac{\pi^4}{24} +
       \frac{\pi^5}{120} + \ldots
-    </me>
+    </md>
     <p>
       Other important properties of the exponential function can be
       calculated from the series. I'll differentiate the series.
       (I use a shift in the series in the last step.)
     </p>
-    <me>
+    <md>
       \frac{d}{dx} e^x = \frac{d}{dx} \sum_{n=0}^\infty \frac{1}{n!}
       x^n = \sum_{n=1}^\infty \frac{1}{n!} n x^{n-1} =
       \sum_{n=1}^\infty \frac{1}{(n-1)!} x^{n-1} = \sum_{n=0}^\infty
       \frac{1}{n!} x^n = e^x
-    </me>
+    </md>
     <p>
       This recovers the fact that the exponential function is its own
       derivative.
@@ -302,9 +302,9 @@
           /> calculate the series for the exponential function, which
           applied on the domain <m>\RR</m>. 
         </p>
-        <me>
+        <md>
           e^x = \sum_{n=0}^\infty \frac{x^{n}}{n!}
-        </me>
+        </md>
         <p>
           Now I want a series for <m>e^{x^2}</m>. 
           Here is a 
@@ -313,16 +313,16 @@
           integrate it with conventional methods. However, if I put
           <m>x^2</m> into the series for the exponential function, I
           get a series for <m>e^{x^2}</m>.
-          <me>
+          <md>
             e^{x^2} = \sum_{n=0}^\infty \frac{x^{2n}}{n!}
-          </me>
+          </md>
         </p>
         <p>
           Since this is a series, I can integrate it.
-          <me>
+          <md>
             \int e^{x^2} dx = \sum_{n=0}^\infty
             \frac{x^{2n+1}}{(2n+1)n!} + c
-          </me>
+          </md>
         </p>
         <p>
           This new series is the anti-derivative of <m>e^{x^2}</m>.
@@ -379,9 +379,9 @@
           only write the odd terms, using <m>(2n+1)</m>, since the
           even coefficients are all zero. 
         </p>
-        <me>
+        <md>
           \sin x = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!} x^{2n+1}
-        </me>
+        </md>
         <p>
           The radius of convergence of this series is <m>R =
           \infty</m>, so it expresses <m>\sin x</m> for all real
@@ -390,9 +390,9 @@
           cosine, the odd terms are zero, so I only write the even
           terms, using <m>(2n)</m>. 
         </p>
-        <me>
+        <md>
           \cos x = \sum_{n=0}^\infty \frac{(-1)^n}{(2n)!} x^{2n}
-        </me>
+        </md>
         <p>
           The radius of convergence of this series is also <m>R =
           \infty</m>.
@@ -423,24 +423,24 @@
           carefully match the details of these three pieces to the
           index to produce a general pattern. 
         </p>
-        <me>
+        <md>
           f^{(n)}(x) = \frac{(-1)^{n-1}(n-1)!}{x^n} 
-        </me>
+        </md>
         <p>
           Then I evalute the pattern at the desired centre point. 
         </p>
-        <me>
+        <md>
           f^{(n)}(1) = (-1)^{n-1}(n-1)!
-        </me>
+        </md>
         <p>
           Once I have the general pattern evaluated  at the
           centre point, I put it into standard the Taylor series
           form.
         </p>
-        <me>
+        <md>
             \ln x = \sum_{n=1}^\infty \frac{(-1)^{n-1}(n-1)!}{n!}
           (x-1)^n = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} (x-1)^n
-        </me>
+        </md>
         <p>
           The radius of convergence is 1, found by ratio test.
         </p>
@@ -465,24 +465,24 @@
           and a alternating sign. I carefully match with the index to
           get the pattern. 
         </p>
-        <me>
+        <md>
           f^{(n)}(x) = \frac{(-1)^{n}(n+1)!}{x^{n+2}}
-        </me>
+        </md>
         <p>
           I evaluate the pattern at the centre point.
         </p>
-        <me>
+        <md>
            f^{(n)}(3) = \frac{(-1)^{n}(n+1)!}{3^{n+2}}
-        </me>
+        </md>
         <p>
 j          Then I put these derivatives evaluted at the centre point
           into the standard Taylor series form.
         </p>
-        <me>
+        <md>
           \ln x = \sum_{n=1}^\infty
           \frac{(-1)^{n}(n+1)!}{3^{n+2} n!} (x-3)^n =
           \sum_{n=1}^\infty \frac{(-1)^n (n+1)}{3^{n+2}} (x-3)^n
-        </me>
+        </md>
         <p>
           The radius of convergence is 3, found by ratio test.
         </p>
@@ -499,10 +499,10 @@ j          Then I put these derivatives evaluted at the centre point
       calculate a series for <m>sin(x^3)</m> by inputing <m>x^3+1</m>
       for the variable in the series for sine.
     </p>
-    <me>
+    <md>
       \sin(x^3) = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}
       (x^3)^{2n+1} = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!} x^{6n+3}
-    </me>
+    </md>
     <p>
       When I use this technique, be aware that the radius of
       convergence can change via the composition. It may be necessary

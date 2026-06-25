@@ -7,9 +7,9 @@
         <p>
           Calculate this integral.
         </p>
-        <me>
+        <md>
           \int \sin^3 x \cos^4 x dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -17,10 +17,10 @@
           <m>\sin x</m>, I should be able to setup a cosine
           substitution.
         </p>
-        <me>
+        <md>
           \int \sin^3 x \cos^4 x dx = \int \sin^2x
           \cos^4 x \sin x dx .
-        </me>
+        </md>
         <p>
           Then I change everything into cosine, except the one
           seperate sine function.
@@ -66,9 +66,9 @@
         <p>
           Calculate this integral.
         </p>
-        <me>
+        <md>
           \int \sin^4 x \cos^2 x dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -155,9 +155,9 @@
         <p>
           Calculate this integral.
         </p>
-        <me>
+        <md>
           \int \tan^3 x \sec^4 x dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -191,9 +191,9 @@
         <p>
           Calculate this integral.
         </p>
-        <me>
+        <md>
           \int \sec^6 x dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -230,9 +230,9 @@
         <p>
           Calculate this integral.
         </p>
-        <me>
+        <md>
           \int_0^{\frac{\pi}{3}} \tan x \sec^6 x dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -290,9 +290,9 @@
           antiderivatives from the tables for both of the resulting
           trig integrals.) 
         </p>
-        <me>
+        <md>
           \int \frac{\sqrt{9-x^2}}{x} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -344,10 +344,10 @@
           for <m>\sin \theta</m> and <m>\csc \theta</m> from the
           tables. 
         </p>
-        <me>
+        <md>
           3 \int \csc \theta d \theta - 3 \int \sin \theta d \theta =
           3 \ln |\csc \theta - \cot \theta| + 3 \cos \theta + c
-        </me>
+        </md>
         <p>
           To reverse the substitution, I need to write everything in a
           form that I can substitute backward. I change the cosecant
@@ -369,10 +369,10 @@
           Now everything looks like something from the substitution
           calculations. I reverse the substitution. 
         </p>
-        <me>
+        <md>
           \int \frac{\sqrt{9-x^2}}{x} dx = 3 \ln \left| \frac{3 -
           \sqrt{9-x^2}}{x} \right| + \sqrt{9-x^2} + c
-        </me>
+        </md>
       </solution>
      </activity>
     <activity>
@@ -383,9 +383,9 @@
           cosecant terms and look for a known antiderivative from the
           tables.) 
         </p>
-        <me>
+        <md>
           \int \frac{1}{x^2 \sqrt{3-3x^2}} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -456,9 +456,9 @@
         <p>
           Calculate this integral using a trig substitution.
         </p>
-        <me>
+        <md>
           \int \frac{\sqrt{x^2-6}}{x} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -519,10 +519,10 @@
           calculated a term that I can use to replace the tangent. For
           replaing <m>\theta</m>, I invert the substitution. 
         </p>
-        <me>
+        <md>
           \int \frac{\sqrt{x^2-6}}{x} dx = \sqrt{x^2-6} - \sqrt{6}
           \arcsec \left( \frac{x}{\sqrt{6}} \right) + c 
-        </me>
+        </md>
       </solution>
     </activity>
     <activity>
@@ -530,9 +530,9 @@
         <p>
           Calculate this integral using a trig substitution.
         </p>
-        <me>
+        <md>
           \int_0^5 x^2 \sqrt{25-x^2} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -629,9 +629,9 @@
         <p>
           Calculate this integral using a trig substitution.
         </p>
-        <me>
+        <md>
           \int_0^{10} \frac{1}{\sqrt{100 + x^2}} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -702,9 +702,9 @@
           Calculate this improper integral and determine if it
           converges.
         </p>
-        <me>
+        <md>
           \int_1^\infty \frac{1}{x^3} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -735,9 +735,9 @@
           converges. (You can do a substitution first and then the
           limit for the improper integral.) 
         </p>
-        <me>
+        <md>
           \int_1^\infty \frac{\ln x}{x} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -766,16 +766,16 @@
           the logarithm grows without bound, <m>u</m> will also
           diverge to infinity. Then I perform the substitution.
         </p>
-        <me>
+        <md>
           \int_1^\infty \frac{\ln x}{x} dx = \int_0^\infty u du 
-        </me>
+        </md>
         <p>
           Now I can use a limit to evalute this improper integral.
         </p>
-        <me>
+        <md>
           = \lim_{a \rightarrow \infty} \frac{u^2}{2} \Bigg|_0^a
           = \lim_{a \rightarrow \infty} \frac{a^2}{2} = \infty 
-        </me>
+        </md>
         <p>
           This improper integral diverges.
         </p>
@@ -787,18 +787,18 @@
           Calculate this improper integral and determine if it
           converges.
         </p>
-        <me>
+        <md>
           \int_1^\infty x e^{-x} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
           I set up the improper integral limit.
         </p>
-        <me>
+        <md>
           \int_1^\infty x e^{-x} dx = \lim_{a \rightarrow
           \infty} \int_1^a x e^{-x} dx 
-        </me>
+        </md>
         <p>
           Then I use integration by parts. 
         </p>
@@ -833,11 +833,11 @@
           the denominator with <m>e^a</m> clearly dominates over the
           numerator with just <m>a</m>, so the limit is zero. 
         </p>
-        <me>
+        <md>
             \lim_{a \rightarrow \infty} \frac{-a}{e^a} +
             \frac{1}{e} - \frac{1}{e^a} + \frac{1}{e} = 0 +
             \frac{1}{e} + 0 + \frac{1}{e} = \frac{2}{e} 
-        </me>
+        </md>
         <p>
           This improper integral converges.
         </p>
@@ -849,28 +849,28 @@
           Calculate this improper integral and determine if it
           converges.
         </p>
-        <me>
+        <md>
           \int_0^1 \ln x dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
           The function is undefined at <m>x=0</m>, so I take a limit
           approaching this bound.
         </p>
-        <me>
+        <md>
           \int_0^1 \ln x dx = \lim_{a \rightarrow 0^+} \int_a^1
           \ln x dx 
-        </me>
+        </md>
         <p>
           Then I just calculate the integral, using the antiderivative
           for the logarithm from the tables. After the antiderivative,
           I apply the limit.
         </p>
-        <me>
+        <md>
           \lim_{a \rightarrow 0^+} x \ln x - x \Bigg|_a^1 =
           \lim_{a \rightarrow 0^+} 1\ln 1 - 1 - a \ln a + a = -\infty
-        </me>
+        </md>
         <p>
           This improper integral diverges, since as <m>a</m> gets
           close to zero, the logarithm <m>\ln a</m> diverges down to
@@ -888,9 +888,9 @@
           Calculate this improper integral and determine if it
           converges.
         </p>
-        <me>
+        <md>
           \int_0^1 \frac{1}{(x-1)^2} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -929,9 +929,9 @@
           Calculate this improper integral and determine if it
           converges.
         </p>
-        <me>
+        <md>
           \int_0^{\frac{\pi}{2}} \tan x dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -966,9 +966,9 @@
           first and then the improper integral limit after the trig
           substitution.
         </p>
-        <me>
+        <md>
           \int_{2\sqrt{2}}^{4} \frac{1}{\sqrt{(16-x^2)^3}} dx 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -1027,14 +1027,14 @@
           <m>\frac{\pi}{2}</m>, so I can the limit approaching that
           endpoint. 
         </p>
-        <me>
+        <md>
           \frac{1}{16} \tan \theta
           \Big|_{\frac{\pi}{4}}^{\frac{\pi}{2}} = 
           \lim_{a \rightarrow \frac{\pi}{2}} \frac{1}{16} \tan \theta
           \Big|_{\frac{\pi}{4}}^{a} = 
           \lim_{a \rightarrow \frac{\pi}{2}} \frac{1}{16} \left( \tan
           a - 1 \right) = \infty
-       </me>
+       </md>
        <p>
         The limit diverges since I know that tangent has a vertical
         asymptote at <m>\frac{\pi}{2}</m>. The improper integral does

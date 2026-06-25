@@ -92,19 +92,19 @@
           left endpoint. Note that I need a one-sided limit here: I can
           only approach <m>0</m> from the positive side. 
         </p>
-        <me>
+        <md>
           \int_0^2 \frac{1}{\sqrt{x}} dx = \lim_{a \rightarrow 0^+}
           \int_a^2 \frac{1}{\sqrt{x}} dx 
-         </me>
+         </md>
         <p>
           Then I can just calculate the integral with the bound <m>a</m>
           and take the limit. 
         </p>
-        <me>
+        <md>
           = \lim_{a \rightarrow 0^+} 2x^{\frac{1}{2}} \Bigg|_a^2
           = \lim_{a \rightarrow 0^+} 2\sqrt{2} - 2 \sqrt{a} = 2\sqrt{2}
           - 0 = 2\sqrt{2}
-        </me>
+        </md>
         <p>
           I get a nice, finite answer. The area in <xref
           ref="figure-improper-integral1" />, even though the asymptote
@@ -137,9 +137,9 @@
           the <m>x</m> axis to infinity, as show in <xref
           ref="figure-improper-integral2" />. 
         </p>
-        <me>
+        <md>
           \int_1^\infty \frac{1}{x^2} dx
-        </me>
+        </md>
         <p>
           It's not at all obvious how much area there is under the
           integral as the bounds go off to infinity. The limit will
@@ -147,12 +147,12 @@
           upper bound to <m>a</m> and take the limit as <m>a \rightarrow
           \infty</m>. 
         </p>
-        <me>
+        <md>
           \int_1^\infty \frac{1}{x^2} dx = \lim_{a \rightarrow \infty}
           \int_1^a \frac{1}{x^2} dx = \lim_{a \rightarrow \infty}
           \frac{-1}{x} \Bigg|_1^a = \lim_{a \rightarrow
           \infty} \frac{-1}{a} + 1 = 1
-        </me>
+        </md>
         <p>
           In this way, I show that the unknown area under the curve of
           <m>\frac{1}{x^2}</m> is indeed finite, even when the bound
@@ -162,21 +162,21 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \int_1^\infty \frac{1}{x} dx
-        </me>
+        </md>
         <p>
           This is very similar to the previous example, but the
           antiderivative of <m>\frac{1}{x}</m> differs from that of
           <m>\frac{1}{x^2}</m> in an important way. I use a limit to
           evaluate the integral on the infinite interval.
         </p> 
-        <me>
+        <md>
           \int_1^\infty \frac{1}{x} dx = \lim_{a \rightarrow \infty}
           \int_1^a \frac{1}{x} dx = \lim_{a \rightarrow \infty} 
           \ln |x| \Bigg|_1^a = \lim_{a \rightarrow \infty} \ln a - 0
           = \infty
-        </me>
+        </md>
         <p>
           The shape of the graphs of <m>\frac{1}{x^2}</m> and
           <m>\frac{1}{x}</m> on the interval <m>[1,\infty)</m> are very
@@ -266,9 +266,9 @@
       property of integrals: if <m>f(x) \geq g(x)</m> on <m>[a,b]</m>,
       then
     </p>
-    <me>
+    <md>
       \int_a^b f(x) dx \geq \int_a^b g(x)
-    </me>
+    </md>
     <p>
       The same inequality holds for improper integrals, at least
       adopting the convention that that <m>\infty > a</m> for any
@@ -301,9 +301,9 @@
     </p>
     <example>
       <statement>
-        <me>
+        <md>
           \int_1^\infty \frac{1}{4 + x + 18x^2}
-        </me>
+        </md>
         <p>
           The asymptotic order of the denominator is <m>x^2</m>.
           Therefore, the convengence behaviour is the same as if the

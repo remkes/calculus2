@@ -17,11 +17,11 @@
     notation? This is actually an infinite series. Let me write
     what the decimal expansion stands for. 
   </p>
-  <me>
+  <md>
     a + \frac{d_1}{10} + \frac{d_2}{100} + \frac{d_3}{1000} +
     \frac{d_4}{10000} + \frac{d_5}{100000} + \ldots 
     = a + \sum_{n=1}^\infty \frac{d_n}{10^n}
-  </me>
+  </md>
   <p>
     Asymptotically, since the numerators are bounded by <m>9</m>, this
     series behaves like <m>\frac{1}{10^n}</m>. The terms
@@ -37,9 +37,9 @@
     fact about real numbers. I'm going to start by thinking about the
     partial sums of a decimal expansion.
   </p>
-  <me>
+  <md>
     s_n = a + \sum_{k=1}^n \frac{d_k}{10^k}
-  </me>
+  </md>
   <p>
     These partial sums are all finite sums of fractions, hence they
     are rational numbers. Any real number <m>\alpha</m> is the limit

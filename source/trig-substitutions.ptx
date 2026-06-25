@@ -108,9 +108,9 @@
     </p>
     <ul>
       <li>
-        <me>
+        <md>
           \sqrt{a^2 - x^2} 
-        </me>
+        </md>
         <p>
           For an integral involving this expression, the appropriate
           substitution is <m>x = a \sin \theta</m>, with differential
@@ -119,11 +119,11 @@
           \theta</m> with <m>\cos^2 \theta</m> using the square
           identity <m>\sin^2 \theta + \cos^2 \theta + 1</m>. 
         </p>
-        <me>
+        <md>
           \sqrt{a^2 - x^2} = \sqrt{a^2 - a^2 \sin^2 \theta} = a
           \sqrt{1 - \sin^2 \theta} = a \sqrt{\cos^2 \theta} = a |\cos
           \theta|
-        </me>
+        </md>
         <p>
           I'd like to avoid the absolute value, so I restrict the domain
           of this substitution to <m>\theta \in \left[ \frac{-\pi}{2},
@@ -134,9 +134,9 @@
         </p>
       </li>
       <li>
-        <me>
+        <md>
           \sqrt{a^2 + x^2} 
-        </me>
+        </md>
         <p>
           For an integral involving this expression, the appropriate
           substitution is <m>x = a \tan \theta</m>, with differential
@@ -145,11 +145,11 @@
           \theta + 1</m> with <m>\sec^2 \theta</m> using the square
           identity <m>\tan^2 \theta + 1 = \sec^2 \theta</m>. 
         </p>
-        <me>
+        <md>
           \sqrt{a^2 + x^2} = \sqrt{a^2 + a^2 \tan^2 \theta} = a
           \sqrt{1 + \tan^2 \theta} = a \sqrt{\sec^2 \theta} = a |\sec
           \theta|
-        </me>
+        </md>
         <p>
           I'd like to avoid the absolute value, so I restrict the domain
           of this substitution to <m>\theta \in \left( \frac{-\pi}{2},
@@ -160,9 +160,9 @@
         </p>
       </li>
       <li>
-        <me>
+        <md>
           \sqrt{x^2 - a^2} 
-        </me>
+        </md>
         <p>
           For an integral involving this expression, the appropriate
           substitution is <m>x = a \sec \theta</m>, with differential
@@ -171,11 +171,11 @@
           \theta - 1</m> with <m>\tan^2 \theta</m> using the square
           identity <m>\tan^2 \theta + 1  = \sec^2 \theta</m>. 
         </p>
-        <me>
+        <md>
           \sqrt{x^2 - a^2} = \sqrt{a^2 \sec^2 \theta- a^2 } = a
           \sqrt{\sec^2 \theta - 1 } = a \sqrt{\tan^2 \theta} = a |\tan
           \theta|
-        </me>
+        </md>
         <p>
           I'd like to avoid the absolute value, so I restrict the domain
           of this substitution to <m>\theta \in \left[0, \frac{\pi}{2}
@@ -259,9 +259,9 @@
     </p>
     <example>
       <statement>
-        <me>
+        <md>
           \int \sqrt{1-4x^2} dx 
-        </me>
+        </md>
         <p>
           This example is close to <m>\sqrt{a^2 - x^2}</m>, but there
           is a coefficient in front of the <m>x</m>. I need to remove
@@ -269,11 +269,11 @@
           <m>1</m> as <m>\frac{4}{4}</m> and factoring the <m>4</m>
           out of the square root. 
         </p>
-        <me>
+        <md>
           \int \sqrt{1-4x^2} dx = \int \sqrt{\frac{4}{4} - 4x^2} dx =
           \int \sqrt{4 \left( \frac{1}{4} - x^2 \right)} dx 
           = \int 2 \sqrt{\frac{1}{4} - x^2} dx
-        </me>
+        </md>
         <p>
           Then I can apply the trig substitution <m>x = a \sin
           \theta</m> with <m>a = \frac{1}{2}</m>. 
@@ -358,9 +358,9 @@
     </example>
     <example>
       <statement>
-      <me>
+      <md>
         \int \frac{\sqrt{x^2-9}}{x^3} dx 
-      </me>
+      </md>
       <p>
         No algebra is required here to setup the trig substitution.
         This is in the form for a secant substitution. In the
@@ -450,9 +450,9 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           A = 4 \int_0^a \frac{b}{a} \sqrt{a^2-x^2} dx
-        </me>
+        </md>
         <p>
           Here is an example with bounds. This particular example is
           quite useful: it calculates the area of the ellipse
@@ -543,22 +543,22 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}}
           \frac{1}{x^5\sqrt{9x^2-1}} dx
-        </me>
+        </md>
         <p>
           This is a long and complicated example. First, I need to do
           some algebra to put this in the right form to use a trig
           substitution. I write <m>1 = \frac{9}{9}</m> and factor a
           <m>9</m> out of the square root. 
         </p>
-        <me>
+        <md>
           \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}}
           \frac{1}{x^5\sqrt{9x^2-1}} dx =
           \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}}
           \frac{1}{3x^5\sqrt{x^2 - \frac{1}{9}}} dx 
-        </me>
+        </md>
         <p>
           Now I can use a secant substitution. I need to change the
           bounds as well, which involes inverting the secant function.

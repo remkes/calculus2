@@ -23,17 +23,17 @@
           the range is <m>y \in [0,h]</m>. Now I can setup the
           integral. 
         </p>
-        <me>
+        <md>
           V = \int_0^h \frac{\pi y^2 r^2}{h^2} dy 
-        </me>
+        </md>
         <p>
           This is a reasonable polynomial integral. 
         </p>
-        <me>
+        <md>
           V = \frac{\pi r^2}{h^2} \int_0^h y^2 dy = \frac{\pi
           r^2}{h^3} \frac{y^3}{3} \Bigg|_0^h = \frac{\pi
           r^2}{h^2} \frac{h^3}{3} = \frac{\pi r^2 h}{3}
-        </me>
+        </md>
       </solution>
     </activity>
     <activity>
@@ -48,17 +48,17 @@
         <p>
           The setup for a surface of revolution is this integral.
         </p>
-        <me>
+        <md>
           V = \int_a^b \pi (f(x))^2 dx 
-        </me>
+        </md>
         <p>
           The function and the range are given, so I can just proceed
           with the integral.
         </p>
-        <me>
+        <md>
           V = \int_1^{e^2} A dh = \int_1^{e^2} \pi (ln x)^2 dx = \pi
           \int_1^{e^2} (\ln x)^2 dx 
-        </me>
+        </md>
         <p>
           I will integrate by parts, with <m>f = \ln x</m> and
           <m>\frac{dg}{dx}  = \ln x</m>, so that <m>\frac{df}{dx} =
@@ -106,10 +106,10 @@
           <m>\pi/6</m>, <m>\pi/6</m> and <m>2\pi/3</m>. I apply the
           sine law to this triangle.
         </p>
-        <me>
+        <md>
           \frac{a}{\sin \frac{2\pi}{3}} = \frac{b}{\sin \frac{\pi}{6}}
           \implies \frac{a}{\frac{\sqrt{3}}{2}} = \frac{1}{2} 
-        </me>
+        </md>
         <p>
           This implies <m>b = \frac{a}{\sqrt{3}}</m>. Then there is a
           right triangle whose vertical are one vertex of the base,
@@ -146,29 +146,29 @@
           <m>\frac{\sqrt{3}a^2}{4}</m>. This gives the area of each
           slice. 
         </p>
-        <me>
+        <md>
           A = \frac{\sqrt{3}}{4} \left( \sqrt{ \frac{3}{2}} h
           \right)^2 = \frac{\sqrt{3}}{4} \frac{3}{2} h^2 =
           \frac{3\sqrt{3}h^2}{8}
-        </me>
+        </md>
         <p>
           Then I can setup the integral of the slices. 
         </p>
-        <me>
+        <md>
           V = \int_0^{\sqrt{\frac{3}{2}}a} A(h) dh =
           \int_0^{\sqrt{\frac{3}{2}}a}  \frac{3\sqrt{3}h^2}{8} dh
-        </me>
+        </md>
         <p>
           This is a reasonable polynomial integral.
         </p>
-        <me>
+        <md>
           V = \frac{3\sqrt{3}}{8} \int_0^{\sqrt{\frac{3}{2}}a} h^2 dh
           = \frac{3\sqrt{3}}{8} \frac{h^3}{3}
           \Bigg|_0^{\sqrt{\frac{3}{2}}a}  
           = \frac{\sqrt{3}}{8} \left( \sqrt{\frac{2}{3}} a \right)^3
           = \frac{\sqrt{3}}{8} \frac{2\sqrt{2}}{3\sqrt{3}} a^3 =
           \frac{a^3}{6\sqrt{2}}
-        </me>
+        </md>
       </solution>
     </activity>
   </subsection>

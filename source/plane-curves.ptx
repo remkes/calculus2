@@ -61,9 +61,9 @@
         general form is the following, where <m>a</m>, <m>b</m> and
         <m>c</m> are real constants. 
       </p>
-      <me>
+      <md>
         ax + by + c = 0 
-      </me>
+      </md>
     </li>
     <li>
       <p>
@@ -81,9 +81,9 @@
         <m>a_1</m>, <m>a_2</m>, <m>a_3</m>, <m>a_4</m>, <m>a_5</m> and
         <m>a_6</m> are real constants. 
       </p>
-      <me>
+      <md>
         a_1 x^2 + a_2 xy + a_3 y^2 + a_4 x + a_5 y + a_6 = 0
-      </me>
+      </md>
       <p>
         This form does include some equations which are not familiar,
         such as <m>-4x^2 + 4xy - 2y^2 + 4x - 3y + 2 = 0</m>. This
@@ -138,9 +138,9 @@
         which is unbounded. Its graph is shown in <xref
         ref="figure-apc1" />. 
       </p>
-      <me>
+      <md>
         xy^4 - 4xy^3 + x^2 - y^3 + x^2 - 4 = 0 
-      </me>
+      </md>
     </statement>
   </example>
   <example>
@@ -171,10 +171,10 @@
         which is bounded. Its graph is shown in <xref
         ref="figure-apc2" />. 
       </p>
-      <me>
+      <md>
         \frac{x^3y^3}{8} - \frac{x^5}{4} + \frac{y^6}{6} - 2xy - 3y -
         3 = 0 
-      </me>
+      </md>
     </statement>
   </example>
   <example xml:id="example-apc1">

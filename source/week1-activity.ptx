@@ -8,26 +8,26 @@
           Calculate these limits.
         </p>
         <ol>
-          <li><me>
+          <li><md>
             \lim_{x \rightarrow 0} \frac{\sin x \sinh x}{x^2} 
-          </me></li>
-          <li><me>
+          </md></li>
+          <li><md>
             \lim_{x \rightarrow 0} x^3 \coth x
-          </me></li>
-          <li><me>
+          </md></li>
+          <li><md>
             \lim_{x \rightarrow \infty} \frac{\sinh x}{\cosh x} 
-          </me></li>
+          </md></li>
         </ol>
       </statement>
       <solution>
         <ol>
           <li>
-            <me>
+            <md>
               \lim_{x \rightarrow 0} \frac{\sin x \sinh x}{x^2} = 
               \lim_{x \rightarrow 0} \frac{\sin x}{x} \frac{\sinh
               x}{x} = \lim_{x \rightarrow 0} \frac{\sin x}{x} \lim_{x
               \rightarrow 0} \frac{\sinh x}{x} = 1 \cdot 1=  1\\
-            </me>
+            </md>
             <p>
               This limit can be split up into two limits. For both
               <m>\sin x</m> and <m>\sinh x</m>, there are known
@@ -35,13 +35,13 @@
             </p>
           </li>
           <li>
-            <me>
+            <md>
               \lim_{x \rightarrow 0} x^3 \coth x = \lim_{x \rightarrow
               0} \frac{x}{\sinh x} x^2 \cosh x = = \left( \lim_{x
               \rightarrow 0} \frac{x}{\sinh x} \right) \left( \lim_{x
               \rightarrow 0} x^2 \right) \left( \lim_{x \rightarrow 0}
               \cosh x \right)= 1 \cdot 0 \cdot 1 = 0
-            </me>
+            </md>
             <p>
               By writing hyperbolic cotangent in terms of hyperbolic
               sine and cosine, this limit can also be split up. Then
@@ -50,11 +50,11 @@
             </p>
           </li>
           <li>
-            <me>
+            <md>
               \lim_{x \rightarrow \infty} \frac{\sinh x}{\cosh x} =
               \lim_{x \rightarrow \infty} \frac{e^x - e^{-x}}{e^x +
               e^{-x}} = 1 
-            </me>
+            </md>
             <p>
               For this limit, I can write the hyperbolics in terms of
               their exponential defintions and then use asymptotic
@@ -74,12 +74,12 @@
           Calculate these derivatives.
         </p>
         <ol>
-          <li><me>
+          <li><md>
             \frac{d}{dx} e^{\cosh x}
-          </me></li>
-          <li><me>
+          </md></li>
+          <li><md>
             \frac{d}{dx} \cosh (1 + x^2) 
-          </me></li>
+          </md></li>
         </ol>
       </statement>
       <solution>
@@ -123,22 +123,22 @@
           Calculate these integrals.
         </p>
         <ol>
-          <li><me>
+          <li><md>
             \int \sinh (x^6) x^5 dx 
-          </me></li>
-          <li><me>
+          </md></li>
+          <li><md>
             \int \cosh^3 x \sinh 2x dx 
-          </me></li>
+          </md></li>
         </ol>
       </statement>
       <solution>
         <ol>
           <li>
-            <me>
+            <md>
               \int \sinh (x^6) x^5 dx = \frac{1}{6} \int \sinh u du
               = \frac{1}{6} \cosh u + c = \frac{1}{6} \cosh (x^6) +
               c 
-            </me>
+            </md>
             <p>
               In the first step, I used substitution with <m>u =
               x^6</m> and <m>du = 6x^5dx </m>, so <m>\frac{1}{6} du =
@@ -149,10 +149,10 @@
             </p>
           </li>
           <li>
-            <me>
+            <md>
               \int \cosh^3 x \sinh 2x dx = \int \cosh^3 x 2
               \sinh x \cosh x dx 
-            </me>
+            </md>
             <p>
               The <m>\sinh 2x</m> term makes the integral difficult to
               approach. Happily, there is a double-angle identity for
@@ -160,18 +160,18 @@
               x</m> from the table of identities. Then I group the
               <m>\cosh x</m> terms together using exponents. 
             </p>
-            <me>
+            <md>
               = 2 \int \cosh^4 x \sinh x dx 
-            </me>
+            </md>
             <p>
               This can now be solved by substitution with <m>u = \cosh
               x</m> and <m>du = \sinh x dx</m>. After the replacements,
               I get a power rule integral. 
             </p>
-            <me>
+            <md>
               = 2 \int u^4 du = 2 \frac{u^5}{5} + c = \frac{2 \cosh^5
               x}{5} + c 
-            </me>
+            </md>
             <p>
               After doing the antiderivative, I reversed the
               substitution.
@@ -190,9 +190,9 @@
           Sketch the locus and observe the expected slopes; compare
           those with the slopes given by the implicit derivatives.
         </p>
-        <me>
+        <md>
           x^2 + y^2 = 100
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -284,9 +284,9 @@
           Sketch the locus and observe the expected slopes; compare
           those with the slopes given by the implicit derivatives.
         </p>
-        <me>
+        <md>
           \frac{x^2}{4} + \frac{y^2}{64} = 1 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -380,9 +380,9 @@
           Sketch the locus and observe the expected slopes; compare
           those with the slopes given by the implicit derivatives.
         </p>
-        <me>
+        <md>
           x^2 - y^2 = 4 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -472,9 +472,9 @@
           Sketch the locus and observe the expected slopes; compare
           those with the slopes given by the implicit derivatives.
         </p>
-        <me>
+        <md>
           xy = 1 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -563,9 +563,9 @@
           Sketch the locus and observe the expected slopes; compare
           those with the slopes given by the implicit derivatives.
         </p>
-        <me>
+        <md>
           x^2 + y^2 = -3 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -608,22 +608,22 @@
           Calculate these limits.
         </p>
         <ol>
-          <li><me>
+          <li><md>
             \lim_{x \rightarrow \infty} \frac{\sinh x}{x^4} 
-          </me></li>
-          <li><me>
+          </md></li>
+          <li><md>
             \lim_{x \rightarrow 0} \frac{\sin x}{\sinh x}
-          </me></li>
+          </md></li>
         </ol>
       </statement>
       <solution>
         <ol>
           <li>
-            <me>
+            <md>
               \lim_{x \rightarrow \infty} \frac{\sinh x}{x^4} =
               \lim_{x \rightarrow \infty} \frac{e^x - e^{-x}}{2x^4}
               = \infty 
-            </me>
+            </md>
             <p>
               I can change the hyperbolics into their exponential
               form and use asymptotic analysis. Then I see the
@@ -631,11 +631,11 @@
             </p>
           </li>
           <li>
-            <me>
+            <md>
               \lim_{x \rightarrow 0} \frac{\sin x}{\sinh x} =
               \lim_{x \rightarrow 0} \frac{\sin x}{x} \lim_{x
               \rightarrow 0} \frac{x}{\sinh x} = 1 \cdot 1 = 1
-            </me>
+            </md>
             <p>
               This is a neat trick. By multiplying by
               <m>\frac{x}{x}</m>, which doesn't change the fraction,
@@ -652,12 +652,12 @@
           Calculate these derivatives.
         </p>
         <ol>
-          <li><me>
+          <li><md>
             \frac{d}{dx} \sinh 2x \coth x
-          </me></li>
-          <li><me>
+          </md></li>
+          <li><md>
             \frac{d}{dx} \frac{\sinh^2 x}{e^x} 
-          </me></li>
+          </md></li>
         </ol>
       </statement>
       <solution>
@@ -706,12 +706,12 @@
           Calculate these integrals.
         </p>
         <ol>
-          <li><me>
+          <li><md>
             \int_{\ln 2}^{\ln 4} \cosh x dx 
-          </me></li>
-          <li><me>
+          </md></li>
+          <li><md>
             \int_0^{\ln 5} \sinh^2 x + \cosh^2 x dx 
-          </me></li>
+          </md></li>
         </ol>
       </statement>
       <solution>

@@ -7,9 +7,9 @@
         <p>
           Find the limit of this sequence.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \frac{n^2}{n^3 + 3n +4} 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -25,9 +25,9 @@
         <p>
           Find the limit of this sequence.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \frac{2^n}{n!} 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -44,10 +44,10 @@
         <p>
           Find the limit of this sequence.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \frac{n^2 + 3n}{n^2 + \sin
           (\pi n)} 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -66,9 +66,9 @@
         <p>
           Find the limit of this sequence.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \frac{\ln n}{n} 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -84,9 +84,9 @@
         <p>
           Find the limit of this sequence.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} (-1)^n \sin (\pi n) 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -105,9 +105,9 @@
         <p>
           Find the limit of this sequence.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty} \frac{(-1)^n}{\sqrt{n}} 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -126,9 +126,9 @@
         <p>
           Find the limit of this sequence.
         </p>
-        <me>
+        <md>
           \lim_{n \rightarrow \infty}  \tan (n)
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -146,9 +146,9 @@
         <p>
           Find the limit of this sequence.
         </p>
-        <me>
+        <md>
           \lim_{ n \rightarrow \infty} \frac{e^n}{e^{2n} + 1} 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -167,9 +167,9 @@
           with <m>a_1 = 1</m> and with the following recursive
           relationship. 
         </p>
-        <me>
+        <md>
           a_n = 3 + \frac{2}{a_{n-1}} 
-        </me>
+        </md>
         <p>
           What is the limit of the sequence? 
         </p>
@@ -221,9 +221,9 @@
           with <m>a_1 = 1</m> and with the following recursive
           relationship. 
         </p>
-        <me>
+        <md>
           a_n = 1 - \frac{1}{a_{n-1}} 
-        </me>
+        </md>
         <p>
           What is the limit of the sequence? 
         </p>
@@ -342,9 +342,9 @@
             <m>\frac{r-1}{r-1}</m> for some value of <m>r</m> to
             simplify the expression for the partial sum.)
           </p>
-          <me>
+          <md>
             \sum_{n=1}^\infty \frac{1}{3^n} 
-          </me>
+          </md>
         </statement>
         <solution>
           <p>
@@ -403,9 +403,9 @@
             <m>\frac{r-1}{r-1}</m> for some value of <m>r</m> to
             simplify the expression for the partial sum.)
           </p>
-          <me>
+          <md>
             \sum_{n=1}^\infty \frac{1}{5^n} 
-          </me>
+          </md>
         </statement>
         <solution>
           <p>
@@ -464,9 +464,9 @@
             <m>\frac{r-1}{r-1}</m> for some value of <m>r</m> to
             simplify the expression for the partial sum.)
           </p>
-          <me>
+          <md>
             \sum_{n=1}^\infty \frac{1}{10^n} 
-          </me>
+          </md>
         </statement>
         <solution>
           <p>
@@ -525,9 +525,9 @@
             expand the term into two fractions. Then, in the partial
             terms, cancel most of the fractions.) 
           </p>
-          <me>
+          <md>
             \sum_{n=1}^\infty \frac{1}{n^2 + 4n + 3} 
-          </me>
+          </md>
         </statement>
         <solution>
           <p>
@@ -622,9 +622,9 @@
             expand the term into two fractions. Then, in the partial
             terms, cancel most of the fractions.) 
           </p>
-          <me>
+          <md>
             \sum_{n=1}^\infty \frac{1}{n^2 + 5n + 6} 
-          </me>
+          </md>
         </statement>
         <solution>
           <p>
@@ -692,9 +692,9 @@
           <p>
             Consider this series.
           </p>
-          <me>
+          <md>
             \sum_{n=1}^{\infty} \frac{1}{3n} 
-          </me>
+          </md>
           <p>
             Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
@@ -715,9 +715,9 @@
           <p>
             Consider this series.
           </p>
-          <me>
+          <md>
             \sum_{n=1}^{\infty} \frac{1}{\sqrt{n}} 
-          </me>
+          </md>
           <p>
             Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
@@ -737,9 +737,9 @@
           <p>
             Consider this series.
           </p>
-          <me>
+          <md>
             \sum_{n=1}^{\infty} \frac{1}{n^2 - 9n + 20} 
-          </me>
+          </md>
           <p>
             Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
@@ -778,9 +778,9 @@
           <p>
             Consider this series.
           </p>
-          <me>
+          <md>
             \sum_{n=1}^{\infty} (-1)^{\frac{n(n+1)}{2}} 
-          </me>
+          </md>
           <p>
             Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
@@ -802,9 +802,9 @@
           <p>
             Consider this series.
           </p>
-          <me>
+          <md>
             \sum_{n=1}^{\infty} \sin \left( \frac{n\pi}{2} \right) 
-          </me>
+          </md>
           <p>
             Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
@@ -849,9 +849,9 @@
           <p>
             Consider this series.
           </p>
-          <me>
+          <md>
             \sum_{n=1}^{\infty} 2^n 
-          </me>
+          </md>
           <p>
             Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
@@ -892,9 +892,9 @@
           <p>
             Consider this series.
           </p>
-          <me>
+          <md>
             \sum_{n=1}^{\infty} \ln \left( \frac{1}{n} \right) 
-          </me>
+          </md>
           <p>
             Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument

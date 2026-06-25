@@ -25,9 +25,9 @@
         The Guassian distribution (often called the bell curve) is
         central to statistics. This is the function <m>f(x) =
         e^{-x^2}</m>. Consider its integral.
-        <me>
+        <md>
           \int e^{-x^2} dx
-        </me>
+        </md>
       </p>
       <p>
         This is a very useful integral, as I shall discuss in <xref

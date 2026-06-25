@@ -60,9 +60,9 @@
       notice this, I'll say the integral is zero by symmetry. Consider
       this first example:
     </p>
-    <me>
+    <md>
       \int_0^{2\pi} \sin x dx 
-    </me>
+    </md>
     <p>
       This is an integral over a full period of the sine function. In
       a full period, there are equal pieces above and below the axis,
@@ -75,9 +75,9 @@
       symmetry argument, but it applies more broadly. Consider this
       inetgral.
     </p>
-    <me>
+    <md>
       \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos x dx 
-    </me>
+    </md>
     <p>
       This is an integral over half a period, so the full period
       argument doesn't apply. However, on this half-period, cosine
@@ -91,9 +91,9 @@
       If I take an odd power of a trig function, this argument still
       works. 
     </p>
-    <me>
+    <md>
       \int_0^{2\pi} \sin^7 x dx 
-    </me>
+    </md>
     <p>
       This is an integral over a whole period. The positive and
       negative parts are still perfect mirrors of each other, so this
@@ -107,9 +107,9 @@
       Finally, adjustments of period can come into play. Consider this
       integral. 
     </p>
-    <me>
+    <md>
       \int_0^{\frac{2\pi}{3}} \sin (3x) dx 
-    </me>
+    </md>
     <p>
       In <m>\sin (3x)</m>, the period is one third of the original
       period. The bounds of this integral are likewise also one third of
@@ -341,10 +341,10 @@
           successful.) Let me start by converting everything into
           sine and cosine. 
         </p>
-        <me>
+        <md>
           \int_0^{\frac{\pi}{3}} \tan^5 x \sec^4 x dx =
           \int_0^{\frac{\pi}{3}} \frac{\sin^5 x}{\cos^9 x} dx
-        </me>
+        </md>
         <p>
           There is an odd power of sine in the numerator, so I'd like
           to isolate one sine term and change all the rest to cosine.

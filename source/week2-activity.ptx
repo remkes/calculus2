@@ -8,9 +8,9 @@
           Find and classify the singularities of this algebraic plane
           curve.
         </p>
-        <me>
+        <md>
           y^2 = x^2 + x^4 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -100,9 +100,9 @@
           Find and classify the singularities of this algebraic plane
           curve.
         </p>
-        <me>
+        <md>
           y^2 = x^4 + x^3 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -240,9 +240,9 @@
           Find and classify the singularities of this algebraic plane
           curve.
         </p>
-        <me>
+        <md>
           y^2 = (x-3)^2(x-4)^2
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -338,9 +338,9 @@
           Find and classify the singularities of this algebraic plane
           curve.
         </p>
-        <me>
+        <md>
           y^2 = x(x-1)(x-2) 
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
